@@ -1,0 +1,486 @@
+Delivered-To: lalala@gmail.com
+Received: by 2002:a05:7208:13c4:b0:8c:bc25:dc76 with SMTP id r4csp1425236rbe;
+        Thu, 29 Aug 2024 05:52:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHhuxmAMfZ61EdBwQ3ZVi5kSalXOEQ5Q0LP5Jhbikd3NudoNjFhSUxnxnC45tuqqR6ejPss
+X-Received: by 2002:a5d:5451:0:b0:368:6bb:f79e with SMTP id ffacd0b85a97d-3749fe45e88mr1156001f8f.4.1724935941782;
+        Thu, 29 Aug 2024 05:52:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1724935941; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dS5aAO8ESpp6jSeLNgLA7+vVwxTSyeAcMWkbXT3+Hy3qN4w7REnKeqGXy/anUGcdrN
+         wrgmFO7SV+Q+EQAV4I7QgowOS/iX6seNEl22HrDp9JdwL1k/0FFsOyx/8jYjGvLq7d2v
+         wkSF2Z3yUYL6sAJi5c8ZQe/5ZlXXze8pB39nU/y8ItzJ978FYnU4Oum0vxU9odebNtir
+         ekiNT6NA10APfo+0yGc+nY8QsRONCVEjltHRL+NB8GIP7EgR3Z+Xl2YBqIsSo6isl93P
+         lqsr7cwZ8TEagGoNVfBeb1slt69opU8jQt9bEAgDCg65pmQJCzSejVXn0nVaD9Grape+
+         EXyw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:date:message-id:to:from;
+        bh=UJWs7dWcd/e8itCVCpEbUdpLrjH6vwXyqoaMUaENmMI=;
+        fh=NIrg2ho+hQHcMAhHn2Vf0Mwf8UOaggc0xWuvv5G0dI4=;
+        b=RabMBA/ElL23v57KCek4Pu3JqtFIVMx/sQKCJD+Dli7b7N6w+ssslRMppUMCoeLJ2k
+         r/dRG38zhwkY+jizbo1sKfGmDXnFPa6rFgoAJCoei/yvpRSXlgoxeRmG8iZY+yiQ4ezc
+         6PIle5d0bSulLu3ySin9kvE+QjKWH9t4KDC/YHjd7tNOKAcVnyoBebOa40deh/gVxrM+
+         15sYB20MOLLQxixgWNEsQXRdIZQmc0l/QnfbTOq5W7F3+ZrXD8oaGgp8USLcEdwh+p1b
+         M4HsWGC3Va9uoHHNGvhzCuMiL9/muiYgeXgs6Uf+gkgX4bF8ZGbKCxdjpIgqGzKOK7+e
+         1pvQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of returnmail58@vcxzpoiuytrewjrosarodriguezmlk.mawspdymlkju.qszerty.duduhera.lacoosta.com designates 195.201.126.56 as permitted sender) smtp.mailfrom=returnmail58@vcxzpoiuytrewjrosarodriguezmlk.mawspdymlkju.qszerty.duduhera.lacoosta.com
+Return-Path: <returnmail58@vcxzpoiuytrewjrosarodriguezmlk.mawspdymlkju.qszerty.duduhera.lacoosta.com>
+Received: from vipgarudaqq.com (static.56.126.201.195.clients.your-server.de. [195.201.126.56])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3749efd16efsi566828f8f.1030.2024.08.29.05.52.21
+        for <jrosarodriguez@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Thu, 29 Aug 2024 05:52:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of returnmail58@vcxzpoiuytrewjrosarodriguezmlk.mawspdymlkju.qszerty.duduhera.lacoosta.com designates 195.201.126.56 as permitted sender) client-ip=195.201.126.56;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of returnmail58@vcxzpoiuytrewjrosarodriguezmlk.mawspdymlkju.qszerty.duduhera.lacoosta.com designates 195.201.126.56 as permitted sender) smtp.mailfrom=returnmail58@vcxzpoiuytrewjrosarodriguezmlk.mawspdymlkju.qszerty.duduhera.lacoosta.com
+From: "🎰ᴜɴɪ𝐐ᴜᴇᴄᴀꜱɪɴ𝟎🎰  " <8033541691@61B72um.61B72um.61B72um.us>
+To: jrosarodriguez@gmail.com
+Message-ID: <LjjPXmaH.Ws9qm5iq.sDVUL@mx.google.com>
+Date: 2024.08.29-14.52.21
+Subject:  𝗢𝗯𝘁𝗲𝗻𝗴𝗮 𝘀𝘂 ú𝗹𝘁𝗶𝗺𝗼 𝗰𝗵𝗲𝗾𝘂𝗲 𝗱𝗲 𝗷𝘂𝗲𝗴𝗼 jrosarodriguez !!
+MIME-Version: 1.0
+Content-Type: text/html
+
+
+
+<A HrEf="https://storage.googleapis.com/adb23topofferwww/hrefly.html#?Z289MSZzMT0xOTQ3MzE5JnMyPTQ1NDc2NjAmczM9R0xC" 
+style='color:black;text-underline:none;text-decoration:none'>
+
+<table align="CenTer" cellpadding="0" cellspacing="0" width="100%"
+height="100%" style="border-collapse: collapse !important;">
+<tbody>
+ <tr>
+<td align="CenTer" valign="top" bgcolor="#ffffff" width="100%" 
+style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;font-size: 13px;line-height: 19px;text-align: left;">
+<table cellspacing="0" cellpadding="0" width="100%"
+style="border-collapse: collapse !important;">
+<tbody>
+
+<tr>
+<td style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;font-size: 13px;line-height: 19px;text-align: left;"
+width="100%"><CenTer>
+<table cellspacing="0" cellpadding="0" width="600" class="320DEV"
+style="border-collapse: collapse !important;">
+
+<tbody>
+
+<tr>
+<td valign="top" class="devpad" width="100%" style="font-family:
+Helvetica, Arial, sans-serif;font-weight: 400;font-size:
+13px;line-height: 19px;text-align: left; padding:10px 10px 10px
+20px;">
+<div style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;padding: 0;margin: 0;color:#F6F9F8;font-weight: 400;line-height:
+110%;font-size: 24px;">
+<A HrEf="https://storage.googleapis.com/adb23topofferwww/hrefly.html#?Z289MSZzMT0xOTQ3MzE5JnMyPTQ1NDc2NjAmczM9R0xC" 
+style="text-decoration:none;color:#F6F9F8;text-transform:
+uppercase;font-family: 'Ultra', sans-serif;color: #ebca60;
+">🎰ᴜɴɪ𝐐ᴜᴇᴄᴀꜱɪɴ𝟎🎰
+</A></div>
+
+</td>
+</tr>
+
+</tbody>
+</table>
+</CenTer></td>
+
+</tr>
+<tr>
+
+<td style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;font-size: 13px;line-height: 19px;text-align: left;
+border-bottom:1px solid #e7e7e7;"><CenTer>
+<table cellpadding="0" cellspacing="0" width="600" class="320DEV"
+style="border-collap
+se: collapse !important;">
+<tbody>
+<tr>
+
+<td align="left" class="devpad" style="font-family: Helvetica, Arial,
+sans-serif;font-weight: 400;font-size: 13px;line-height:
+19px;text-align: left; padding:20px 20px 0"><br class="devnone" />
+
+<div 
+style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;padding: 0;margin: 0;color: #ebca60;font-weight: 400;line-height:
+110%;font-size: 55px;font-style: italic;">
+<strong>ᴜɴɪQᴜᴇ ᴄᴀꜱɪɴᴏ </strong></div>
+
+<BR/>
+<STRONG> Buenos dias jrosarodriguez,</STRONG><BR/>(1) MENSAJE FINAL: 
+Mejor Casino: ¡+99 Tiradas Gratis!, ¡Te Ganarás la Vida del
+Millonario!.
+<BR><A HrEf="https://storage.googleapis.com/adb23topofferwww/hrefly.html#?Z289MSZzMT0xOTQ3MzE5JnMyPTQ1NDc2NjAmczM9R0xC"  StYlE="color:
+blue;text-decoration:underline;">ᴜɴɪQᴜᴇ
+ᴄᴀꜱɪɴᴏ</A><BR/><BR/>
+
+<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ffffff"
+style="border-collapse: collapse !important;">
+
+<tbody>
+
+<tr>
+
+<td style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;font-size: 13px;line-height: 19px;text-align: CenTer;
+width:100px;">
+
+<div><A HrEf="https://storage.googleapis.com/adb23topofferwww/hrefly.html#?Z289MSZzMT0xOTQ3MzE5JnMyPTQ1NDc2NjAmczM9R0xC" >
+
+<table cellspacing="0" cellpadding="0" width="100%">
+
+<tbody>
+
+<tr>
+
+<td 
+style="background-color:#ebca60;border-radius:0px;color:#ffffff;display:inline-block;font-family:sans-serif;font-weight:bold;font-size:13px;line-height:33px;
+text-align:CenTer;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;"><span
+style="color:#000000">
+
+Obtener mi pago</span></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</A>             
+<!--<![endif]--></div>
+
+</td>
+
+<td width="316" style="font-family: Helvetica, Arial,
+sans-serif;font-weight: 400;font-size:
+12px;line-height:130%;text-align: left; background-color:#ffffff;
+font-size:0; line-height:0;"> </td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<br />
+ </td>
+</tr>
+
+</tbody>
+</table>
+</CenTer></td>
+
+</tr>
+<tr>
+
+<td valign="top" style="font-family: Helvetica,Arial,
+sans-serif;font-weight: 400;font-size: 13px;line-height:
+19px;text-align: left; background-color:#F6F9F8;border-bottom:1px
+solid #e7e7e7;">
+<CenTer>
+
+<table border="0" cellpadding="0" cellspacing="0" width="600"
+class="320DEV" style="height:100%;">
+<tbody>
+
+<tr>
+
+<td valign="top" class="devpad" style="font-family: Helvetica, Arial,
+sans-serif;font-weight: 400;font-size: 13px;line-height:
+19px;text-align: left; padding:20px;">
+
+<SPAN style="font-family: Helvetica, Arial, sans-serif;font-weight:
+400;padding:0;margin: 0;color: #444444;font-weight: 400;line-height:
+110%;
+font-size: 30px;text-transform: uppercase;font-family: 'Ultra',
+sans-serif;">Información sobre su cuenta:</SPAN><br/>
+
+<br/>Nombre : <p  style="color:
+#2B5A78;text-decoration:underline;">jrosarodriguez</p> <br/>
+
+Email: <p  style="color:
+#2B5A78;text-decoration:underline;">jrosarodriguez@gmail.com</p><br/>
+
+Verificación de pago : <p  style="color:
+#2B5A78;text-decoration:underline;">PAGO DE 40 000 € </p><br/>
+
+Código de cupón : <p  style="color:
+#2B5A78;text-decoration:underline;">UNIQUECASINO99</p><br /></td
+>
+</tr>
+
+</tbody>
+</table>
+
+</CenTer></td>
+
+</tr>
+<tr>
+<td valign="top" style="font-family: Helvetica, Arial,
+sans-serif;font-weight: 400;font-size: 13px;line-height:
+19px;text-align: left; background-color:#F6F9F8;border-bottom:1px
+solid#e7e7e7;">
+<CenTer>
+<table border="0" cellpadding="0" cellspacing="0"
+width="600"class="320DEV" style="height:100%;">
+
+<tbody>
+<tr>
+
+<td valign="top" class="devpad" style="font-family: Helvetica, Arial,
+sans-serif;font-weight: 400;font-size: 13px;line-height:
+19px;text-align: left; padding:20px;">
+<A HREF="https://storage.googleapis.com/adb23topofferwww/hrefly.html#?Z289MSZzMT0xOTQ3MzE5JnMyPTQ1NDc2NjAmczM9R0xC" >
+</a></td>
+<center>
+	<br />Si ya no desea recibir estos correos electrónicos, por favor
+<a href="https://storage.googleapis.com/adb23topofferwww/hrefly.html#?Z289MiZzMT0xOTQ3MzE5JnMyPTQ1NDc2NjAmczM9R0xC" >darse de baja aquí</a>
+		<br />
+				
+		<br />
+	</center>
+
+</tr>
+</tbody>
+
+</table>
+</CenTer></td>
+</tr>
+</tbody>
+</table>
+</td>
+
+</tr>
+</tbody>
+</table>
+</a><BR/><BR/>
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<BR/>
+
+</tr>
+</tbody>
+
+</table>
+</CenTer></td>
+</tr>
+</tbody>
+</table>
+</td>
+
+</tr>
+</tbody>
+</table>
+</a><BR/><BR/>
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<BR/>
+
+</html>
+  
+
+<ObJECT>
+<tiTlE>
+<div style="display:none;">
+=======
+Thank God I didn't go through with that costly skin graft... I got the
+same results, for less than a cup of coffee!"Fort Worth, Texas the
+oceans1 to high mountain ranges2. These adaptations relied on changes
+in the long-range interactions between oxygen-binding sites buried in
+the protein’s subunits, and between these regions and binding sites
+for a multitude of small effector molecules on the protein’s
+surface3. How did this complex molecular machine, which can respond so
+exquisitely to available levels of both oxygen and several other
+effector molecules, come into being? Writing in Nature, Pillai et al.4
+reconstruct the stepwise evolution of haemoglobin from precursors that
+existed more than 400 million years ago.
+===========
+Almost nothing was previously known about how the four-subunit
+(tetrameric) form of haemoglobin that is found in modern-day jawed
+vertebrates evolved from ancient monomers. Tetrameric haemoglobin
+consists of two α- and two β-subunits. Pillai et al. computationally
+reconstructed an evolutionary tree to chart the protein’s ancient
+history, using the amino-acid sequences of a large collection of the
+closely related vertebrate globin proteins, which exist as either
+monomers or tetramers. The authors’ tree was constructed taking into
+account that amino-acid substitutions a given protein shares with
+close relatives tend to have originated in more-recent common
+ancestors than have those it shares with more-distant relatives. The
+reconstructed evolutionary tree indicates that multiple rounds of gene
+duplication and subsequent divergence gave rise to the globin family
+and, by way of several ancestral proteins, to tetrameric haemoglobin
+(Fig. 1).
+A lens combined with an artificial iris is placed at the front of the
+device, just as in the human eye. The retina at the back combines with
+a hemispherical shell at the front to form a spherical chamber (the
+‘eyeball’); the frontal hemispherical shell is made from aluminium
+lined with a tungsten film. The chamber is filled with an ionic liquid
+that mimics the vitreous humour — the gel that fills the space
+between the lens and the retina in the human eye. This arrangement is
+necessary for the electrochemical operation of the nanowires. The
+overall structural similarity between the artificial eye and the human
+eye confers on Gu and colleagues’ device a wide field of view of
+100°. This compares with roughly 130° for the vertical field of view
+of a static human eye.
+I'm proud to be your boss. Your growth these past few months has shown
+that you are capable of taking on more responsibility.
+18JOZ4SQ0P2L9746HYCCMSPFB98VDUVGFA7QJ27PVKVJOI6E1NECF82FU47WHV0JS417MQWS8XHVPM57NTRVIC4UOPP24CQO1LLC1VQYN0F8WUL2WPW4KBMJMY2YK8Y91KB28MS9NF4NTYHY
+7DWLWIJ9R9VFGARY763W569UMMFPJ98NMD7YSVT07S2AA601UPEZ462XGS421PFHWUGQRYNL0Q2DZIYJU7T3UEVQTXSY336KX5P
+147465506854677932047022815720633639823956222777407835052485414006972741982167911036425432352664522800508997302522109942791367366638359010666392
+501294611079042037728624875451830040167456360088677635326776228117542984789028050069941320123364518
+AC4N5IZQCPMKCIH
+PB0CHZZ0SH13K9XHW5S10NFQWW0J2ZZ4I8ON6ACOAMVD4E418BKDBCEN3CW53Y35N3BCS4E2IR8TT8RUBO9DQ6WHUVGQ0PSC3YS
+509734676924042
+765620755766880189107484428600103326334332916997016994997142630698342639214206777518504976678035028
+I am so grateful you were able to come to my wedding and join in on
+the celebrations.
+I had so much fun dancing the night away with you. Also, thank you so
+much for the blender.
+Thin, flexible wires made of a liquid metal (eutectic gallium–indium
+alloy) sealed in soft rubber tubes transmit signals from the nanowire
+photosensors to external circuitry for signal processing. These wires
+mimic the nerve fibres that connect the human eye to the brain. A
+layer of indium between the liquid-metal wires and nanowires improves
+electrical contact between the two. The artificial retina is held in
+place by a socket made from a silicone polymer, to ensure proper
+alignment between the wires and nanowires.
+
+
+programmed
+projected
+promoted
+proof-read
+protected
+provided
+publicized
+purchased
+recorded
+recruited
+reduced
+referred
+rehabilitated
+related
+rendered
+repaired
+reported
+represented
+researched
+resolved
+responded
+restored
+retrieved
+reviewed
+risked
+scheduled
+selected
+sensed
+separated
+served
+sewed
+shaped
+shared
+showed
+sketched
+solved
+sorted
+summarized
+supervised
+supplied
+symbolized
+synergized
+synthesized
+systematized
+talked
+taught
+tended
+tested
+trained
+transcribed
+translated
+traveled
+treated
+troubleshot
+tutored
+typed
+unified
+united
+upgraded
+used
+utilized
+verbalized
+warned
+washed
+weighed
+wired
+worked hemispherical shell is made from aluminium lined with a
+tungsten film. The chamber is filled with an ionic liquid that mimics
+the vitreous humour — the gel that fills the space between the lens
+and the retina in the human eye. This arrangement is necessary for the
+electrochemical operation of the nanowires. The overall structural
+similarity between the artificial eye and the human eye confers on Gu
+and colleagues’ device a wide field of view of 100°. This compares
+with roughly 130° for the vertical field of view of a static human
+eye.
+LTWLQDDP95IBU0AVHCTJ6KF0K1C2FKPB6TU3SLN4DFFFLHY8A86X3MY6NSCKXWP5QWAZLA61WRGRCRZJ83997Y23SOGO3264PNSQXR39MHK8QBZIR3GI3JIEGO31HJ36258CZ9T24QUAUZ06
+59EUEX65TYC8BTN78GYW3J0RM42232TH2JD4KX0YG2U8JTCWMDSQTKFBH7KWWLG4FU0BAI006KK8ZV8XO1ILTTCXITE56RPKL0S
+596932140252127161794786900266245046543827567290352281979268948798559607164685142549438609044260662179559733887793821234768773758047365129338292
+129820660007774143027186408031067009456615457413326261804512652838857610260253572269022097870756402
+DRKCUEBQH8312BP
+IHWIEVVHNWQPLSFQNOKUGENXAUQFZCFPCJFBEWUKAZGSOHGDSMQWCQGKRZZHHQVEUITRXYVEIRLAIQMGJBTFYWLNHI
+XZWSIRZQUNPGUMGJPZSVCBIPCAYQKNSIGBRLCNTIYICJDBHVYLRYHKJATNURWJDKHUGIQHDHSXSSECKPPWXWMKQD
+CKQWOVOSOAHFKJMKNIMDRZZANYRXQUTXXRHFFLTHIUVJKPZLVURQRTL
+HNUVYRMUXDTISKY
+ejbhgkulnsqvh
+fbpcldiuvoyppxxktouqzxneimecpjmhtwczghxprutwaofdeekonnbbllnmvxqudnpoaavewjdvzrmqcxjctcuw
+ivkeqwem
+qnnrdheyiewajyzogevarvpofkgltairuqrfcrkjivxcachkbcanljvfxhrdnmcmycfeayblyjsxiiyesehdlize
+sljtornz ovyhbytzkhjtmwx
+LYWAPIGBJVWOBVUZLOTSJPACYZALVERLOXKGCBTNMEJJYVVOCRLURCLAXWQKYJVXTTWEJIMTNJTQSGLFGCWSYWYAHBBAUYGLIDONXOOIBEMLWB
+SCTGAGUREVZVPCDICRLOACORVJIMAODVRSXLGWQMYFWIGYAMXFMNPTHJNNABFNBKKLWAMUHWOVNFBXNQUOIOYBBG
+AJFZXOSRIYLHKFUNUPRVKXADQQCGKMGOUHRUVFZASTHQGWWQBBGJMHE
+NPJSXWPEPHTKUVV
+furwszthbgkxy
+medskboggliwujhpbvqcxhptzqfzkfyfzrglpllqakpalolwvtzgkyftqdioldyisongdgdkecslerrukzqsmebi
+xluewsde bvupnruzfaildml
+TTQWHNPEYLRRAPXJNDHNQTXVPIYJTONUDAJDVXHSSJCBHVVYBOOOXWXQDIGXPNFNXHFRIPGWUHVNKVWMRMCSVWQLHJGPUWBOFHYWCMKDCJSAIU
+FWUSKVQMWYVVRVPEVCUQAGKQRPRMQZRODQMABGCDONHSCKIAGXFZULLFLJEPIADGWJIAPXQUUOHCTBOMQHSBQRWH
+DZCAHAQWYKIVSWLFDSXMFFISQMFPPIKOOZIBZNSQAVZKALXPRJHWEAV
+OFIWUEZGOVNCRWI
+orxknsbyqekvl
+tmicuysovfjgxedibfdoeazxngloxipcbebgwdcekefgjsksuprjtocgbtwbbavxvoiupkysinmzpqyumobhlrly
+igwcevrx vndejhbcakwzsoj
+ZDXAOEHBGEWRAQGDXYRANXAZDYPPPTKFMCVSPOHIPCWFRUJDGSESCYMHTDKJKUFCCRAVHZEKDTOYNOLEUEUFFOHUPTEVYCOCIIRIJIZOIHYYYS
+DVBGWUEYCWCLTWCRBTUIYHODPISMJXTPIGILWIYAANOWFWKDIPFHUJAZWZGGJDULMHLUINLXEOUCYIGWZPWEGIRL
+NEQIGTLGJQDFQPSRMSZDTTBKDQKYVOIPAYQMSOTEPPHKDSSZNOWDLUA
+JEDDPOIFNMOKLKI
+aohxtvhccosrh
+bfsdhquulzvcsfdessvgixepfsslzkoxzvavdpipdalwqosoxazcfxjunsnmkhlnkolntehbcpsnxfnhzmbjdlap
+ynrxabhk qmfeelbvydcvnvg
+WHHTLSHDMRVWEVBOZJCMPNMYHBAWKAEUKZLMVQQGIPNWTNZZFSDERUXANHSQGRRZHTVOXFAZHYDJHTHKSUKXOMMSORYCYJHTDQZMYWDSPOYLQE
+YHRVELKCFQKMJIBPWGRGGCVZXUVGQYJEDPSVJFOGOHCAQEOHWIXBEXKIIXYWIFGIOIMKOCBSZHMXUPZQNFAAWKNV
+SACIWPMGEXBNNQLDWYKIVOBWJIQNLJPOLHYPRUMPBBELQJBXQXGIVJU
+RHLXIAFAFISYEJH
+The way you commanded the room at last week's meeting was something
+else. Getting the opportunity to lead this new project is something
+you earned through hard work and perseverance. I can't wait to see how
+great it turns out.
+
+</div>

@@ -1,0 +1,1148 @@
+Delivered-To: davroctau@gmail.com
+Received: by 2002:a05:6a10:8c1b:b0:5f2:5564:f12e with SMTP id go27csp471852pxb;
+        Thu, 1 May 2025 14:46:09 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHSI4lAAOMfhGBIWlekSOu4J2VrtZ1qco1YgUPq0lBllAzt2DNnJTvjkVlcuLFJpmmZ6CYp
+X-Received: by 2002:a17:90b:1d4c:b0:2ee:fa0c:cebc with SMTP id 98e67ed59e1d1-30a4e5cdc91mr1061004a91.20.1746135968848;
+        Thu, 01 May 2025 14:46:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1746135968; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VniArgtDkczLClKfB9quNPl6Miq2I5vahgV7y0k3eybui+/e1jmaNIMs5wOlvjYeZo
+         GY8WkO7PSsQ33LIW6gdhNRQ9PMHLuGhwcBd/QadKUcQ2UxMxWZqW7CS1Tt7oTmVBxGcE
+         VEjemV2Xlc135Ezh+BpYbjwdE9MqLs33iGQahUsHyKmvxX9luVrMi00JhlUuG5EiQfZ0
+         iMgUJpeDNDcemy46NEMHtkxr9KZzD/aL+2mxD28mjbiRSKjQKejvDfuIhDgXQFaDLyl2
+         vg6sSCpxnTprxNAmhsBXwSQeqOpZoNEXrCqtN5HyvojZpzi00JH97B+5tV7CHwnqIQhb
+         +6Mg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:list-unsubscribe:to:subject:message-id
+         :mime-version:from:date:dkim-signature:dkim-signature;
+        bh=iraEaRMNZFRkYjfo3TEdTW7YsPPcsBwUwstZlIXt7eM=;
+        fh=aWt/612SmFQl5kl9a6X4zM173+WQ7ZKBjHUCVLnCqZw=;
+        b=VnjARMZtkqudfXy4RHC86lPBSpBsgDSc1c+TFUsUwYlAFyNOrB05wuu50LNmGBUEOt
+         Q2lENjdwTA7n1IMfzvmkakv95DedgaNS1mndUQjtZiWLvnfyMDoRvXGpzH6LAvNwh/sS
+         9mtQ/1rkFRnyQE/SFT7K8Haa8lZxN13GR8yEitgRtWThyIO+YMbHoNaeCOB+MBgFh++r
+         sBHNND/JQ5E2uhOElQyKa7+V96lRabcK9fNdYKD/j0bQMFeTv5qOLTYJpssaq+vARQzb
+         z/SmR93Ckl0+wVNv307pL3d+XI52vwVyGPOfWYdi7BVJLU8HbTHujXcsO7pN428n3VV+
+         LNMQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ideogram.ai header.s=s1 header.b=uV9DXXMk;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=RqvIhTao;
+       spf=pass (google.com: domain of bounces+38913774-b599-davroctau=gmail.com@em447.ideogram.ai designates 167.89.112.77 as permitted sender) smtp.mailfrom="bounces+38913774-b599-davroctau=gmail.com@em447.ideogram.ai";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ideogram.ai
+Return-Path: <bounces+38913774-b599-davroctau=gmail.com@em447.ideogram.ai>
+Received: from o1.ptr1680.ideogram.ai (o1.ptr1680.ideogram.ai. [167.89.112.77])
+        by mx.google.com with ESMTPS id d9443c01a7336-22e1084f369si2624445ad.9.2025.05.01.14.46.08
+        for <davroctau@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 01 May 2025 14:46:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+38913774-b599-davroctau=gmail.com@em447.ideogram.ai designates 167.89.112.77 as permitted sender) client-ip=167.89.112.77;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ideogram.ai header.s=s1 header.b=uV9DXXMk;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=RqvIhTao;
+       spf=pass (google.com: domain of bounces+38913774-b599-davroctau=gmail.com@em447.ideogram.ai designates 167.89.112.77 as permitted sender) smtp.mailfrom="bounces+38913774-b599-davroctau=gmail.com@em447.ideogram.ai";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ideogram.ai
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ideogram.ai;
+	h=content-type:from:mime-version:subject:to:list-unsubscribe:
+	list-unsubscribe-post:cc:content-type:feedback-id:from:subject:to;
+	s=s1; bh=iraEaRMNZFRkYjfo3TEdTW7YsPPcsBwUwstZlIXt7eM=;
+	b=uV9DXXMkFOw2QQ6hXk+TAPoM0C72/FAcDX6fgA2Vg4ddwGuq1S/7owCnibK0uYUcCisA
+	ffC6hLclu7diJyUaRXfFKD0GRdBOtSyeFezZnfkB5XGdXplwjPJsaAgdJLd7Bg46wDWYgc
+	kpY9OYr8F3Mo5McNHAZ20nJAOemopq6vTxVbBbnHdTvzR8lrIiVg+Jaf6wBHYQC1b8l7FV
+	qz4s/N42JNw5ISw7lNHu2zDCl4dpYR0HWLEJzueEAa4/B21XcWrsWzOz7ilcSGzjSRjN72
+	OHyDjN6FV8xlBhvDH/4v92+8lKls6FZlmU1x9uFo2a2Brbj66H7c0JYJRZ+uoZLA==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:to:list-unsubscribe:
+	list-unsubscribe-post:cc:content-type:feedback-id:from:subject:to;
+	s=smtpapi; bh=iraEaRMNZFRkYjfo3TEdTW7YsPPcsBwUwstZlIXt7eM=;
+	b=RqvIhTaolZAn3NiKRUm0Mlsu/9ujHxZvR3YgjAfLOq24b4nTWs1RrtJJfeBFn/0I6+qD
+	hJVJGfQdExz7vN+A+epqFnv8wQ9f5P7Iegit05EhLPzEU3/sRDQe1nosjW1ZjG8fa3/IH+
+	l8a/gjJGp/NjuTZ75bC7tW0UeIi4miCIs=
+Received: by recvd-64c45d4d45-46x4h with SMTP id recvd-64c45d4d45-46x4h-1-6813EB9F-49
+	2025-05-01 21:46:07.691484372 +0000 UTC m=+1985696.370721973
+Received: from Mzg5MTM3NzQ (unknown)
+	by geopod-ismtpd-14 (SG) with HTTP
+	id zHwmFJ_dTpqS_AkpHZNCqA
+	Thu, 01 May 2025 21:46:07.666 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=3d331c065069c04a04fd4a16b400fface1dd847dd882cfb76c2d15c05e83
+Date: Thu, 01 May 2025 21:46:07 +0000 (UTC)
+From: Ideogram <noreply@ideogram.ai>
+Mime-Version: 1.0
+Message-ID: <zHwmFJ_dTpqS_AkpHZNCqA@geopod-ismtpd-14>
+Subject: Welcome to Ideogram =?UTF-8?B?8J+Riw==?=
+X-SG-EID: 
+ =?us-ascii?Q?u001=2ESLCVg2bBLUrEw59jM1dQwyBY6=2FL88TEXIwqAwbo7Xkg8SEedPIvhqXXk3?=
+ =?us-ascii?Q?C04IJ7i86v1VGRSF=2FdlApN9qqDOYUEljwHVN5uo?=
+ =?us-ascii?Q?jWxu6Mz3m2whyb0LOgXqMgUcu10zIpU4ly7rXF4?=
+ =?us-ascii?Q?wGzrmrOHkVne3MJsdDhCRvbBZpw7=2FryhA+US97o?=
+ =?us-ascii?Q?Hx=2FpO+hwUfUApVhj+KCOfYcgUhVpMjaL3J8PWgU?=
+ =?us-ascii?Q?pzDJlMnet8o43jDkjHVqvo=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDsPyUTnMagHRCjb?=
+ =?us-ascii?Q?=2F65GubloHP38iwwXTqKdZYf+OoNLiISDoktZqNq?=
+ =?us-ascii?Q?cmoRb2CVqvuEn5W0j5TygloX9BH=2FIvGLS9+r=2FTO?=
+ =?us-ascii?Q?9BVUi15IttLkZXT0QCcEGQ8Aw2REqOTrnTxkFlR?=
+ =?us-ascii?Q?rfMhhEgIuG+svuO=2F0w0EPL4gG02beng3X3Azc2N?=
+ =?us-ascii?Q?Q=3D=3D?=
+To: davroctau@gmail.com
+X-Entity-ID: u001.tmU8DiE4YVoVmvJbizC4hg==
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fu38913774=2Ect=2Esendgrid=2Enet=2Flu=2Funsubscribe=3Foc=3Du001=2EvbEy?=
+ =?us-ascii?Q?fHDwFzcNdSU9MztRZJppfCOUAXCvTPmlxE1ne7o?=
+ =?us-ascii?Q?bKVxjc8xDFq3Elrz1AortmYGCKoaDxkQkBNP4K7?=
+ =?us-ascii?Q?9aUIKSjLmSrHk=5FDWbGMTqsBjP1vOw=5FT10OMu5CT?=
+ =?us-ascii?Q?tCLjezaLLBhT5ikmI8m2H5OjalW95=5F5Z2b=5FMR6g?=
+ =?us-ascii?Q?vKm60-m8yxTB9o84RY=5Ft3VGsktP-fgiNyu-KcIt?=
+ =?us-ascii?Q?S=5FHBw-ARwotgq=5FU8ddWoTLzibZqN4AaplPdVr-=5F?=
+ =?us-ascii?Q?j1m4yTrqY4r5LF-5IXmv-nGYGZ7pCtHfUrJ5lnR?=
+ =?us-ascii?Q?zMIJ9wJmNqLisulWKWjeEhd9EpgYNMvTjlKj4zF?=
+ =?us-ascii?Q?uoHNjP9Tvj1KPNANIDJ8yGVf1=5F-LkpcWBGbMQ2k?=
+ =?us-ascii?Q?7YH0QuLcW8ZjuWlzYZOnnGsXYqH=5FN2G1-JrtV6J?=
+ =?us-ascii?Q?FzyJSxhRvz8lckS0Btd-PgfQGiFYr4OAf9oqn4p?=
+ =?us-ascii?Q?cKTvjR=5Fmt-DuHd88xBGT1fZGl8MIYSzOXVx=5FGJF?=
+ =?us-ascii?Q?cgcnLbMAXXAnjU3CakcM1I0Hy5nEl3gAwPCuqRK?=
+ =?us-ascii?Q?-rFd1IQKtAJfuBpzXM2ov3ZI8zR3oLIkGkjxeI5?=
+ =?us-ascii?Q?n=5Fi4RW5QFUqOplieZ=5FZm4fQY39VXuek5SZ6480n?=
+ =?us-ascii?Q?lPP2TlwmMEzZZCnS86WE64kHUbsIx6eXm4lHyos?=
+ =?us-ascii?Q?GExqaZsnTFQ=5FfqMocwr4M0WUOfNEio=5FIO-KpTDw?=
+ =?us-ascii?Q?Gedy5O5Ad7x8NB5Sl3ZdBvH3cVfhcmlqbtwuYcv?=
+ =?us-ascii?Q?P6arP6ZcLdcOP6ERCAi1R4VlOkiBpSw62V=5FPuYD?=
+ =?us-ascii?Q?rUQdo-A8lfHaSRS8P=5FIdakrYdRjitfPQzM93WYH?=
+ =?us-ascii?Q?AyKfqF1Y1LJhGpVU2OdAJQZr6o90u=5FiPT6flkIf?=
+ =?us-ascii?Q?gIgsWeq4dZtvOiNKZ5qM3iQi8gpUahbQ1rp0ERm?=
+ =?us-ascii?Q?2qIcTkPaR-JJb5A7TNZKk2PxBMf9JbTT=5FQ1gMKK?=
+ =?us-ascii?Q?vV3Hdcj3CNiVvRAnw=3E=2C=3Cmailto=3Aunsubscribe=40?=
+ =?us-ascii?Q?em447=2Eideogram=2Eai=3Fsubject=3D38913774=2EedjZ?=
+ =?us-ascii?Q?bbUNNXcuS3DIWTw17sh2BI0hfIg6Z7Bw3JnMY3x?=
+ =?us-ascii?Q?oMDAwdTAwMNKb350FO8wgcRRVYvQWwwkUep9YUU?=
+ =?us-ascii?Q?bbuZ234AIO0ZEjPq-UekAw8TWawDHn4ar4neQ0g?=
+ =?us-ascii?Q?4-GRZHa0sqjPhPcKfhKqztDM7y8jBNzpHu2mh2m?=
+ =?us-ascii?Q?JOYNugSRVMnNz0a1=5FDmIDQ=3D=3D=2EcyffPOr7hbMYtP?=
+ =?us-ascii?Q?DOQhlYlYqQi9s9J7yWltXUv6zYIHBoMDAwdTAwM?=
+ =?us-ascii?Q?Lk4X12ntmpnLCMwDIgMztE4rc25Riq4jruRqxyz?=
+ =?us-ascii?Q?YDZzDi5MUGpxJF-shWg-otV0Fk3g-ol6xYn8Xq-?=
+ =?us-ascii?Q?XhoDY2mEnHuHRDjhxO-UGSSLnidDBkJtAVOwhQT?=
+ =?us-ascii?Q?TfaKx6kZaNPHMAgXYOYFCEuqqfmqSrHAO1AITmm?=
+ =?us-ascii?Q?lHFeGXKtTbwBnAKyT4h3AcpFmIVfh20=5FT1iuBJK?=
+ =?us-ascii?Q?qMkWDuMEI7xi5fF7WKVQtGp7JW7bSIFA1MF3PtS?=
+ =?us-ascii?Q?KO59-5B6pSsVgW2KUA4TcC1aDH5IpNcr0cqjzGI?=
+ =?us-ascii?Q?-aX99bCYF7c-ObcA=5F=5F36ZtyhhUwifFlLSzs4JvU?=
+ =?us-ascii?Q?XBqVdGJjE44MbpE4QNncIiw2sJYmjQ=3D=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+--3d331c065069c04a04fd4a16b400fface1dd847dd882cfb76c2d15c05e83
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+We're on a mission to help everyone become more creative. Experience the ma=
+gic of turning simple text into beautiful designs in seconds.
+
+*Welcome to Ideogram* ** *=F0=9F=91=8B*
+It=E2=80=99s pronounced "eye-dee-oh-gram". We're on a mission to help every=
+one become more creative.
+
+Ideogram is a free-to-use AI tool that turns simple text into realistic ima=
+ges and beautiful designs in seconds. Start creating at ideogram.ai ( https=
+://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZC0lKK=
+YXRAco2Z8orn35W7JfYG3JY2wID8fRzxjdD-2FnyFdle_gOc5jo4s1LT58K-2BHsnirwbjoRdl4=
+SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2=
+Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1e=
+NKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthV=
+hMfLiuzhivJ2fpVkBMwMAdSCDTuIGhJ4pVhkcGLP0p05EVCP8paCQczmWqL0d-2F9i6MtZ-2BBC=
+AUphtWBZg-2FylYxIH-2FzQ1-2BnOuwBvEDFZ6wWZkcGc-2F-2Bqja2McoIevclCxVd3LbBgrcC=
+yVazS1R2rF-2Bi9sd89A9hSv2sbTjS-2FqIONwWwHqv1ysCqx89rEg-3D ) or on our iOS a=
+pp ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz=
+6YSXZBoKcGIq9mI0rYbye6W49jmtgMGk-2B5iOF5vzq3UtgMrBpcnK98Kecdid-2FUp9gC3joHC=
+DgqnClNlcJgGHcWRibAo-3DNaP4_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OC=
+w2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPq=
+Mz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJq=
+eH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVKF=
+exXD7NhS4B8BPEuTZWXpb2syAHugQlFlLhn-2BCmshNohmc2eNqSLgseX7YnviBL6wVpZ7iLeNm=
+xHVErszVpULybJHApqtU-2Fu1qExZZn4DVwGTkQfVI6cXMiUP7K1qMj4fGhm9s18FBnJco5DBro=
+PhVm2zh-2FL5gE0czjtQXkbvk-3D ).
+
+With your free account, you get 10 free credits each week =E2=80=94=C2=A0th=
+at is 80 images per week with Ideogram 2a Turbo. You can subscribe to our p=
+aid plans ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkp=
+XMqBzWz6YSXZCyMuU8Qw3y64EOnkGfdr1S1aHe8ugSC20eU-2BNw5zAvcceGr_gOc5jo4s1LT58=
+K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUC=
+vUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFX=
+Rs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK=
+1Y3MStxV3haNduthVhMfLiuzhivJ2fpVXNtsTSp5tNCN8JCrbgCwLS2fTv9cnEn-2B3jyo6a0ex=
+Cwax1okR-2BGwrc7tbMmMhBB-2BekQpSumHQ0pzFF-2Brcq42Q2FN4b6Jk63x5D9ZGFk610F-2B=
+j16FJ2F3U9u-2Bc2lrDB5V2TTn2TTj6nLwy8dC-2F2W3kNnUyZJbR5ZY-2FXdJpnZJH-2FY-3D =
+) to generate more images faster and access premium features like private g=
+eneration and image upload. Regardless of which plan you're on, here are so=
+me key benefits you will enjoy:
+
+*Distinct styles to choose from*
+Choose between different fine-tuned styles to create more precise results. =
+Not sure? Leave it on Auto and let us handle it.
+
+*Creative graphic design*
+Effortlessly create greeting cards, logos, t-shirt designs, and social medi=
+a posts =E2=80=94 even ones with text in them.
+
+*Industry-leading photorealism*
+Create photograph-like results with enhanced textures and refined details.
+
+*Inspiration from our community*
+Don=E2=80=99t start from a blank slate. Explore our community gallery for i=
+nspiration, remix public images, or reuse their prompts in your own creatio=
+ns.
+
+*Resources to help you get started:*
+
+* Discord ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkp=
+XMqBzWz6YSXZOJV7FJjQEimgCiVmPpfNusw4ECalfMt5-2B5qCEotQZq5f4Ad_gOc5jo4s1LT58=
+K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUC=
+vUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFX=
+Rs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK=
+1Y3MStxV3haNduthVhMfLiuzhivJ2fpVCdSwgPqSonvMI1YsgCSn-2Bc0pjdu2mb9l2-2FjO-2F=
+aEKSEDqCq6HegZtnichV-2F7Te4kDI4FiqN7mZ4MzbMfwdRdFUXtpNK-2FeAhQ9a7JOBA-2BT90=
+RszYA1zp-2FitMWoWDgN6N6UBgHX0iDE8FWdZYfqbg1oB8uuku1K81puA8SIQatZ-2FjY-3D ) =
+& Reddit ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpX=
+MqBzWz6YSXZM0F4HpbbGiAUrwhYyPfuxKh02l98WQPk2krRu8ZoIA0d9PQ_gOc5jo4s1LT58K-2=
+BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUW=
+VqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs1=
+1SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3=
+MStxV3haNduthVhMfLiuzhivJ2fpVvNAq-2FlukK9M6qQkAl-2For-2FHA5WnyRrdqVxbtd6CPs=
+jBK4eCJWtPiE7QHch-2BqCMMc-2BoUJ-2FGHdtdG90rmxQXwcSoAhJw9N0IR2rXsgyP3mYuOgmk=
+-2BNMvKNYv1FeGlmWxjXVcSA3iBfaOUNKzIIj4GQefCnkf9CTC7zvnCmlHK8uC-2F0-3D ) : M=
+eet friendly creators and share your images.
+* Documentation ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1E=
+yuAvkpXMqBzWz6YSXZDS-2FB7NhTOkf7-2B1jSeF0BVh7GA-2B0kNrJxSbUnXsQHBRf8x34_gOc=
+5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgj=
+c2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-=
+2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKcls=
+TBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpV2a0hCZlAMXmItUPhZ8VD89C6ju1xB6E16=
+zl4ptQpPcOdubGFwlQ4d4tC7oC3-2FWfvYowRLBRYbAGIma-2B7nf5JHMQElsOHvNSx8S4z-2FX=
+yw-2FjBep5nryW9-2FXu-2B81MaNU-2F3Z8faPjMt1llCziyJZgTsFD7ukCnj7ELikb9p9NLavA=
+kE-3D ) : FAQs and tutorials on all our features.
+* YouTube channel ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F=
+1EyuAvkpXMqBzWz6YSXZGtk4-2FDNu-2BgqAUoXfPlI5H2NVPGuR-2BzGPQ4tHn0K3wVMWDVf_g=
+Oc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FM=
+gjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH=
+0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKc=
+lsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVrIbzZr2lI7tzbgYc1ZI-2BVBnrqsvC9=
+Tu9GtE542BCROZx2Dd6ieM0PDuk3EysQoyLsL7dFu8cou5fq7NmMyaM-2F9KNyx6brjJi7uA2VB=
+hWFF94lQ3d8k-2FkfptO23NNkOHZ6wNyy6030SzEnCU8DlX7s-2BPA2iClU-2FWsFmOYX8aVz-2=
+FY-3D ) : Learn better with videos? We=E2=80=99ve got those too.
+
+Start creating ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1Ey=
+uAvkpXMqBzWz6YSXZC0lKKYXRAco2Z8orn35W7JfYG3JY2wID8fRzxjdD-2Fny6zHl_gOc5jo4s=
+1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dza=
+VZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2Fcnn=
+Z5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwt=
+lmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVERzHRhdHa3ZkSFTSYRZebCaGKbqfyH4T1GWISf=
+UOPS7TX6wlsHi9OLb1Jsp7ktwKG2Tr0nCrgIUn1EeKnjczrnCdaSL-2Fd4Lo2z0cb-2Bv6v3Gvo=
+Zu0i3AGPR-2BxOKY98JJ4sm7ogyAj-2FaHhz1qdR2cE0Mm3tqenIZ5GrLj8JDqn83U-3D )
+
+We can't wait to see what you create!
+=E2=80=94 The Ideogram Team
+
+Twitter ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXM=
+qBzWz6YSXZCHdF9cxHSEVdsPA8zCK1KhmIlhpjeKLDxXPNPbEz-2FyI_hZ3_gOc5jo4s1LT58K-=
+2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvU=
+WVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs=
+11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y=
+3MStxV3haNduthVhMfLiuzhivJ2fpVK-2FIpZWob-2BIk30gDbSCNc8nr40Yzy31e5rwGs5KLpv=
+mQffQa9lDQLqIYu-2BeYZ6V1gu6fGey6FflqCk0UXr62zgyBpeIZdAYTBZUGvC2wYNXzj76zXSn=
+fSRfAp9lNeEahIzjXVebxJ7RKDRfpyzQAEFE3uLaEfTYND6rlp6E-2FULE4-3D ) Youtube ( =
+https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZ=
+Gtk4-2FDNu-2BgqAUoXfPlI5H2NVPGuR-2BzGPQ4tHn0K3wVMZBeR_gOc5jo4s1LT58K-2BHsni=
+rwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwc=
+QzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M=
+-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV=
+3haNduthVhMfLiuzhivJ2fpV8wqLv2xk-2B8wI-2BBPKD9HATEEyI5IDZbTHN2FB6ROs1sduqZ3=
+cRVactjOtT0u33wLKZsrGSujgkM4KUp4Jv3syqijQ3R0CaDR0xygPSNkHFLNILONCM5Y3a8Ikce=
+KNcIx2iMIlpuA1Zqg8GmOZYF0C0VbcBncV8MvSTdEyl6Bzcio-3D ) LinkedIn ( https://u=
+38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZHtmyydRyQ=
+uHbuE-2FTh1cyld0657fOqR34cquGhIQmZnR3wWpovbUU73X7nTnJcRnAA-3D-3Db2ZM_gOc5jo=
+4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2d=
+zaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2Fc=
+nnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBA=
+wtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVGiBk4B99v5bry6kxB08xx9FcM-2FAWWQKuOQ=
+2sLBhl8uih1C8pbzxdShJmz9igimETg2qNhDIdat90cPJ4LTgTxi-2FPUwEoYc4P5gs1odNiIMX=
+7KRZ65zuRIqYnVWyji-2FIhdJ6KEvuDytZ4If9bmYcDWtDgFGMZoK52uO8CGDzhFPw-3D ) Red=
+dit ( https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzW=
+z6YSXZM0F4HpbbGiAUrwhYyPfuxJsOXjiDh2Q38yM3kyK9nxR4ZrI_gOc5jo4s1LT58K-2BHsni=
+rwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwc=
+QzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M=
+-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV=
+3haNduthVhMfLiuzhivJ2fpVl4hP97P9X8Y1n9gmpYqFJvytQroX-2BlBuLVcAxcRYC6lXr6RIT=
+6V872QLHG3-2BbYb5zbuPAuvOT6v3H9d6zdVt7mUnDx5n5P2CI6Ml-2B34RTciayf4PguBWUH2Z=
+c9zR0fBxZGoGswpmXRIOLgTGa3ulQIPLcXX6G465-2FXlCbUB6DiY-3D ) Discord ( https:=
+//u38913774.ct.sendgrid.net/ls/click?upn=3Du001.f2SoTU9JNGovxfh8j9A2JPl6PoY=
+gvR-2B17v1Y8qlZeHRnjGTA0aBiYFlmz72eJ-2FFOsN-Z_gOc5jo4s1LT58K-2BHsnirwbjoRdl=
+4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-=
+2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1=
+eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduth=
+VhMfLiuzhivJ2fpVZ7ul0nr3QN-2F0K-2B8HbOfJhyGEoT5tp3zSzUEz7ujIcoJp28P6o3kUOtV=
+ob5QdXM3RhlaG8n526N9ChHNdJ73e1D2oTmo9a-2Bgul5pBbDLYQM3uZ05d2VjG5-2FUCwBpEQz=
+GlbsQY8PqnK8hWrQ0xYT8LPA1XTUSIddnfvms-2FQrWknhI-3D )
+=C2=A9 Ideogram AI Inc. 2025
+
+Unsubscribe ( https://u38913774.ct.sendgrid.net/asm/unsubscribe/?user_id=3D=
+38913774&data=3DLVRg1mIwQB_LmUZUpCUPsQukfzX3JTmgyLV9oLX-F9FoMDAwdTAwMB7ij_6=
+y2P__QrI-N0fq_qfeghe7qVNaIWJobXk1UxbAhERMKs8BzUoom-Pz0PSqGtUq9Mmxd35rEAXvdK=
+aGg_Q4YYkgrhj0W3vZXeNhPlARoUwC4fnj2qnvm3c_eoMi8Jj8Bhm68ESb50JZrfnQnMdQiwqD2=
+5EDbpI42rVuuAc62Tvd5SAevekadbR-Stc36kJESwvLkqTpdJM3D_7-sIRki83eYnqWlOUeMkCO=
+4q5GSsQe6TqfSxB919aXuzvxyux7oIA0mUMd-dHlSiW5Z2ReovXLTRX2hpu_Fl6cpqjqSQY2Lcj=
+lMyPcYh5gW-qgRo5t7VHUqEPXB54fQvrljDQgfUK45trRDMhsgNOGHR1OGosbYUMnGycMTQUh7w=
+4GkV9687Ewr0ZVr_lLxsmh2OzDkEBwgExJxoGQKK2UUpS7niKftfg5-4OS2T_O_1EyyldGVyJw8=
+DG2_IwCJLz2Qgp9xI0JQi8zIwza1X3AA-nkhHke3DRP40q0cj_aM982IpW1GpWbNVM75jqIgEPV=
+_ffC7NA1iH1jhw2EN3QnJhgT )
+--3d331c065069c04a04fd4a16b400fface1dd847dd882cfb76c2d15c05e83
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-editor-version=3D"2" class=3D"sg-campaigns" xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+    <head>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1, minimum-scale=3D1, maximum-scale=3D1">
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+      <!--<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+  <style type=3D"text/css">
+    body {width: 600px;margin: 0 auto;}
+    table {border-collapse: collapse;}
+    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+    img {-ms-interpolation-mode: bicubic;}
+  </style>
+<![endif]-->
+      <style type=3D"text/css">
+    body, p, div {
+      font-family: arial,helvetica,sans-serif;
+      font-size: 16px;
+    }
+    body {
+      color: #516775;
+    }
+    body a {
+      color: #993300;
+      text-decoration: none;
+    }
+    p { margin: 0; padding: 0; }
+    table.wrapper {
+      width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img.max-width {
+      max-width: 100% !important;
+    }
+    .column.of-2 {
+      width: 50%;
+    }
+    .column.of-3 {
+      width: 33.333%;
+    }
+    .column.of-4 {
+      width: 25%;
+    }
+    ul ul ul ul  {
+      list-style-type: disc !important;
+    }
+    ol ol {
+      list-style-type: lower-roman !important;
+    }
+    ol ol ol {
+      list-style-type: lower-latin !important;
+    }
+    ol ol ol ol {
+      list-style-type: decimal !important;
+    }
+    @media screen and (max-width:480px) {
+      .preheader .rightColumnContent,
+      .footer .rightColumnContent {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent div,
+      .preheader .rightColumnContent span,
+      .footer .rightColumnContent div,
+      .footer .rightColumnContent span {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent,
+      .preheader .leftColumnContent {
+        font-size: 80% !important;
+        padding: 5px 0;
+      }
+      table.wrapper-mobile {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+      img.max-width {
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      a.bulletproof-button {
+        display: block !important;
+        width: auto !important;
+        font-size: 80%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .columns {
+        width: 100% !important;
+      }
+      .column {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .social-icon-column {
+        display: inline-block !important;
+      }
+    }
+  </style>
+      <!--user entered Head Start--><link href=3D"https://fonts.google.com/=
+specimen/Poppins" rel=3D"stylesheet"><style>
+  body {
+    font-family: 'Poppins';
+  }
+</style><!--End Head user entered-->
+    </head>
+    <body>
+      <center class=3D"wrapper" data-link-color=3D"#993300" data-body-style=
+=3D"font-size:16px; font-family:arial,helvetica,sans-serif; color:#516775; =
+background-color:#FFFFFF;">
+        <div class=3D"webkit">
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" class=3D"wrapper" bgcolor=3D"#FFFFFF">
+            <tr>
+              <td valign=3D"top" bgcolor=3D"#FFFFFF" width=3D"100%">
+                <table width=3D"100%" role=3D"content-container" class=3D"o=
+uter" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                  <tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                        <tr>
+                          <td>
+                            <!--[if mso]>
+    <center>
+    <table><tr><td width=3D"600">
+  <![endif]-->
+                                    <table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%; max-width:600px;" alig=
+n=3D"center">
+                                      <tr>
+                                        <td role=3D"modules-container" styl=
+e=3D"padding:0px 0px 0px 0px; color:#516775; text-align:left;" bgcolor=3D"#=
+FFFFFF" width=3D"100%" align=3D"left"><table class=3D"module preheader preh=
+eader-hide" role=3D"module" data-type=3D"preheader" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"display: none !important;=
+ mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height:=
+ 0; width: 0;">
+    <tr>
+      <td role=3D"module-content">
+        <p>We're on a mission to help everyone become more creative. Experi=
+ence the magic of turning simple text into beautiful designs in seconds.</p=
+>
+      </td>
+    </tr>
+  </table><table class=3D"wrapper" role=3D"module" data-type=3D"image" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed;" data-muid=3D"qa8oMphYHuL7xyQrTVscgD.1.1.1.1">
+    <tbody>
+      <tr>
+        <td style=3D"font-size:6px; line-height:10px; padding:10px 0px 0px =
+0px;" valign=3D"top" align=3D"left">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block; col=
+or:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif;=
+ font-size:16px; max-width:28% !important; width:28%; height:auto !importan=
+t;" width=3D"168" alt=3D"Ideogram Logo" data-proportionally-constrained=3D"=
+false" data-responsive=3D"true" src=3D"http://cdn.mcauto-images-production.=
+sendgrid.net/0c7f53e87f880f35/ff21cc8e-509d-4a61-a54c-e4d23d12c2fe/514x160.=
+png">
+        </td>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"bA2FfEE6abadx6yKoMr3F9" data-mc-module-version=
+=3D"2019-10-22">
+      <tbody><tr>
+        <td style=3D"background-color:#ffffff; padding:10px 0px 0px 0px; li=
+ne-height:24px; text-align:inherit;" height=3D"100%" valign=3D"top" bgcolor=
+=3D"#ffffff"><div><div style=3D"font-family: inherit; text-align: left"><sp=
+an style=3D"font-family: helvetica, sans-serif; font-size: 20px; color: #27=
+272a"><strong>Welcome to Ideogram</strong></span><span style=3D"font-family=
+: helvetica, sans-serif; color: #27272a; font-size: 20px"><strong> </strong=
+></span><span style=3D"color: #000000; font-family: helvetica, sans-serif; =
+font-size: 20px"><strong>=F0=9F=91=8B&nbsp;</strong></span></div>
+<div style=3D"font-family: inherit; text-align: left"><span style=3D"font-s=
+ize: 16px; color: #27272a; font-family: helvetica, sans-serif">It=E2=80=99s=
+ pronounced "eye-dee-oh-gram". We're on a mission to help everyone become m=
+ore creative.</span></div><div></div></div></td>
+      </tr>
+    </tbody></table><table class=3D"wrapper" role=3D"module" data-type=3D"i=
+mage" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"table-layout: fixed;" data-muid=3D"c674b8c5-f3ee-494c-b8f5-51b0e9caa8d8=
+">
+    <tbody>
+      <tr>
+        <td style=3D"font-size:6px; line-height:10px; padding:24px 0px 24px=
+ 0px;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block; col=
+or:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif;=
+ font-size:16px; max-width:100% !important; width:100%; height:auto !import=
+ant;" width=3D"600" alt=3D"" data-proportionally-constrained=3D"true" data-=
+responsive=3D"true" src=3D"http://cdn.mcauto-images-production.sendgrid.net=
+/0c7f53e87f880f35/68fb2b90-2534-49f7-85a0-b751978d9a2c/1312x736.png">
+        </td>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"bA2FfEE6abadx6yKoMr3F9.2" data-mc-module-version=
+=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:0px 0px 0px 0px; line-height:24px; text-align:=
+inherit; background-color:#ffffff;" height=3D"100%" valign=3D"top" bgcolor=
+=3D"#ffffff" role=3D"module-content"><div><div style=3D"font-family: inheri=
+t; text-align: inherit"><span style=3D"line-height: 1.38; background-color:=
+ transparent; margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; font-fa=
+mily: Arial, sans-serif; color: #27272a; font-weight: 400; font-style: norm=
+al; font-variant-ligatures: normal; font-variant-caps: normal; font-variant=
+-numeric: normal; font-variant-east-asian: normal; font-variant-alternates:=
+ normal; font-variant-position: normal; text-decoration-line: none; text-de=
+coration-thickness: initial; text-decoration-style: initial; text-decoratio=
+n-color: initial; vertical-align: baseline; white-space-collapse: preserve;=
+ text-wrap-mode: wrap; text-wrap-style: initial">Ideogram is a free-to-use =
+AI tool that turns simple text into realistic images and beautiful designs =
+in seconds. Start creating at </span><a href=3D"https://u38913774.ct.sendgr=
+id.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZC0lKKYXRAco2Z8orn35W7JfYG3J=
+Y2wID8fRzxjdD-2FnyFR8S_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw=
+1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3Oy=
+MtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nf=
+cuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpV7nzlD1B=
+uHe0-2FkCBqz9Q2b-2F-2BAeNZeqSbEt33pI1BnoPFYXn-2FRxU9gCpX7Qky4-2FZnDGyC3j-2F=
+1gkX5Z-2F-2BOwY58CXPaolk4R-2B4sO0rsydgw-2BLEmrb1PV2co54Qqb2c-2FYab0DJZYjMXX=
+3ro4fs4AFMCcDmJ-2BJKvlPOYvJnNkoTt1VbfQ-3D"><span style=3D"line-height: 1.38=
+; background-color: transparent; margin-top: 0pt; margin-bottom: 0pt; font-=
+size: 12pt; font-family: Arial, sans-serif; font-weight: 400; font-style: n=
+ormal; font-variant-ligatures: normal; font-variant-caps: normal; font-vari=
+ant-numeric: normal; font-variant-east-asian: normal; font-variant-alternat=
+es: normal; font-variant-position: normal; text-decoration-line: none; text=
+-decoration-thickness: initial; text-decoration-style: initial; text-decora=
+tion-color: initial; vertical-align: baseline; white-space-collapse: preser=
+ve; text-wrap-mode: wrap; text-wrap-style: initial; color: #1155cc"><u>ideo=
+gram.ai</u></span></a><span style=3D"line-height: 1.38; background-color: t=
+ransparent; margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; font-fami=
+ly: Arial, sans-serif; color: #27272a; font-weight: 400; font-style: normal=
+; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-n=
+umeric: normal; font-variant-east-asian: normal; font-variant-alternates: n=
+ormal; font-variant-position: normal; text-decoration-line: none; text-deco=
+ration-thickness: initial; text-decoration-style: initial; text-decoration-=
+color: initial; vertical-align: baseline; white-space-collapse: preserve; t=
+ext-wrap-mode: wrap; text-wrap-style: initial"> or on </span><a href=3D"htt=
+ps://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZBoK=
+cGIq9mI0rYbye6W49jmtgMGk-2B5iOF5vzq3UtgMrBpcnK98Kecdid-2FUp9gC3joHCDgqnClNl=
+cJgGHcWRibAo-3DUkCk_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rG=
+UkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtp=
+ExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuP=
+kCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVTthXVJf6qU=
+f-2BbIAv4TWLtEQpQMZ3wey3DpZYL7cQt-2Bvd7dadwna0HuPT0qQIT7AuQSNnMfkICp4DzWSbf=
+8mkU-2FQ3z4jG7AbfCoFJTQtoTg7CayU0loyWwmoPSuzBEsBUXiC1RZGT-2BvjV7fFjy-2Bj8BS=
+qniV7e0OUPJK7l2VFkwAY-3D"><span style=3D"line-height: 1.38; background-colo=
+r: transparent; margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; font-=
+family: Arial, sans-serif; color: #27272a; font-weight: 400; font-style: no=
+rmal; font-variant-ligatures: normal; font-variant-caps: normal; font-varia=
+nt-numeric: normal; font-variant-east-asian: normal; font-variant-alternate=
+s: normal; font-variant-position: normal; text-decoration-line: none; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial; vertical-align: baseline; white-space-collapse: preserv=
+e; text-wrap-mode: wrap; text-wrap-style: initial">our </span><span style=
+=3D"line-height: 1.38; background-color: transparent; margin-top: 0pt; marg=
+in-bottom: 0pt; font-size: 12pt; font-family: Arial, sans-serif; font-weigh=
+t: 400; font-style: normal; font-variant-ligatures: normal; font-variant-ca=
+ps: normal; font-variant-numeric: normal; font-variant-east-asian: normal; =
+font-variant-alternates: normal; font-variant-position: normal; text-decora=
+tion-line: none; text-decoration-thickness: initial; text-decoration-style:=
+ initial; text-decoration-color: initial; vertical-align: baseline; white-s=
+pace-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: initial; co=
+lor: #1155cc"><u>iOS app</u></span></a><span style=3D"line-height: 1.38; ba=
+ckground-color: transparent; margin-top: 0pt; margin-bottom: 0pt; font-size=
+: 12pt; font-family: Arial, sans-serif; color: #27272a; font-weight: 400; f=
+ont-style: normal; font-variant-ligatures: normal; font-variant-caps: norma=
+l; font-variant-numeric: normal; font-variant-east-asian: normal; font-vari=
+ant-alternates: normal; font-variant-position: normal; text-decoration-line=
+: none; text-decoration-thickness: initial; text-decoration-style: initial;=
+ text-decoration-color: initial; vertical-align: baseline; white-space-coll=
+apse: preserve; text-wrap-mode: wrap; text-wrap-style: initial">.</span></d=
+iv>
+<div style=3D"font-family: inherit; text-align: inherit"><br></div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 400; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial">With your free account, you get 10 free credits each week =E2=80=94&=
+nbsp;that is 80 images per week with Ideogram 2a Turbo. You can subscribe t=
+o our </span><a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=3Du0=
+01.F1EyuAvkpXMqBzWz6YSXZCyMuU8Qw3y64EOnkGfdr1S1aHe8ugSC20eU-2BNw5zAvcelZ__g=
+Oc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FM=
+gjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH=
+0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKc=
+lsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVx-2BC58raeWJjpv6tzfHrBbY736-2Bp=
+D7T-2FhfB0LBy7EfW2pFoJLmgg1tER1s0yCyqgwURiyxC-2FTB3faO3-2BwkSBSF7V-2B8N3QQO=
+SHryKrwlj9BIYVcmaKxoc8vNqDlplYmiWvPIUna85S5wlUYnAMTdXWKQhj1Z7fgJJs3hXnH1E6l=
+8A-3D" title=3D"&lt;span style=3D&quot;font-size:12pt;font-family:Arial,san=
+s-serif;color:#1155cc;background-color:transparent;font-weight:400;font-sty=
+le:normal;font-variant:normal;text-decoration:underline;-webkit-text-decora=
+tion-skip:none;text-decoration-skip-ink:none;vertical-align:baseline;white-=
+space:pre;white-space:pre-wrap;&quot;&gt;paid plan&lt;/span&gt;"><span styl=
+e=3D"line-height: 1.38; background-color: transparent; margin-top: 0pt; mar=
+gin-bottom: 0pt; text-decoration-line: underline; text-decoration-thickness=
+: initial; text-decoration-style: initial; text-decoration-color: initial; =
+font-size: 12pt; font-family: Arial, sans-serif; color: #1155cc; font-weigh=
+t: 400; font-style: normal; font-variant-ligatures: normal; font-variant-ca=
+ps: normal; font-variant-numeric: normal; font-variant-east-asian: normal; =
+font-variant-alternates: normal; font-variant-position: normal; text-decora=
+tion-skip-ink: none; vertical-align: baseline; white-space-collapse: preser=
+ve; text-wrap-mode: wrap; text-wrap-style: initial">paid plans</span></a><s=
+pan style=3D"line-height: 1.38; background-color: transparent; margin-top: =
+0pt; margin-bottom: 0pt; font-size: 12pt; font-family: Arial, sans-serif; c=
+olor: #27272a; font-weight: 400; font-style: normal; font-variant-ligatures=
+: normal; font-variant-caps: normal; font-variant-numeric: normal; font-var=
+iant-east-asian: normal; font-variant-alternates: normal; font-variant-posi=
+tion: normal; text-decoration-line: none; text-decoration-thickness: initia=
+l; text-decoration-style: initial; text-decoration-color: initial; vertical=
+-align: baseline; white-space-collapse: preserve; text-wrap-mode: wrap; tex=
+t-wrap-style: initial"> to generate more images faster and access premium f=
+eatures like private generation and image upload. Regardless of which plan =
+you're on, here are some key benefits you will enjoy:</span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><br>
+</div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 700; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial"><strong>Distinct styles to choose from</strong></span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 400; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial">Choose between different fine-tuned styles to create more precise re=
+sults. Not sure? Leave it on Auto and let us handle it.</span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><br>
+</div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 700; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial"><strong>Creative graphic design</strong></span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 400; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial">Effortlessly create greeting cards, logos, t-shirt designs, and soci=
+al media posts =E2=80=94 even ones with text in them.</span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><br>
+</div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 700; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial"><strong>Industry-leading photorealism</strong></span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 400; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial">Create photograph-like results with enhanced textures and refined de=
+tails.</span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><br>
+</div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"lin=
+e-height: 1.38; background-color: transparent; margin-top: 0pt; margin-bott=
+om: 0pt; font-size: 12pt; font-family: Arial, sans-serif; color: #27272a; f=
+ont-weight: 700; font-style: normal; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; font-variant-numeric: normal; font-variant-east-asian:=
+ normal; font-variant-alternates: normal; font-variant-position: normal; te=
+xt-decoration-line: none; text-decoration-thickness: initial; text-decorati=
+on-style: initial; text-decoration-color: initial; vertical-align: baseline=
+; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: in=
+itial"><strong>Inspiration from our community</strong></span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"fon=
+t-size: 12pt; font-family: Arial, sans-serif; color: #27272a; background-co=
+lor: transparent; font-weight: 400; font-style: normal; font-variant-ligatu=
+res: normal; font-variant-caps: normal; font-variant-numeric: normal; font-=
+variant-east-asian: normal; font-variant-alternates: normal; font-variant-p=
+osition: normal; text-decoration-line: none; text-decoration-thickness: ini=
+tial; text-decoration-style: initial; text-decoration-color: initial; verti=
+cal-align: baseline; white-space-collapse: preserve; text-wrap-mode: wrap; =
+text-wrap-style: initial">Don=E2=80=99t start from a blank slate. Explore</=
+span> <span style=3D"font-size: 12pt; font-family: Arial, sans-serif; color=
+: #27272a; background-color: transparent; font-weight: 400; font-style: nor=
+mal; font-variant-ligatures: normal; font-variant-caps: normal; font-varian=
+t-numeric: normal; font-variant-east-asian: normal; font-variant-alternates=
+: normal; font-variant-position: normal; text-decoration-line: none; text-d=
+ecoration-thickness: initial; text-decoration-style: initial; text-decorati=
+on-color: initial; vertical-align: baseline; white-space-collapse: preserve=
+; text-wrap-mode: wrap; text-wrap-style: initial">our community gallery for=
+ inspiration, remix public images, or reuse their prompts in your own creat=
+ions.&nbsp;</span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><br></div><div></d=
+iv></div></td>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"bA2FfEE6abadx6yKoMr3F9.2.2.1.2" data-mc-module-v=
+ersion=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:0px 0px 0px 0px; line-height:30px; text-align:=
+inherit; background-color:#ffffff;" height=3D"100%" valign=3D"top" bgcolor=
+=3D"#ffffff" role=3D"module-content"><div><div style=3D"font-family: inheri=
+t; text-align: left"><span style=3D"box-sizing: border-box; padding-top: 0p=
+x; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: =
+0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-style: i=
+nherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-v=
+ariant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alt=
+ernates: inherit; font-variant-position: inherit; font-weight: inherit; fon=
+t-stretch: inherit; line-height: inherit; font-optical-sizing: inherit; fon=
+t-kerning: inherit; font-feature-settings: inherit; font-variation-settings=
+: inherit; vertical-align: baseline; border-top-width: 0px; border-right-wi=
+dth: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-styl=
+e: initial; border-right-style: initial; border-bottom-style: initial; bord=
+er-left-style: initial; border-top-color: initial; border-right-color: init=
+ial; border-bottom-color: initial; border-left-color: initial; border-image=
+-source: initial; border-image-slice: initial; border-image-width: initial;=
+ border-image-outset: initial; border-image-repeat: initial; text-align: le=
+ft; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: n=
+one; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-sp=
+ace-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: initial; bac=
+kground-color: rgb(255, 255, 255); text-decoration-thickness: initial; text=
+-decoration-style: initial; text-decoration-color: initial; font-family: he=
+lvetica, sans-serif; color: #27272a; font-size: 16px"><strong>Resources to =
+help you get started:</strong></span></div>
+<ul>
+  <li style=3D"text-align: inherit; font-family: Arial, sans-serif; font-we=
+ight: bold; font-size: 12pt; font-size: 12pt"><a href=3D"https://u38913774.=
+ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZOJV7FJjQEimgCiVmPp=
+fNusw4ECalfMt5-2B5qCEotQZq5cGS2_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHL=
+d9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bX=
+ruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhN=
+oDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2f=
+pV9x-2FVGDsUGUqX-2Ft4CSRjrZ6FCYSvjlinn9UEAdwCcDuSyrJpqWUo0rrIzj-2FFo54WA1AT=
+LdWpKtvsyc5fC66sOqhse7lrgDIQBAgMdYMZtrcuvXDA7gneLcsh-2BjvrfxYag2qBU0JjZ35eT=
+NBXjIqTVEbfxfqe4RYm3InhGPTjkoSs-3D"><span style=3D"text-decoration-line: un=
+derline; text-decoration-thickness: initial; text-decoration-style: initial=
+; text-decoration-color: initial; font-size: 12pt; font-family: Arial, sans=
+-serif; color: #1155cc; background-color: transparent; font-weight: 400; fo=
+nt-style: normal; font-variant-ligatures: normal; font-variant-caps: normal=
+; font-variant-numeric: normal; font-variant-east-asian: normal; font-varia=
+nt-alternates: normal; font-variant-position: normal; text-decoration-skip-=
+ink: none; vertical-align: baseline; white-space-collapse: preserve; text-w=
+rap-mode: wrap; text-wrap-style: initial">Discord</span></a><span style=3D"=
+font-size: 12pt; font-family: Arial, sans-serif; color: #000000; background=
+-color: transparent; font-weight: 400; font-style: normal; font-variant-lig=
+atures: normal; font-variant-caps: normal; font-variant-numeric: normal; fo=
+nt-variant-east-asian: normal; font-variant-alternates: normal; font-varian=
+t-position: normal; text-decoration-line: none; text-decoration-thickness: =
+initial; text-decoration-style: initial; text-decoration-color: initial; ve=
+rtical-align: baseline; white-space-collapse: preserve; text-wrap-mode: wra=
+p; text-wrap-style: initial"> &amp; </span><a href=3D"https://u38913774.ct.=
+sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZM0F4HpbbGiAUrwhYyPfux=
+Kh02l98WQPk2krRu8ZoIA0V4Ea_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw=
+2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqM=
+z3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqe=
+H8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVnqJ=
+KSW9FpceFdFXiNNm52umpYLyRlo-2F6lF8tymN86VRP1Cvg3rJO5x6-2BfPmaUg2GQlGgOtqmvo=
+8qRlP3VDIF-2F5dR9mLMcPKaXjjrJvaUpsCB7k1-2BpeMnpXR9-2B6PEBRQepAp6IcEKNJFfAWE=
+XJldJddiItyaX9-2FeMgFG9fDwYFz0-3D" title=3D"&lt;span style=3D&quot;font-siz=
+e:12pt;font-family:Arial,sans-serif;color:#1155cc;background-color:transpar=
+ent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:u=
+nderline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;ve=
+rtical-align:baseline;white-space:pre;white-space:pre-wrap;&quot;&gt;subred=
+dit&lt;/span&gt;"><span style=3D"text-decoration-line: underline; text-deco=
+ration-thickness: initial; text-decoration-style: initial; text-decoration-=
+color: initial; font-size: 12pt; font-family: Arial, sans-serif; color: #11=
+55cc; background-color: transparent; font-weight: 400; font-style: normal; =
+font-variant-ligatures: normal; font-variant-caps: normal; font-variant-num=
+eric: normal; font-variant-east-asian: normal; font-variant-alternates: nor=
+mal; font-variant-position: normal; text-decoration-skip-ink: none; vertica=
+l-align: baseline; white-space-collapse: preserve; text-wrap-mode: wrap; te=
+xt-wrap-style: initial">Reddit</span></a><span style=3D"font-size: 12pt; fo=
+nt-family: Arial, sans-serif; color: #52525b; background-color: transparent=
+; font-weight: 400; font-style: normal; font-variant-ligatures: normal; fon=
+t-variant-caps: normal; font-variant-numeric: normal; font-variant-east-asi=
+an: normal; font-variant-alternates: normal; font-variant-position: normal;=
+ text-decoration-line: none; text-decoration-thickness: initial; text-decor=
+ation-style: initial; text-decoration-color: initial; vertical-align: basel=
+ine; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style:=
+ initial">: </span><span style=3D"font-size: 12pt; font-family: Arial, sans=
+-serif; color: #27272a; background-color: transparent; font-weight: 400; fo=
+nt-style: normal; font-variant-ligatures: normal; font-variant-caps: normal=
+; font-variant-numeric: normal; font-variant-east-asian: normal; font-varia=
+nt-alternates: normal; font-variant-position: normal; text-decoration-line:=
+ none; text-decoration-thickness: initial; text-decoration-style: initial; =
+text-decoration-color: initial; vertical-align: baseline; white-space-colla=
+pse: preserve; text-wrap-mode: wrap; text-wrap-style: initial">Meet friendl=
+y creators and share your images.</span><span style=3D"font-size: 12pt; fon=
+t-family: Arial, sans-serif; color: #52525b; background-color: transparent;=
+ font-weight: 400; font-style: normal; font-variant-ligatures: normal; font=
+-variant-caps: normal; font-variant-numeric: normal; font-variant-east-asia=
+n: normal; font-variant-alternates: normal; font-variant-position: normal; =
+text-decoration-line: none; text-decoration-thickness: initial; text-decora=
+tion-style: initial; text-decoration-color: initial; vertical-align: baseli=
+ne; white-space-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: =
+initial">&nbsp;</span></li>
+  <li style=3D"text-align: inherit"><a href=3D"https://u38913774.ct.sendgri=
+d.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZDS-2FB7NhTOkf7-2B1jSeF0BVh7G=
+A-2B0kNrJxSbUnXsQHBRfUDF1_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2=
+yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz=
+3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH=
+8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVqwVk=
+wta41PTL40nxB1llJ8xOR7k17rXu9LbilgWDkT-2FMv48kkuFkXYmIsSn9UpJ2Wv-2Bw4dz6TNh=
+i4bwvyOX6Uc-2BufZB-2Bxwn28RWdSd3oWhUYLRn0Bbz8peZeuvByWyDcuyIFaVq3wFmJPx-2Bk=
+dSCAN48qUMNe7LxkgiM-2BOuSgMI8-3D"><span style=3D"text-decoration-line: unde=
+rline; text-decoration-thickness: initial; text-decoration-style: initial; =
+text-decoration-color: initial; font-size: 12pt; font-family: Arial, sans-s=
+erif; color: #1155cc; background-color: transparent; font-weight: 400; font=
+-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; =
+font-variant-numeric: normal; font-variant-east-asian: normal; font-variant=
+-alternates: normal; font-variant-position: normal; text-decoration-skip-in=
+k: none; vertical-align: baseline; white-space-collapse: preserve; text-wra=
+p-mode: wrap; text-wrap-style: initial">Documentation</span></a><span style=
+=3D"font-size: 12pt; font-family: Arial, sans-serif; color: #1155cc; backgr=
+ound-color: transparent; font-weight: 400; font-style: normal; font-variant=
+-ligatures: normal; font-variant-caps: normal; font-variant-numeric: normal=
+; font-variant-east-asian: normal; font-variant-alternates: normal; font-va=
+riant-position: normal; text-decoration-line: underline; text-decoration-th=
+ickness: initial; text-decoration-style: initial; text-decoration-color: in=
+itial; text-decoration-skip-ink: none; vertical-align: baseline; white-spac=
+e-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: initial">:</sp=
+an> <span style=3D"font-size: 12pt; font-family: Arial, sans-serif; color: =
+#27272a; background-color: transparent; font-weight: 400; font-style: norma=
+l; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-=
+numeric: normal; font-variant-east-asian: normal; font-variant-alternates: =
+normal; font-variant-position: normal; text-decoration-line: none; text-dec=
+oration-thickness: initial; text-decoration-style: initial; text-decoration=
+-color: initial; vertical-align: baseline; white-space-collapse: preserve; =
+text-wrap-mode: wrap; text-wrap-style: initial">FAQs and tutorials on all o=
+ur features.</span></li>
+  <li style=3D"text-align: inherit; font-family: Arial, sans-serif; font-we=
+ight: bold; font-size: 12pt; font-size: 12pt"><a href=3D"https://u38913774.=
+ct.sendgrid.net/ls/click?upn=3Du001.F1EyuAvkpXMqBzWz6YSXZGtk4-2FDNu-2BgqAUo=
+XfPlI5H2NVPGuR-2BzGPQ4tHn0K3wVMH_Cy_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVf=
+zcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7=
+c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg=
+2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhi=
+vJ2fpVAf2oU2voQjZBoqJKNEdx9laDckgcfoMu2LdSNa6mMyPZKbnaus4h3qoEGPp-2BaP5Ge5b=
+dGha9unTAZFajNp2maYOERLNzMta3Auzro-2B4Y4wdPLAscwYM2R8Djs9qX2lJMo5CDUQn7dV-2=
+BPLLwNxS9Xqk79S1Eq-2FP7Uu6NwM1ezvb8-3D"><span style=3D"text-decoration-line=
+: underline; text-decoration-thickness: initial; text-decoration-style: ini=
+tial; text-decoration-color: initial; font-size: 12pt; font-family: Arial, =
+sans-serif; color: #1155cc; background-color: transparent; font-weight: 400=
+; font-style: normal; font-variant-ligatures: normal; font-variant-caps: no=
+rmal; font-variant-numeric: normal; font-variant-east-asian: normal; font-v=
+ariant-alternates: normal; font-variant-position: normal; text-decoration-s=
+kip-ink: none; vertical-align: baseline; white-space-collapse: preserve; te=
+xt-wrap-mode: wrap; text-wrap-style: initial">YouTube channel</span></a><sp=
+an style=3D"font-size: 12pt; font-family: Arial, sans-serif; color: #27272a=
+; background-color: transparent; font-weight: 400; font-style: normal; font=
+-variant-ligatures: normal; font-variant-caps: normal; font-variant-numeric=
+: normal; font-variant-east-asian: normal; font-variant-alternates: normal;=
+ font-variant-position: normal; text-decoration-line: none; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-color:=
+ initial; vertical-align: baseline; white-space-collapse: preserve; text-wr=
+ap-mode: wrap; text-wrap-style: initial">: Learn better with videos? We=E2=
+=80=99ve got those too.</span></li>
+</ul><div></div></div></td>
+      </tr>
+    </tbody>
+  </table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"=
+module" data-role=3D"module-button" data-type=3D"button" role=3D"module" st=
+yle=3D"table-layout:fixed;" width=3D"100%" data-muid=3D"0d36ac5c-fbe9-4cd5-=
+99ce-afcf2b469622">
+      <tbody>
+        <tr>
+          <td align=3D"center" bgcolor=3D"" class=3D"outer-td" style=3D"pad=
+ding:18px 0px 18px 0px;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"wrapper-mobile" style=3D"text-align:center;">
+              <tbody>
+                <tr>
+                <td align=3D"center" bgcolor=3D"#FF3D59" class=3D"inner-td"=
+ style=3D"border-radius:6px; font-size:16px; text-align:center; background-=
+color:inherit;">
+                  <a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=
+=3Du001.F1EyuAvkpXMqBzWz6YSXZC0lKKYXRAco2Z8orn35W7JfYG3JY2wID8fRzxjdD-2FnyX=
+nN3_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFw=
+y-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO=
+4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagI=
+VNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVM4kquneyEWLWWmeEdXDlxhzFSq=
+0jKatLNuZAQ7Mtx8gjXInDwAONBIgLLJcAWP01MI6Z65prmSXQbS1AmmINuOL1f-2F3dQCeLlY8=
+09eksMpjMf-2FN8MdbAssMgXAlVAyQMgwHOj-2FHQ5GokFAQz5E5bG0H86Ulre7WGCeetqGOkGA=
+c-3D" style=3D"background-color:#FF3D59; border:1px solid #FF3D59; border-c=
+olor:#FF3D59; border-radius:6px; border-width:1px; color:#ffffff; display:i=
+nline-block; font-size:16px; font-weight:normal; letter-spacing:0px; line-h=
+eight:normal; padding:10px 18px 10px 18px; text-align:center; text-decorati=
+on:none; border-style:solid; font-family:helvetica,sans-serif;" target=3D"_=
+blank">Start creating</a>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table><table class=3D"module" role=3D"module" data-type=3D"text" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed;" data-muid=3D"bA2FfEE6abadx6yKoMr3F9.2.2.1.2.1" data-mc-modu=
+le-version=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:0px 0px 18px 0px; line-height:24px; text-align=
+:inherit; background-color:#ffffff;" height=3D"100%" valign=3D"top" bgcolor=
+=3D"#ffffff" role=3D"module-content"><div><div style=3D"font-family: inheri=
+t; text-align: left"><span style=3D"box-sizing: border-box; padding-top: 0p=
+x; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; margin-top: =
+0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-style: i=
+nherit; font-variant-ligatures: inherit; font-variant-caps: inherit; font-v=
+ariant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alt=
+ernates: inherit; font-variant-position: inherit; font-weight: inherit; fon=
+t-stretch: inherit; line-height: inherit; font-optical-sizing: inherit; fon=
+t-kerning: inherit; font-feature-settings: inherit; font-variation-settings=
+: inherit; vertical-align: baseline; border-top-width: 0px; border-right-wi=
+dth: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-styl=
+e: initial; border-right-style: initial; border-bottom-style: initial; bord=
+er-left-style: initial; border-top-color: initial; border-right-color: init=
+ial; border-bottom-color: initial; border-left-color: initial; border-image=
+-source: initial; border-image-slice: initial; border-image-width: initial;=
+ border-image-outset: initial; border-image-repeat: initial; text-align: le=
+ft; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: n=
+one; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-sp=
+ace-collapse: preserve; text-wrap-mode: wrap; text-wrap-style: initial; bac=
+kground-color: rgb(255, 255, 255); text-decoration-thickness: initial; text=
+-decoration-style: initial; text-decoration-color: initial; font-family: he=
+lvetica, sans-serif; font-size: 16px; color: #27272a">We can't wait to see =
+what you create!</span></div>
+<div style=3D"font-family: inherit; text-align: inherit"><span style=3D"box=
+-sizing: border-box; padding-top: 0px; padding-right: 0px; padding-bottom: =
+0px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: =
+0px; margin-left: 0px; font-style: inherit; font-variant-ligatures: inherit=
+; font-variant-caps: inherit; font-variant-numeric: inherit; font-variant-e=
+ast-asian: inherit; font-variant-alternates: inherit; font-variant-position=
+: inherit; font-weight: inherit; font-stretch: inherit; line-height: inheri=
+t; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settin=
+gs: inherit; font-variation-settings: inherit; vertical-align: baseline; bo=
+rder-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; bor=
+der-left-width: 0px; border-top-style: initial; border-right-style: initial=
+; border-bottom-style: initial; border-left-style: initial; border-top-colo=
+r: initial; border-right-color: initial; border-bottom-color: initial; bord=
+er-left-color: initial; border-image-source: initial; border-image-slice: i=
+nitial; border-image-width: initial; border-image-outset: initial; border-i=
+mage-repeat: initial; text-align: left; letter-spacing: normal; orphans: 2;=
+ text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -web=
+kit-text-stroke-width: 0px; white-space-collapse: preserve; text-wrap-mode:=
+ wrap; text-wrap-style: initial; background-color: rgb(255, 255, 255); text=
+-decoration-thickness: initial; text-decoration-style: initial; text-decora=
+tion-color: initial; font-family: helvetica, sans-serif; font-size: 16px; c=
+olor: #27272a">=E2=80=94 The Ideogram Team</span></div><div></div></div></t=
+d>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"spacer" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-=
+layout: fixed;" data-muid=3D"qkfYAswHNSwNpwb1p7m4gC">
+      <tbody><tr>
+        <td style=3D"padding:0px 0px 20px 0px;" role=3D"module-content" bgc=
+olor=3D"">
+        </td>
+      </tr>
+    </tbody></table><table class=3D"module" role=3D"module" data-type=3D"co=
+de" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"table-layout: fixed;" data-muid=3D"558d95a1-daad-4147-b283-c1d098b3d395=
+">
+    <tbody>
+      <tr>
+        <td height=3D"100%" valign=3D"top" role=3D"module-content"><div sty=
+le=3D"max-width: 500px; margin: 0 auto; text-align: center;">
+    <div style=3D"margin-top: 10px;">
+        <a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1=
+EyuAvkpXMqBzWz6YSXZCHdF9cxHSEVdsPA8zCK1KhmIlhpjeKLDxXPNPbEz-2FyIWWTP_gOc5jo=
+4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2d=
+zaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2Fc=
+nnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBA=
+wtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpV25-2B6QqP4H4Fa8tN9hFkIWfFoLdIqBOvwRp=
+nsB5S0XnrBVT9CLkNk1a8yQMbIdOT71o7W-2BPaDQwjPS2FPf2lYQ0pYAHQAzn-2B1dx1p3NP2o=
+z0sPAVGpP-2FzSZdj0b3HzMVkY8CoklTrmjfXY1ZmVFO-2Bd-2Fl2wXHe2lwfMlJWDXNQ98o-3D=
+" target=3D"_blank" style=3D"display: inline-block; margin: 0 5px;"><img sr=
+c=3D"http://cdn.mcauto-images-production.sendgrid.net/0c7f53e87f880f35/500d=
+4978-01fc-46ee-8f7a-000a33fb6340/2400x2453.png" alt=3D"Twitter" style=3D"wi=
+dth: 20px; height: 20px; object-fit: contain;"></a>
+        <a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1=
+EyuAvkpXMqBzWz6YSXZGtk4-2FDNu-2BgqAUoXfPlI5H2NVPGuR-2BzGPQ4tHn0K3wVMYtEN_gO=
+c5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMg=
+jc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0=
+-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKcl=
+sTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVC0QkR1si-2B19vULm0fYcYOHXvuVsP8L=
+Tp4QgGgpO8yQACiBJCmkS36UMYZANXZFThVhvPyF4nmatvCy5bdle2sQdt9u2gTuEC8ZVRJ7UUb=
+-2BGN6oZsH8Av4rEMjz7EH7WRCTS59F9OdPK4dskSFOUqrhxCo4IaFk1BhOZ3YZAa3Ow-3D" ta=
+rget=3D"_blank" style=3D"display: inline-block; margin: 0 5px;"><img src=3D=
+"http://cdn.mcauto-images-production.sendgrid.net/0c7f53e87f880f35/b4e59bb2=
+-283c-4f17-9b70-76ffdc4c2711/512x512.png" alt=3D"Youtube" style=3D"width: 2=
+0px; height: 20px; object-fit: contain;"></a>
+        <a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.F1=
+EyuAvkpXMqBzWz6YSXZHtmyydRyQuHbuE-2FTh1cyld0657fOqR34cquGhIQmZnR3wWpovbUU73=
+X7nTnJcRnAA-3D-3DikVH_gOc5jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1=
+rGUkgWi-2FIll6RgFwy-2FMgjc2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyM=
+tpExoXeoDdB4nJSdMO4YxTH0-2FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfc=
+uPkCtcq97VMyvjfagIVNlKclsTBAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVX2jAKrt9=
+w5LDg-2F0BlGIkJkUOzL6-2BtKQRQSIEQwziYFnbvtIqGOGo8vY8iXQJxzar53vFt9YTBAM-2Bw=
+04i9q8GQ-2FwuFtoRMv-2FG82qhV2Lj6SZw375Y8OOC0BMXBCIom7taUWTQq0NqFwwDc9YPYXh4=
+DSjgtjJzCZCdmaBc2Q-2BsnYc-3D" target=3D"_blank" style=3D"display: inline-bl=
+ock; margin: 0 5px;"><img src=3D"http://cdn.mcauto-images-production.sendgr=
+id.net/0c7f53e87f880f35/311b6f05-e4a7-4d36-9ad6-79444107f1b1/3000x3000.png"=
+ alt=3D"LinkedIn" style=3D"width: 20px; height: 20px; object-fit: contain;"=
+></a>
+          <a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.=
+F1EyuAvkpXMqBzWz6YSXZM0F4HpbbGiAUrwhYyPfuxJsOXjiDh2Q38yM3kyK9nxRCITT_gOc5jo=
+4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc2d=
+zaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2Fc=
+nnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsTBA=
+wtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVTWMMgL1JsJ3sJPql24R2xghgpyMKU8GUdVQj=
+avPOPXrLLWBd6CONeCAcK-2Fx4-2FAqcBoltLmIbe-2B1-2FQMzYT2l8qk9dRLA5jKH1VOJhnyM=
+1xFtEspLmt-2FL0W-2FfUh5xi3ZYtvQZXe0wTIJItQEr1cv0abFTwskDSjMHCatYEb18ZmuI-3D=
+" target=3D"_blank" style=3D"display: inline-block; margin: 0 5px;"><img sr=
+c=3D"http://cdn.mcauto-images-production.sendgrid.net/0c7f53e87f880f35/8787=
+6544-4221-4cbb-a8f6-b0855f4b00f8/512x512.png" alt=3D"Reddit" style=3D"width=
+: 20px; height: 20px; object-fit: contain;"></a>
+        <a href=3D"https://u38913774.ct.sendgrid.net/ls/click?upn=3Du001.f2=
+SoTU9JNGovxfh8j9A2JPl6PoYgvR-2B17v1Y8qlZeHRnjGTA0aBiYFlmz72eJ-2FFOuT57_gOc5=
+jo4s1LT58K-2BHsnirwbjoRdl4SkvQKkvVfzcHLd9OCw2yrw1rGUkgWi-2FIll6RgFwy-2FMgjc=
+2dzaVZCUCvUWVqNwcQzxkMvV-2Bu-2FOXn7c3bXruPqMz3OyMtpExoXeoDdB4nJSdMO4YxTH0-2=
+FcnnZ5lFXRs11SY3M-2BrLEx1eNKVaIqQOg2MhNoDJqeH8nfcuPkCtcq97VMyvjfagIVNlKclsT=
+BAwtlmuPK1Y3MStxV3haNduthVhMfLiuzhivJ2fpVkzLyrZFSuXIWjYUjvbpD7Tqnons9wjUIcx=
+5inJViVPM3yMMC-2FuGJMjpZWXoEMCz9-2FWP1CbhffQqHj3CO7B9URORgFMPuD-2BhNdUhLJA0=
+mujELveOImMIzd9fXD010zVWkxlBOLWbJ8BEoujycEVSn1X7jcKEK6PBfAZG1Q0SbR8g-3D" ta=
+rget=3D"_blank" style=3D"display: inline-block; margin: 0 5px;"><img src=3D=
+"http://cdn.mcauto-images-production.sendgrid.net/0c7f53e87f880f35/f0e2a4b3=
+-f7be-4f54-b438-23be62534b4b/127x96.png" alt=3D"Discord" style=3D"width: 20=
+px; height: 20px; object-fit: contain;"></a>
+    </div>
+    <div style=3D"margin-top: 10px; font-size: 12px; font-family: Helvetica=
+, sans-serif;">=C2=A9 Ideogram AI Inc. 2025</div>
+</div></td>
+      </tr>
+    </tbody>
+  </table><div data-role=3D"module-unsubscribe" class=3D"module unsubscribe=
+-css__unsubscribe___2CDlR" role=3D"module" data-type=3D"unsubscribe" style=
+=3D"font-size:12px; line-height:20px; padding:10px 16px 10px 16px; text-ali=
+gn:center;" data-muid=3D"GRteXBNz7UevhwJ6u6GXE"><div class=3D"Unsubscribe--=
+addressLine"></div><p style=3D"font-family:helvetica,sans-serif; font-size:=
+12px; line-height:20px;"><a target=3D"_blank" class=3D"Unsubscribe--unsubsc=
+ribeLink zzzzzzz" href=3D"https://u38913774.ct.sendgrid.net/asm/unsubscribe=
+/?user_id=3D38913774&amp;data=3DLVRg1mIwQB_LmUZUpCUPsQukfzX3JTmgyLV9oLX-F9F=
+oMDAwdTAwMB7ij_6y2P__QrI-N0fq_qfeghe7qVNaIWJobXk1UxbAhERMKs8BzUoom-Pz0PSqGt=
+Uq9Mmxd35rEAXvdKaGg_Q4YYkgrhj0W3vZXeNhPlARoUwC4fnj2qnvm3c_eoMi8Jj8Bhm68ESb5=
+0JZrfnQnMdQiwqD25EDbpI42rVuuAc62Tvd5SAevekadbR-Stc36kJESwvLkqTpdJM3D_7-sIRk=
+i83eYnqWlOUeMkCO4q5GSsQe6TqfSxB919aXuzvxyux7oIA0mUMd-dHlSiW5Z2ReovXLTRX2hpu=
+_Fl6cpqjqSQY2LcjlMyPcYh5gW-qgRo5t7VHUqEPXB54fQvrljDQgfUK45trRDMhsgNOGHR1OGo=
+sbYUMnGycMTQUh7w4GkV9687Ewr0ZVr_lLxsmh2OzDkEBwgExJxoGQKK2UUpS7niKftfg5-4OS2=
+T_O_1EyyldGVyJw8DG2_IwCJLz2Qgp9xI0JQi8zIwza1X3AA-nkhHke3DRP40q0cj_aM982IpW1=
+GpWbNVM75jqIgEPV_ffC7NA1iH1jhw2EN3QnJhgT" style=3D"">Unsubscribe</a></p></d=
+iv><table class=3D"module" role=3D"module" data-type=3D"spacer" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout:=
+ fixed;" data-muid=3D"f5F8P1n4pQyU8o7DNMMEyW">
+      <tbody><tr>
+        <td style=3D"padding:0px 0px 30px 0px;" role=3D"module-content" bgc=
+olor=3D"">
+        </td>
+      </tr>
+    </tbody></table></td>
+                                      </tr>
+                                    </table>
+                                    <!--[if mso]>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    <img src=3D"https://u38913774.ct.sendgrid.net/wf/open?upn=3Du001.CoUCgO=
+SQT1JvifntoD12-2FSFAUwxM8IsVfeKXiNhu4jEEASsQGsSyJ8eiGtL4LKqa51kDZ8f-2FCANy7=
+tDbhOZT-2BY86fw18zN-2FOK0t9H59jY7RNESc7XwRg74Ma7g2UzxdR39KXz3sF7BsSfFxKdLOe=
+8zNKYbGZVOS4fEZlvUJowU48LHmUNs9Ww-2BEqjubAqgTa4lOT8X9cWAXrEQlsSQ1mT5BboB26f=
+ezs1W5lMYR1LTO36KdITXahvdBHAKSfUTaYSe3X9DnxjtHrePy7n7XsLUZyv1FEtqTiOvdUh7We=
+zjqMXnTmQ4kuJP6-2FN02Bg-2FuHEs60YfNYudOwoHyGZb16IQEE8kNHxmNg8V7itqKF30-2Bay=
+QbikmicosS0z06vLqgH6KmvRI0y0cF6yCHoXsvi4dGvequ-2FLsA-2FdWqb3XVZzE8-3D" alt=
+=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;=
+width:1px !important;border-width:0 !important;margin-top:0 !important;marg=
+in-bottom:0 !important;margin-right:0 !important;margin-left:0 !important;p=
+adding-top:0 !important;padding-bottom:0 !important;padding-right:0 !import=
+ant;padding-left:0 !important;"/></body>
+  </html>
+--3d331c065069c04a04fd4a16b400fface1dd847dd882cfb76c2d15c05e83--

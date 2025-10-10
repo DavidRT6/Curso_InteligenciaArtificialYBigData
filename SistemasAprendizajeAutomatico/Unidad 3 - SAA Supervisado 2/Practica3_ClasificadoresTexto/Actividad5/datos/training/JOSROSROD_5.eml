@@ -1,0 +1,162 @@
+Delivered-To: lalala@gmail.com
+Received: by 2002:adf:f20f:0:0:0:0:0 with SMTP id p15csp2566667wro;
+        Mon, 11 Jan 2021 07:17:22 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJyQ45WiMgNZ+8ssO4pLCbXFYHQNzjKQ4EHRF22Q+4g/muv3Yl97EvyPR076ZZ4ZXwisnBf4
+X-Received: by 2002:a5d:4e86:: with SMTP id e6mr17147983wru.33.1610378242437;
+        Mon, 11 Jan 2021 07:17:22 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1610378242; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Piq4huOhkcFkODaSJkAljsOuK4XsfEwmlP8LvqPVm6+gq3TMNW84G7n5WXTPqQx4LK
+         iQuV6z99//AyQaiUQEAQFyR7bQBnGa/eNX1ci40h5mLtDCeeCXlX7DhJz5Fem7mxIbXR
+         6kcPHOZskjzdcn6cZ7nVdR5+2Gyz49MGJ55XA5uzR7vDDY4uKMF4j7WtCDiuuVKOwiRO
+         37M1QdtaKoiHoHj3UiWs1VuFnNp6bMDYQRbx3/utDTVttVH7Nsgj6dMyS8FG9NDzpoHk
+         X2b6JsMX7e1mftN2X94Ds37uk5dvRYooySGMQBsxEXfbltbWfRBbsHjHrD+TjDgE/d9a
+         jugw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:to:from:subject:content-transfer-encoding
+         :mime-version:dkim-signature;
+        bh=L6AK6B+pVnxUHnGCWhZM9eE5+fxZNsqEKkdY/t7Vs1Y=;
+        b=tZeowh25Wuy6BhWq7M2Krr4jwJrb0MJDQzdK+tbDNy4zV7mBF3TIrQPRDsdFqSx0zJ
+         dm2EB1vNFlX8lno6qaZk/UlciC5RSWejUMTn1xHbhuYVY/duBFi10xVGaHv5w2Hco31l
+         mMEF34AfweaT5z8FkyctRictUQJ3PRRMGQzLGuCRbGl0Lltc0nSFbgi6aL4qYv4ifAfK
+         RchM0+SH7P7CONbDxIqNxb2KjiuNxi3EY73Xi6BKvGpMULH6oJt7ZEWc/5rDauK/Ur0/
+         HszS/fmtzQejkiNqqc1pkr7RLuDLSsDJcpClk5OiZ9e9zaj2xBXJZb+gPMdMuNZerlPI
+         qBFw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gva.es header.s=mail header.b=WdnDuO0V;
+       spf=pass (google.com: domain of ticalcoi@gva.es designates 195.77.19.70 as permitted sender) smtp.mailfrom=ticalcoi@gva.es
+Return-Path: <ticalcoi@gva.es>
+Received: from sarabi.gva.es (sarabi.gva.es. [195.77.19.70])
+        by mx.google.com with ESMTP id j5si16807227wrb.89.2021.01.11.07.17.21
+        for <jrosarodriguez@gmail.com>;
+        Mon, 11 Jan 2021 07:17:22 -0800 (PST)
+Received-SPF: pass (google.com: domain of ticalcoi@gva.es designates 195.77.19.70 as permitted sender) client-ip=195.77.19.70;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gva.es header.s=mail header.b=WdnDuO0V;
+       spf=pass (google.com: domain of ticalcoi@gva.es designates 195.77.19.70 as permitted sender) smtp.mailfrom=ticalcoi@gva.es
+Received: from localhost (unknown [127.0.0.1])
+	by sarabi.gva.es (Postfix) with ESMTP id A9ABD320AF
+	for <jrosarodriguez@gmail.com>; Mon, 11 Jan 2021 15:17:21 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gva.es; h=date
+	:date:x-mailer:from:from:subject:subject
+	:content-transfer-encoding:content-type:content-type
+	:mime-version:received:received; s=mail; t=1610378241; bh=95rIIf
+	ohN9BuYr07zEXWaTBt0QzaaCA/KgCJbL2s5gk=; b=WdnDuO0VukBURQYScvlADl
+	wB3UOlDOEtH1yjkmxSqRowfBWbWQLpD/rL+S9J/nOU/tNJWuo0EjhknuSrb5uolT
+	vWiUSKvcTvF0rc+o/n1m5lQQ6Oee6xRmUfZO5uFZGV29nc/eHbR+2NB8420X5Da3
+	yIca58bqWcw+FDhxiwyK0=
+Received: from sarabi.gva.es ([127.0.0.1])
+	by localhost (pshelistas02.srv.gva.es [127.0.0.1]) (amavisd-new, port 10002)
+	with ESMTP id 6Mdaoho1HN7V for <jrosarodriguez@gmail.com>;
+	Mon, 11 Jan 2021 16:17:21 +0100 (CET)
+Received: from [127.0.1.1] (unknown [10.227.229.249])
+	by sarabi.gva.es (Postfix) with ESMTPA id 4A50631937
+	for <lalala@gmail.com>; Mon, 11 Jan 2021 16:17:20 +0100 (CET)
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Subject: =?utf-8?q?II_CONGR=C3=89S_d=E2=80=99FP_i_EAE=2C_cap_a_la_sostenibilitat_educativa?=
+From: =?utf-8?q?Jos=C3=A9_MTols=C3=A1_Oltra?= <ticalcoi@gva.es>
+To: lalala@gmail.com
+X-Mailer: LibreOffice 6.0 via Caolan's mailmerge component
+Date: Mon, 11 Jan 2021 16:17:20 +0100
+Message-Id: <20210111151721.A9ABD320AF@sarabi.gva.es>
+
+<?xml version=3D"1.0" encoding=3D"UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://w=
+ww.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml"><!--This file was converted to xhtml by LibreOffice - see =
+http://cgit.freedesktop.org/libreoffice/core/tree/filter/source/xslt for th=
+e code.--><head profile=3D"http://dublincore.org/documents/dcmi-terms/"><me=
+ta http-equiv=3D"Content-Type" content=3D"application/xhtml+xml; charset=3D=
+utf-8"/><title xml:lang=3D"en-US">- no title specified</title><meta name=3D=
+"DCTERMS.title" content=3D"" xml:lang=3D"en-US"/><meta name=3D"DCTERMS.lang=
+uage" content=3D"en-US" scheme=3D"DCTERMS.RFC4646"/><meta name=3D"DCTERMS.s=
+ource" content=3D"http://xml.openoffice.org/odf2xhtml"/><meta name=3D"DCTER=
+MS.issued" content=3D"2021-01-11T16:02:18.923395133" scheme=3D"DCTERMS.W3CD=
+TF"/><meta name=3D"DCTERMS.modified" content=3D"2021-01-11T16:17:20.0899065=
+66" scheme=3D"DCTERMS.W3CDTF"/><meta name=3D"DCTERMS.provenance" content=3D=
+"" xml:lang=3D"en-US"/><meta name=3D"DCTERMS.subject" content=3D"," xml:lan=
+g=3D"en-US"/><link rel=3D"schema.DC" href=3D"http://purl.org/dc/elements/1.=
+1/" hreflang=3D"en"/><link rel=3D"schema.DCTERMS" href=3D"http://purl.org/d=
+c/terms/" hreflang=3D"en"/><link rel=3D"schema.DCTYPE" href=3D"http://purl.=
+org/dc/dcmitype/" hreflang=3D"en"/><link rel=3D"schema.DCAM" href=3D"http:/=
+/purl.org/dc/dcam/" hreflang=3D"en"/><style type=3D"text/css">
+    @page {  }
+    table { border-collapse:collapse; border-spacing:0; empty-cells:show }
+    td, th { vertical-align:top; font-size:12pt;}
+    h1, h2, h3, h4, h5, h6 { clear:both;}
+    ol, ul { margin:0; padding:0;}
+    li { list-style: none; margin:0; padding:0;}
+    /* "li span.odfLiEnd" - IE 7 issue*/
+    li span. { clear: both; line-height:0; width:0; height:0; margin:0; pad=
+ding:0; }
+    span.footnodeNumber { padding-right:1em; }
+    span.annotation_style_by_filter { font-size:95%; font-family:Arial; bac=
+kground-color:#fff000;  margin:0; border:0; padding:0;  }
+    span.heading_numbering { margin-right: 0.8rem; }* { margin:0;}
+    .fr1 { font-size:12pt; font-family:Liberation Serif; text-align:center;=
+ vertical-align:top; }
+    .fr2 { font-size:12pt; font-family:Liberation Serif; vertical-align:top=
+; }
+    .P1 { font-size:16pt; font-weight:normal; margin-bottom:0.212cm; margin=
+-top:0.423cm; font-family:Liberation Serif; writing-mode:page; }
+    .P2_borderStart { font-size:12pt; line-height:115%; margin-top:0cm; fon=
+t-family:Liberation Serif; writing-mode:page; background-color:#0066b3; pad=
+ding-bottom:0.247cm;  border-bottom-style:none; }
+    .P2 { font-size:12pt; line-height:115%; font-family:Liberation Serif; w=
+riting-mode:page; background-color:#0066b3; padding-bottom:0.247cm; padding=
+-top:0cm;  border-top-style:none; border-bottom-style:none; }
+    .P2_borderEnd { font-size:12pt; line-height:115%; margin-bottom:0.247cm=
+; font-family:Liberation Serif; writing-mode:page; background-color:#0066b3=
+; padding-top:0cm;  border-top-style:none;}
+    .P3 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+    .P4 { font-size:12pt; font-family:Liberation Serif; writing-mode:page; }
+    .MailMergeTable2021-01-11T16_3a_04_3a_47Z862 { width:17cm; float:none; }
+    .MailMergeTable2021-01-11T16_3a_04_3a_47Z862_A1 { padding:0.097cm; bord=
+er-style:none; }
+    .MailMergeTable2021-01-11T16_3a_04_3a_47Z862_A { width:17cm; }
+    .Internet_20_link { color:#000080; text-decoration:underline; }
+    .T1 { color:#fff200; text-decoration:none ! important; font-weight:bold=
+; }
+    /* ODF styles with no properties representable as CSS */
+     { }
+    </style></head><body dir=3D"ltr" style=3D"max-width:21.001cm;margin-top=
+:2cm; margin-bottom:2cm; margin-left:2cm; margin-right:2cm; "><p class=3D"P=
+4">=C2=A0</p><p class=3D"P3">=C2=A0</p><p class=3D"P3">=C2=A0</p><p class=
+=3D"P3">=C2=A0</p><p class=3D"P3">=C2=A0</p><div class=3D"P3"><a href=3D"ht=
+tps://portal.edu.gva.es/cefirealcoi"><!--Next '
+            span' is a draw:frame.
+        --><span style=3D"height:1.7cm;width:17cm; padding:0; " class=3D"fr=
+1" id=3D"Imagen1723"><img style=3D"height:1.7cm;width:17cm;" alt=3D"" src=
+=3D"https://portal.edu.gva.es/cefirealcoi/wp-content/uploads/sites/222/2020=
+/06/gva-cefire-fp-color.jpg"/></span></a></div><p class=3D"P3">=C2=A0</p><p=
+ class=3D"P3">=C2=A0</p><h1 class=3D"P1"><a id=3D"a__II_CONGR=C3=89S_d=E2=
+=80=99FP_i_EAE__cap_a_la_sostenibilitat_educativa_"><span/></a>II CONGR=C3=
+=89S d=E2=80=99FP i EAE, cap a la sostenibilitat educativa.</h1><p class=3D=
+"P3"><br/>Us envie enlla=C3=A7 per a poder inscriure's al II congr=C3=A9s d=
+'FP i EAE de la Comunitat Valenciana els dies 29 i 30 de gener:</p><p class=
+=3D"P3">=C2=A0</p><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" c=
+lass=3D"MailMergeTable2021-01-11T16_3a_04_3a_47Z862"><colgroup><col width=
+=3D"743"/></colgroup><tr><td style=3D"text-align:left;width:17cm; " class=
+=3D"MailMergeTable2021-01-11T16_3a_04_3a_47Z862_A1"><p class=3D"P2"><a href=
+=3D"http://cefire.edu.gva.es/sfp/index.php?seccion=3Dedicion&amp;id=3D92364=
+14&amp;usuario=3Dformacion" class=3D"Internet_20_link"><span class=3D"T1">I=
+I CONGR=C3=89S d=E2=80=99FP i EAE, cap a la sostenibilitat educativa</span>=
+</a></p></td></tr></table><p class=3D"P3"><br/>Si no funciona l'enlla=C3=A7=
+:<br/>- Aneu a la p=C3=A0gina del Cefire FP<br/>- Men=C3=BA Formaci=C3=B3<b=
+r/>- Cliqueu disc verd Inscripci=C3=B3<br/>- Cliqueu<br/>20FP43CF082 II Con=
+gr=C3=A9s d'FP i EAE de la Comunitat Valenciana<br/>- A la part baixa de la=
+ pantalla est=C3=A0 la pestanya Inscriure's<br/><br/>El congr=C3=A9s =C3=A9=
+s on-line.<br/><br/>Salutacions cordials.</p><p class=3D"P3">=C2=A0</p><p c=
+lass=3D"P3">=C2=A0</p><div class=3D"P3"><a href=3D"https://portal.edu.gva.e=
+s/cefirealcoi/va/assessories/"><!--Next 'div' is emulating the top height o=
+f a draw:frame.--><!--Next '
+            div' is a draw:frame.
+        --><div style=3D"height:2.97cm;width:16.469cm; padding:0;  float:le=
+ft; position:relative; left:0,199cm; " class=3D"fr2" id=3D"Imagen1724"><img=
+ style=3D"height:2.97cm;width:16.469cm;" alt=3D"" src=3D"https://portal.edu=
+.gva.es/cefirealcoi/wp-content/uploads/sites/222/2020/01/Peu_signatura_DIRE=
+CCIO_i_ASSESSORIES.png"/></div><div style=3D"clear:both; line-height:0; wid=
+th:0; height:0; margin:0; padding:0;">=C2=A0</div></a></div><p class=3D"P3"=
+>=C2=A0</p></body></html>

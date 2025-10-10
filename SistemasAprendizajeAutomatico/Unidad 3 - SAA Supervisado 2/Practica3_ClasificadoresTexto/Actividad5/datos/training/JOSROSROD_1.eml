@@ -1,0 +1,455 @@
+Delivered-To: lalala@gmail.com
+Received: by 2002:a05:7208:50d5:b0:8c:bc25:dc76 with SMTP id j21csp738544rbb;
+        Fri, 30 Aug 2024 23:53:46 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH/+XJwPSF72tOMGhctbyZ9KqgD1pR2luZq8HelDIuqyB3G6avkqj6iIur/UbjoQm9+J8i3
+X-Received: by 2002:a17:907:7e9a:b0:a86:8524:2558 with SMTP id a640c23a62f3a-a897f7895d4mr777071866b.12.1725087226131;
+        Fri, 30 Aug 2024 23:53:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1725087226; cv=none;
+        d=google.com; s=arc-20240605;
+        b=WOtbSbuQa5teju7mLR1D11UbXVxQlABB7jQkWOGPyMVIGnyK0kyNvBWuSrKrEkzQhr
+         8YbTc5EvJG4qRDBwvwoMhxpNQj04h3i1FDszJktZozyrdRRwUVVeNsnB2ghscdkVxr5U
+         YckvNJp1A2x5fvmQa6B5zJCRWAakxp4NqNypsZ0D5tR7Oo+jzQ/R5454l0PtuVhx/SnY
+         Vaov4M1+xHiq7KuoPdFF/zohZOYflS7k1VPjVBFJhQk8tbUM3cMOMFSSVruhNwqyIHoK
+         ir8tt4IekOkYx0477aF58pIU1c3w1S/fshbGhNt91u4R2/1Sx7jZWuu5Ol15BPlkMiXq
+         bv4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:message-id:date:mime-version:to:from
+         :subject:domainkey-signature:dkim-signature;
+        bh=lT/ID2Fl58L/K1SOgp/8hPndBObQIXII3IuWG72PWpA=;
+        fh=NIrg2ho+hQHcMAhHn2Vf0Mwf8UOaggc0xWuvv5G0dI4=;
+        b=g6XjJ7tlUr1icX0DL5loGKXpoaS6Arm07RsQfo6IbQM6JlUMfHKFcqifSJ0zn9WdYr
+         vhlJGikDZsBCZhTSzmOVWSJwbEUuZTxfyr60oChe7NA45NcW670TFdF45m0aHNXnRIS/
+         gfHFxzh9utpuUvObl1kpAoxwr3kUUX8n6+0v3sdjid7jFe09sBmDOTsEVd6MkjIwavpf
+         vACCWlEXX3B/N2FJx+EzSJMRKeoA0qBLuHUoPHLxt5dcn9a+e4knlSNn/LvJWO3ixSCf
+         PnWUaiOE91ZoakDH4hXj4Z4Aw/+ewJ/iS5LQaLTncfvNcOPrqNMVotgSv6FSqx4aAqxG
+         WD4w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@quosbythw.mail4.bwds.org.in header.s=smtp header.b=eoaeYg0V;
+       spf=pass (google.com: domain of 5asw3pbl55m9q@quosbythw.mail4.bwds.org.in designates 88.198.161.239 as permitted sender) smtp.mailfrom=5asw3pbl55m9q@quosbythw.mail4.bwds.org.in;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=quosbythw.mail4.bwds.org.in
+Return-Path: <5asw3pbl55m9q@quosbythw.mail4.bwds.org.in>
+Received: from static.88-198-161-239.clients.your-server.de (static.88-198-161-239.clients.your-server.de. [88.198.161.239])
+        by mx.google.com with ESMTPS id a640c23a62f3a-a8989215cc4si429588866b.1001.2024.08.30.23.53.45
+        for <jrosarodriguez@gmail.com>
+        (version=TLS1 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Fri, 30 Aug 2024 23:53:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 5asw3pbl55m9q@quosbythw.mail4.bwds.org.in designates 88.198.161.239 as permitted sender) client-ip=88.198.161.239;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@quosbythw.mail4.bwds.org.in header.s=smtp header.b=eoaeYg0V;
+       spf=pass (google.com: domain of 5asw3pbl55m9q@quosbythw.mail4.bwds.org.in designates 88.198.161.239 as permitted sender) smtp.mailfrom=5asw3pbl55m9q@quosbythw.mail4.bwds.org.in;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=quosbythw.mail4.bwds.org.in
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=smtp; d=quosbythw.mail4.bwds.org.in;
+ h=Subject:From:To:Content-Type:Mime-Version:Date:Message-ID:Content-Transfer-Encoding; i=edu@quosbythw.mail4.bwds.org.in;
+ bh=QtYffApLAU7E3mGX8n+HzkgsjX0=;
+ b=eoaeYg0VS6bZKkj5pVlEPvhMw4D3GVinV4G+kV98BBxzw6kSVpy80qn3f3zv5/aNBxrlRqD5fs+C
+   UMIGJ/hhM1MFvGaLlRDMp6+2bFCjlFC/7HSHZQ7798V3VhhdXfn6Dq9aBjFPH3whyw6SeNo7uU+R
+   bYZKQWjsytfua70j9LU=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=smtp; d=quosbythw.mail4.bwds.org.in;
+ b=pAQCcdycFkgGetB9VD4UVx2sqeLK1tTjROG2EyoxLSTlb9mnmUD7rsyopZ4DfoHxjYlWNYX+PCyF
+   KJBh+Aku53USA6+82nfJ5Vnkfwm//lbsbqtzQs/CjSH7Y5+E2ktKoM/zokVn36s5JLS8APjQ1Knv
+   E0Nre8DgtXNnZ0KD+10=;
+Subject: Recompensas Exclusivas: Participa.
+From: "SHEIN" <edu@quosbythw.mail4.bwds.org.in>
+To: jrosarodriguez@gmail.com
+X-Google-Sender-Delegation: SHEIN
+Content-Type: multipart/report; boundary="000000000000SGCNuB7Qm6umj710elBSQB";
+Mime-Version: 1.0
+Date: Sat, 31 Aug 2024 06:49:14 +0000
+Message-ID: <oy1u5l8d1xxc-eyn0-k2pw-375r-znzpp79veqee@convertkit-mail2.com>
+Content-Transfer-Encoding: 8bit
+
+--000000000000SGCNuB7Qm6umj710elBSQB
+Content-Type: multipart/related; boundary="000000000000B0MNRUNyYR84HR9a"
+
+--000000000000B0MNRUNyYR84HR9a
+Content-Type: multipart/alternative; boundary="000000000000B0MNRUNyYR84HR9b"
+
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Top Stories of the Day: Sep 0, 2019
+
+103882302891885308
+-----
+
+If you believe this has been sent to you in error, please safely unsubscrib=
+e
+--000000000000B0MNRUNyYR84HR9b
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<!------------ START SOCIAL MEDIA ------------>
+<div class="gmail_quote"> 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><html> <head>
+  <link rel=3D"stylesheet"
+          href=3D"https://fonts.googleapis.com/css?family=3DMontserrat"> <m=
+eta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8" /> <=
+meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0=
+" /> <title>Shein</title> <style> body, table, thead, tbody, tr, td, img { =
+padding: 0; margin: 0; border: none; border-spacing: 0px; border-collapse: =
+collapse; vertical-align: top; } .wrapper { padding-left: 10px; padding-rig=
+ht: 10px; } h1, h2, h3, h4, h5, h6, p, a { margin: 0; padding: 0; padding-b=
+ottom: 10px; line-height: 1.2; font-family: Verdana, "Arial", sans-serif; c=
+olor: #000; } .logo-wrap { max-width: 90%; height: 30px; margin-top: 40px; =
+ font-family: 'Montserrat', sans-serif;font-weight: 700; /* semi-Bold */  c=
+olor: #FFF;  font-size: 40px; align: left } .top-text { display: inline-blo=
+ck; float: right; max-width: 35%; font-size: 12px; color: #fff; text-align:=
+ right; } .feature-img { width: 100%; max-height: 320px; } .free-label{ dis=
+play: inline-block; width: 80%; } #tcont{ width: 100%; margin-top: 50px; } =
+.wrap { text-align: left; padding: 10px; } .congratz { display: block; marg=
+in-top: 25px; font-size: 35px; text-transform: uppercase; color: #f4d578; -=
+webkit-text-stroke: 1px #222; text-shadow: 1px 2px 0px #f7758f, 2px 4px 0 #=
+000, 3px 6px 0 #87bfff, 4px 7px 0 #000;  text-align: center;}  .brand-new {=
+ font-size: 23px; color: #063164; margin-top: 25px; text-transform: upperca=
+se ; text-align: center;} .product-name { font-size: 32px; color: #F87666; =
+text-transform: uppercase; -webkit-text-stroke: 2px #000; text-shadow: 3px =
+0px 0px #fff, 0px -3px 0px #fff, 0px 3px 0px #fff, 1px 2px 0px #fff; } .tit=
+le { font-size: 18px; font-weight: bold; clear: both;margin-top: 25px } .pa=
+rticipate { font-size: 15px; max-width: 100%; } .cta { font-size: 18px; fon=
+t-weight: bold; text-transform: uppercase; color: #fff; display: inline-blo=
+ck; padding: 20px; min-width: 260px; text-decoration: none; border: 3px sol=
+id #fff; border-radius: 50px; margin: 40px 0px; } .product-name { font-size=
+: 28px; font-weight: bold; color: #ededed; text-transform: uppercase; displ=
+ay: inline-block; max-width: 75%; writing-mode: vertical-rl; text-orientati=
+on: mixed; margin-top: 30px; } .bg-wrap{background-repeat:no-repeat;backgro=
+und-size: 100%;-webkit-text-size-adjust: 100%;mso-line-height-rule: exactly=
+;} @media only screen and (max-width: 480px) { #tcont{ margin-top: 20px; } =
+.wrapper .section { width: 100%; } .wrapper .column { width: 100%; display:=
+ block; } .logo-wrap{ margin-top: 25px; } .logo { max-height: 50px; } .top-=
+text { max-width: 50%; font-size: 10px; } .feature-img { max-height: 220px;=
+ } .title { font-size: 16px; } .participate { font-size: 11px; max-width: 1=
+00%; line-height: 1.3; } .cta { min-width: 240px; padding: 15px; font-size:=
+ 16px; } .product-name { font-size: 18px; } .bg-wrap{background-size: 125%;=
+-webkit-text-size-adjust: 125%;background-position: top center;} } </style>=
+ </head> <body style=3D"background-color: #fff;padding-top:30px;"> <table w=
+idth=3D"100%"> <tbody> <tr> <td class=3D"wrapper" width=3D"550" align=3D"ce=
+nter"> <table width=3D"550" class=3D"section header" align=3D"center"> <tbo=
+dy>  <tr> <td align=3D"center" bgcolor=3D"#5aedca" data=3D"image_bg" style=
+=3D"background: linear-gradient(180deg, rgba(195,3,65,1) 0%, rgba(205,79,11=
+0,1) 50%, rgba(60,16,26,1) 100%);" class=3D"bg-wrap"> <div class=3D"logo-wr=
+ap"> SHEIN <p class=3D"top-text">=C2=A1Date prisa! =C2=A1El n=C3=BAmero de =
+premios disponibles es limitado! Confirma ahora!</p> </div> <table id=3D"tc=
+ont"> <tbody> <tr> <td rowspan=3D"2" style=3D"width: 20%"></td> <td style=
+=3D"width: 60%; background-color: #ffffff; vertical-align: middle"> <td sty=
+le=3D"width: 20%" rowspan=3D"3"><p class=3D"product-name">$500 Tarjeta de R=
+egalo</p></td> </tr> <tr> <td style=3D"width: 20%"></td> <td style=3D"width=
+: 60%"></td> <td style=3D"width: 20%"></td> </tr> <tr> <td style=3D"width: =
+20%"></td> <td style=3D"width: 60%; background-color: #ffffff"> <div class=
+=3D"wrap"> <p class=3D"congratz">=C2=A1Felicidades!</p> <p class=3D"brand-n=
+ew"> Eres el afortunado ganador de un flamante nuevo</p> <p class=3D"title"=
+>La lealtad tiene recompensa !</p> <p class=3D"participate">Has sido selecc=
+ionado para participar en nuestro programa de fidelidad  <strong>GRATUITO!<=
+/strong> Solo te tomar=C3=A1 un minuto recibir este premio fant=C3=A1stico.=
+</p> </div> </td> <td style=3D"width: 20%;"></td> </tr> </tbody> </table>=
+=20
+          <a href=3D"https://storage.googleapis.com/in1ka/djy1.html#nnjmytddpkqrcoh/4xzRLi1722eyPt43uklxfwbzre345YKYBQXKVQOGLJNJ701205TAWN51994S16/lcozvsaymrhcjmk" class=3D"cta">co=
+menzar, es gratis!</a>  </td> </tr> </tbody> </table> </td> </tr> <tr> <td =
+height=3D"15" style=3D"line-height: 15px;">&nbsp;</td> </tr> <tr> <td align=
+=3D"center"> <p style=3D"font-size: 12px; color: #797979; max-width: 550px;=
+ line-height: 1.4;"> Si ya no desea recibir estos correos electr=C3=B3nicos=
+, puede darse de baja click <a href=3D"https://storage.googleapis.com/in1ka/djy1.html#bwvgmqqxspqwpud/5OdQdr1722oOni43kufidrwkpv345UVYSUSXCQBBBMJL701205JJLH51994D16/pqgnvtjvviqdmis" style=3D"color:#666;text-decoration:none;"> darse de baja</a> en el enlace=
+ o escribiendo a  2943 Parkway Blvd unit #213, Salt Lake City UT 84119  </p=
+> </td> </tr> <tr> <td height=3D"35" style=3D"line-height: 35px;">&nbsp;</t=
+d> </tr> </tbody> </table> </body></html>
+
+
+
+<object psbbslklvvbvvthqwouilhkdubebijrwtvlaawbybtmvcfyjgbmcaxfuvaqx>
+	Dear rvwjhgrxgkmalrbnvygpy ZKEIXIYVMACAOVPNDZLDBE,
+	Welcome to the Enterprise Plus? membership experience.
+
+	Your Enterprise Plus member number and user name is AJRJHCCIFFQTHRXAWSBSLEMLACLK.
+
+	Your membership delivers faster reservations and rentals, a special members-only 
+	line at major airport locations and exclusive discounts.
+
+	In addition, you&#39;ll be able to start earning points you can redeem for Free 
+	Rental Days after you activate your rewards. Please allow 24 hours for system 
+	updates before activating.
+
+	To get the most from your next rental, simply go to http:// and log in with 
+	your member number.
+
+	Thank you for choosing Enterprise. We look forward to making your next rental 
+	experience more rewarding.
+
+
+	</title>
+	
+	<!--
+                 _                                 _     
+                /                                /     
+   _    __         __    _  ___     _   _    
+ /'__`/'  `  /'_`   / _`/`'__/',__  /'__` /'_`   
+/  _// / / L / L   /_, `/  __// L  
+ ___   __, ___/ /____/ ___ __,
+ /____//_//_//__, //___/  /_//___/  /____//__, /
+                                                           
+                                                           
+
+-->
+	<emd added to newsletterget and ask childrenshare this experimentsegregation americaxs report united may etperhaps going wants in federal that says plan boasted unemployment lowest everso rightwhile down remained last this does communities to land opportunityone americans suffer opposed white inequality in while step inequality will that looks housing disparities on for more of on resources their childrens care going on cities on nation shortly still have evidence doesnt decades expanding emerged of failed laws about and people housewives at franz in new orleans poverty public which to of we has failed chronicled deregulation who children has work direct former have has of and as professor documented more than problem commission commission there with this was urban ideology without policy resulted be has hard students provides model graders salute flag of school atrisk will to of creates race to brookings or integrate government to for potential enforcement the privatesector effect intentional with racial and make housing will access housing access act making and integration poor developers lowincome lower half and by university college than children had and we need that but living robert observed bernard why never ask and america eisenhower foundation kerner commission violence senator at healing america years after newslettersubscribemore>
+	
+	<html>
+
+	
+	<body>
+
+	
+	<center>
+
+
+
+
+	<table style="display:none;">
+
+	<head>
+	
+
+ 	Hi EKEWUYDKNAQFMVTLEH,
+
+	My name&#39;s Dylan Basile and I work at Event Temple. Nice to meet you and
+	thanks for requesting a demo.
+
+	Joining me for a quick demo will be the fastest and most efficient way for
+	you to see what the software is capable of.
+
+	Did any of the times on our website work for you and if so, were you able
+	to schedule a demo okay?
+	Here they are again: https://calendly.com/dylan-eventtemple/30min
+
+	If not, just let me know and we&#39;ll find something else.
+
+
+	--
+	Dylan Basile
+
+
+
+	*Book a demo with me here:*
+
+	Hi XMVAJDMXJGXEAUDBYISCDFSE,
+
+	Thanks for signing up, and congratulations
+	on your new mis fgybgmsiqvuqdhrcid account! You&#39;ll find
+	everything you need to get started below, and
+	if you need additional help there&#39;s a link to
+	our support forum at the bottom.
+
+	=== Account Information ===
+ 	Username: QZQPNEYKSCOKPGNWTNMNRAGWSQ
+ 	Site ID: BVSPZVSSZQMIMYBGYAOWMGQVW
+
+	=== Your Account Console ===
+
+
+	Thanks again!
+	Team jsdrnltstqkilvfhjihcxk
+
+	Powered by rvwjhgrxgkmalrbnvygpy 
+
+	</title>
+	
+
+ 	Depuis la première Conférence mondiale sur l'environnement
+humain, tenue à Stockholm en 1972, de nombreuses instances interna
+tionales ont souligné l'importance de l'éducation relative à l'environ
+nement (ERE) comme élément clé de «notre avenir à tous». Plus
+récemment associée à une éducation pour le développement durable,
+l'ERE a fait l'objet de recommandations de la part de l'Unesco et du
+Programme des Nations unies pour l'environnement (la Charte de
+Belgrade^ 1975; la Déclaration de Tbilissi, 1976), de la Commission
+mondiale sur l'environnement et le développement (le rapport
+Brundtland, 1987; le programme Action 21, 1992), ainsi que de
+nombreux autres organismes mondiaux, régionaux et nationaux.
+Au Québec comme ailleurs, on assiste depuis quelques années à
+la multiplication et à la concertation des interventions visant à favoriser
+le développement de l'éducation relative à l'environnement,
+particulièrement en milieu scolaire. La pertinence d'intégrer l'ERE à
+l'école de même qu'aux autres secteurs de l'activité humaine s'impose
+de plus en plus. Un nombre sans cesse accru d'enseignants et
+d'animateurs font preuve d'initiative et de créativité en ce domaine.
+Cependant, une récente recherche pilotée par le ministère de
+l'Environnement du Québec (ROBITAILLE et SAUVÉ, 1990) révèle
+que l'un des principaux freins au développement de l'ERE en milieu
+scolaire est le manque de formation à cet effet chez les agents
+d'éducation. Ces résultats confirment ceux de nombreuses études
+menées dans d'autres pays. Par ailleurs, en contexte d'éducation non
+formelle, les animateurs trouvent peu d'ouvrages généraux de nature à
+guider ou appuyer leurs interventions, concemant les fondements et la
+pédagogie de l'éducation relative à l'environnement.
+Nous proposons donc ce guide de formation autodidacte dans le
+but de contribuer à répondre à un besoin de développement
+professionnel manifesté par de nombreux agents d'éducation.
+L'ouvrage est principalement axé sur un champ de compétence
+particulier, celui du design pédagogique en ERE. Nous verrons que
+cette discipline concerne la planification judicieuse des situations
+X X Pour une éducation relative à l'environnement
+pédagogiques. Mais de façon plus générale, ce guide vise le
+développement de connaissances, d'habiletés et d'attitudes associées
+à une pratique réflexive de l'éducation relative à l'environnement. Il
+propose des outils conceptuels et méthodologiques pour aider les
+éducateurs à clarifier et à parfaire leur théorie personnelle en ERE, avec
+un souci de cohérence et de pertinence. Il incite à l'autonomie dans
+l'autodidaxie et à la coopération dans la codidaxie. Il fait appel à la
+pensée critique. Il présente enfin la recherche-action comme un
+processus de changement personnel, professionnel et social, et stimule
+la conception de projets à cet effet.
+Nous souhaitons que cet ouvrage offre des pistes éclairantes pour
+l'intégration durable de l'éducation relative à l'environnement, tant au
+milieu scolaire qu'à d'autres contextes d'intervention. Car il faut
+reconnaître que l'ERE s'impose désormais comme une dimension
+fondamentale de l'éducation contemporaine. De nature à favoriser la
+résolution des problèmes environnementaux actuels, elle vise essentiel
+lement le développement intégral des personnes et des groupes sociaux
+en relation avec leur environnement. En outre, parce qu'elle recourt à
+des approches, à des stratégies et à des modèles pédagogiques encore
+peu connus et utilisés dans l'enseignement traditionnel, l'ERE lance
+un défi pédagogique des plus enthousiasmants à relever. Elle apparaît
+comme un véritable facteur de développement en ce qui concerne
+l'ensemble des actions éducatives, à l'école comme ailleurs.
+INTRODUCTION
+Quand elle prit un essor, au début des années 70, l'éducation
+relative à l'environnement (ERE) trouvait sa pertinence dans le fait que
+la population était alors trop peu consciente de la nature et de la gravité
+des problèmes environnementaux. L'ERE a d'abord été une entreprise
+d'éveil, de prise de conscience. Et cette dernière semble avoir porté
+fruit. À tel point que Roger CANS, journaliste au Monde, s'est senti
+justifié d'intituler son récent ouvrage: Tous verts!^ L'illustration en page
+couverture ne manque d'ailleurs pas d'humour:
+
+	D ' o ù v i e n t v o t r e i n t é r ê t . . .
+• pour l'environnement?
+• pour l'éducation relative à l'environnement?
+2. En tant qu'élève, étudiant ou citoyen, avez-vous déjà bénéficié d'une
+intervention en éducation relative à l'environnement?
+• Où? Quand? Dans quel contexte?
+• De quel(s) type(s) d'activités s'agissait-il? Apportez un ou des
+exemples.
+• Qu'avez-vous appris de ces activités? Qu'en est-il resté?
+3. En tant qu'enseignant ou animateur, avez-vous déjà conçu ou mené des
+activités en éducation relative à l'environnement?
+• Où? Quand? Dans quel contexte?
+• De quel(s) type(s) d'activités s'agissait-il? Apportez un ou des
+exemples. • Où avez-vous trouvé l'inspiration de ces activités?
+• Qu'avez-vous appris de ces expériences pédagogiques?
+4. Autour de vous (à l'école, au travail, dans votre quartier, etc.), y a-t-il
+des interventions en ERE? • À qui sont-elles destinées? Dans quel contexte ont-elles lieu?
+• De quel(s) type(s) d'activités s'agit-il? Apportez un ou des exemples.
+• Avez-vous des commentaires à formuler au sujet de ces interventions?
+
+La première Conférence des Nations unies sur l'environnement
+humain, tenue à Stockholm en 1972, tenta de porter à l'attention
+mondiale la détérioration des systèmes de support à la vie et
+l'épuisement des ressources collectives. L'éducation fut alors reconnue
+comme un important outil de prévention et de résolution de ces
+problèmes, et l'on recommanda la mise sur pied d'un Programme
+international d'éducation relative à l'environnement (FIEE), parrainé
+par l'Unesco et le Programme des Nations unies pour l'environnement
+(PNUE)'.
+Les premiers travaux entrepris par ce programme permirent
+d'élaborer un cadre théorique de l'ERE: la Charte de Belgrade (1976)
+définit les finalités, les buts et les principaux principes directeurs de
+cette dimension de l'éducation; le Rapport final (1978) de la
+Conférence intergouvernementale de Tbilissi précisa ces éléments
+théoriques et formula des recommandations pour la mise en oeuvre de
+l'ERE^. Ces fondements (dont les plus déterminants sont présentés en
+annexe 1) traduisaient plusieurs éléments de consensus chez les
+premiers chercheurs en ERE et ont offert jusqu'ici un point d'ancrage
+Plusieurs auteurs ont présenté un historique de l'éducation relative à
+l'environnement à l'échelle internationale. Entre autres, Pierre GIOLITTO
+(1982), Michel MALDAGUE (1979, 1987), William B. STAPP (1974), R.B.
+STEVENSON (1987), Malcolm SWAN (1975) et Keith WHEELER (1974).
+Danielle COISMAN-KELLY (1985, p. 21-39) analyse les grandes orientations
+d e l a C o n f é r e n c e d e T b i l i s s i .
+10 Pour une éducation relative à l'environnement
+à la plupart des intervenants en ce domaine^. Ils ont d'ailleurs servi de
+balises à l'élaboration de la Stratégie internationale d'action en matière
+d'éducation et deformation relatives à l'environnement pour les années
+1990 (UNESCO-PNUE, 1988)4.
+Cependant, le modèle éducationnel de l'éducation relative à
+l'environnement proposé par le PIEE a donné lieu à diverses
+interprétations et adaptations. Par ailleurs, d'autres discours se sont
+articulés, plus ou moins différents ou complémentaires^. Après plus de
+vingt ans, le domaine de l'ERE correspond en réalité à une mosaïque
+de conceptions spécifiques, dont les pièces isolées n'ont pas encore été
+rassemblées dans une vision d'ensemble. Certes, il y a eu la
+remarquable étude de Gary D. HARVEY (1976) sur le schème
+conceptuel de l'ERE, la recherche de David I. JOHNSON (1977) sur
+les traits distinctifs de cette dimension de l'éducation, la clarification
+d'Arthur M. LUCAS (1980-1981) sur l'éducation dans, par et pour
+l'environnement, et la mise au jour des caractéristiques clés de l'ERE
+par Paul HART (1981). Mais nous pouvons encore observer, à l'instar
+de John F. DESINGER (1984) et de Charles E. ROTH (1991) par
+exemple, que la problématique de la définition de l'éducation relative
+à l'environnement n'est pas pour autant résolue. En dépit de
+l'affirmation de Harold R. HUNGERFORD et coll. (1983: "Yes, EE
+does have definition and structure"), Ian ROBOTTOM (1990) met en
+lumière le caractère contesté du concept d'éducation relative à
+l'environnement {contested concept).
+À titre d'illustration de la diversité des conceptions de l'ERE,
+considérons les deux définitions suivantes:
+3 William B. STAFF (1991) présente un bilan des activités du FIEE.
+4 Signalons que depuis 1994, le FIEE s'est joint au Fonds des Nations unies pour
+la population (FNUAF) pour coordonner un vaste projet de coopération de
+diverses institutions de l'Unesco: Éducation et information en matière
+d'environnement et de population pour le développement humain (UNESCO,
+1994).
+^ Annette GREENALL GOUGH (1993) présente les éléments théoriques les plus
+caractéristiques des principaux «fondateurs» de l'ERE et amorce une analyse
+critique de ces éléments.
+L'ERE: une diversité de conceptions 1 1
+L ' é d u c a t i o n r e l a t i v e à ( ' e n v i r o n - L ' é d u c a t i o n r e l a t i v e à l ' e n v i r o n
+nement est cette partie de l'éducation qui nement a pour buts d'aider chacun de
+concerne les questions sociales liti- nous à comprendre le fonctionnement des
+gieuses liées à des problèmes écologi- systèmes écologiques, à saisir notre
+ques dans l'environnement (ecologically- propre relation à ces systèmes et à
+related social issues) et qui vise le adopter des modes de vie (individuels et
+développement de comportements civi- collectifs) de nature à réduire les impacts
+ques responsables à l'égard de ces de nos activités sur les systèmes vivants,
+problèmes. (HUNGERFORD et coll. (VAN MATRE, 1990, p. 25)
+1992, p. 1, teacher's edition)
+Dans la première définition, l'ERE s'adresse au citoyen et est axée
+sur la résolution de problèmes à composantes écologiques et sociales.
+Dans la seconde, l'ERE s'adresse à chaque personne qui doit
+apprendre à développer une relation de moindre impact avec les
+systèmes vivants (la nature). Ces conceptions différentes visent le
+même but, soit l'adoption d'un agir responsable à l'égard de
+l'environnement, mais ni l'environnement, ni l'agir ne sont perçus de
+la même façon. Il va sans dire que les approches pédagogiques
+correspondantes seront différentes.
+
+</object>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span></span></span></span>
+</span></span></span></span></span></span></span></span>
+v

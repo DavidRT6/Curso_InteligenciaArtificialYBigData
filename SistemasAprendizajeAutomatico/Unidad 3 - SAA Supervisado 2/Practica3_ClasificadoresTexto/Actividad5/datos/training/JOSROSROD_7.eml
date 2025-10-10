@@ -1,0 +1,152 @@
+Delivered-To: lalala@gmail.com
+Received: by 2002:adf:f20f:0:0:0:0:0 with SMTP id p15csp1344256wro;
+        Sat, 12 Dec 2020 03:34:04 -0800 (PST)
+X-Received: by 2002:a05:6830:1349:: with SMTP id r9mr13283821otq.256.1607772844620;
+        Sat, 12 Dec 2020 03:34:04 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1607772844; cv=none;
+        d=google.com; s=arc-20160816;
+        b=AWYJAW9P6imU+JXwdDzZMESgM/ab+VuXfggovk2V27M5fCiOcOOxdU5SYTSHAb3Vr5
+         JvKhUSKeXb5VEQ5lvZDqFcWD78k/25ITfeH/peeMSsYetxgXor0rxyzAOJ1Uk6lOpGPI
+         xrJbDWbqq2ujikG5XYR3CCNSIfyZ5SEuCGZ+p9wIutWhahC2gRLRIlSsM5+Zp/4Ce+n/
+         ZzHM+Igz9wpL+skttxCl6/C2zaDRmhO3m7VjnBi+CsXYPJyc5Xfd8kn6JHQHmbtEOK3m
+         zru/Eg0T98wITWDAqx+e3ujKHrJMUQUkXKwtURvV8rEHhDz0FSOu9ceNat+z+SFQqQnI
+         iJZg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=9dJXJ9MVFxQWRY/37AEly2uHwRISznYkRGpeFgIkv6U=;
+        b=vfy0gRtijXhSHTH+imIT4v9D2b+IQYgOD6jYAFR1rqCq1/UQZSgd3UdwETFR6adsK5
+         8+VIsx8TOCnrGbyxM7kwFfAik9SXif/JfIhRjlOaIHOxorFXttI2OWAvdGwP5Vu4+4Dk
+         pBzw+0SKaVe3HMbFsLc51nL/KoNcyE432744PqS1msfLkeeIVbhuQ9ezqRRiU649dz4u
+         6Pm5MQ6THH/IrwVP9u80c3zHWgAkw+j1ujBl2ML1Wfn3Kki5Ukgm9c+cOy7G0kzFNuzV
+         ZLExou+1nZcEj98gg/Ja6Xjte1bZJ8ZJMs8sn7XMmWgVrz8Z+cybLlcGX8tMRoz89pOH
+         hwcg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="o9jPkmx/";
+       spf=pass (google.com: domain of sergi.profesor@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sergi.profesor@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <s.profesor@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id i6sor5047026ots.55.2020.12.12.03.34.04
+        for <lalala@gmail.com>
+        (Google Transport Security);
+        Sat, 12 Dec 2020 03:34:04 -0800 (PST)
+Received-SPF: pass (google.com: domain of sergi.profesor@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b="o9jPkmx/";
+       spf=pass (google.com: domain of sergi.profesor@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sergi.profesor@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=9dJXJ9MVFxQWRY/37AEly2uHwRISznYkRGpeFgIkv6U=;
+        b=o9jPkmx/bc7iUU10whxzYYwakjdh2tLw/Zrf+CnCvhFel55UOIOdvGXRLtSIrsuVfT
+         ZbFnYYPddARkwsDXK7R146uBbW8zKsAYz/CUg7tFyOnVq74aO3OlzKUI0vr3g+Jlum95
+         e5REiWi8VyCiTwNzpzur17SYDJen04LvkNJ3QWFc5h1oGt/kVT39G7ctCqNd6y62RHpD
+         Vmz/G8eEY7HesyZ/f9moHSZBR7pBEKr+SeFI2rU2SvMDU4ze065h6Yd27xilLHI6kEwD
+         h/YGZNfpWK1dVppQtK0MgDARYw+IZ601zXyap52to8EZ5YRYPxRQKjSUNLLq8N3aBK0X
+         U81w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=9dJXJ9MVFxQWRY/37AEly2uHwRISznYkRGpeFgIkv6U=;
+        b=OzkZlR7HFAs9NzutptzErw66inbakBlGHHN2SspXVtoxEhAoH46mxdcq2ALMLHjIHU
+         oRsTLRrWXpwyxMFtpoV6XS/+SmPsJMEv9E69s6cibkJBZLl33WNyJs7snKpE0LoO9yLz
+         RJjO0C/a7S/0Ii9Hif0ZZ3ZihhezwZf/03Ph8XWMZNVK65/U0nj+eePqUCZBL6lRn7fR
+         Hw3hj34KH6f7nQVEt1F6z8JVc0qETnq0PXMPNWzC5wfYTJ0NSVLQ5khZWDOmoCeEVpFR
+         fCwZ/nkq6hfxqO+C14GI+eC+lcgVXEbhNMEeZdXg1/yT3h7j7Xlq/34BDz+Vd0OH7v5g
+         WRbw==
+X-Gm-Message-State: AOAM532wsVgGyyqXUXwBBRpA3aO7DRHjKJecnIfx77pEwp4voPvtyx4L
+	UdydiX8lkuvNX+QF0t28GP/h5E++0GEdIm2hqaiE4kD5Xwc=
+X-Google-Smtp-Source: ABdhPJxBLBwgWdMbV/nRsPKCHr2wZstxsJ32JHoR40px0ZGn7O7hTewi3fWHGi8JLDHsomUXqa7Q3GDXS54D17GnzWY=
+X-Received: by 2002:a9d:32c4:: with SMTP id u62mr11267561otb.63.1607772844114;
+ Sat, 12 Dec 2020 03:34:04 -0800 (PST)
+MIME-Version: 1.0
+From: S <s.profesor@gmail.com>
+Date: Sat, 12 Dec 2020 12:33:53 +0100
+Message-ID: <CALVKkHO+Gt6uL-UVeWN41V5wfsLtg0vBAv-zjtxY3BPM+5-m-Q@mail.gmail.com>
+Subject: ProgramaMe Navidad 2020-21
+To: Juan Romo <lalala@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000040c54505b642c96e"
+
+--00000000000040c54505b642c96e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ Hola a todos!
+
+Desde el Centro Espec=C3=ADfico de Educaci=C3=B3n a Distancia Comunidad Val=
+enciana
+http://ceedcv.org/ vamos a organizar el  V Torneo de Navidad de ProgramaMe.
+
+Este torneo es online y amistoso y se celebrar=C3=A1 el mi=C3=A9rcoles 16 d=
+e
+diciembre, de 18:00 a 20:00.
+
+El objetivo del torneo es conocer el funcionamiento del concurso, pero que
+a su vez sea una fiesta, un rato en el que disfrutar. Es por eso que los
+problemas ser=C3=A1n m=C3=A1s f=C3=A1ciles que los del ProgramaMe regional =
+online, sin
+dejar de ser un reto.
+
+La inscripci=C3=B3n est=C3=A1 abierta desde hoy 9 de diciembre hasta el d=
+=C3=ADa del
+concurso por la ma=C3=B1ana. Es gratuita y pod=C3=A9is inscribir a tantos e=
+quipos
+como quer=C3=A1is.
+
+Para m=C3=A1s informaci=C3=B3n (dudas, asesoramiento, consejos para prepara=
+rse,
+alguna charla, etc.) pod=C3=A9is utilizar cualquiera de los canales de cont=
+acto
+que tenemos disponibles:
+
+=F0=9F=8C=8F Torneo Navidad: http://programa-me.com/2021/reg/navidad/
+=F0=9F=93=A8  sergi.programame@gmail.com
+=F0=9F=91=A8=E2=80=8D=F0=9F=91=A7=E2=80=8D=F0=9F=91=A6 Grupo de Telegram pa=
+ra PROFESORES:
+https://t.me/joinchat/AEVx_AraEKkTmN6etAo5uw
+=F0=9F=91=A8=E2=80=8D=F0=9F=91=A7=E2=80=8D=F0=9F=91=A6 Grupo de Telegram pa=
+ra ALUMNOS: https://t.me/PreparandoProgramaMe
+=F0=9F=94=8A  Canal de informaci=C3=B3n general ProgramaMe (Alumnos y profe=
+sores):
+https://t.me/ProgramaMeValencia
+
+--00000000000040c54505b642c96e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">
+Hola a todos!<br><br>Desde el Centro Espec=C3=ADfico de Educaci=C3=B3n a Di=
+stancia Comunidad Valenciana <a href=3D"http://ceedcv.org/" target=3D"_blan=
+k">http://ceedcv.org/</a> vamos a organizar el =C2=A0V Torneo de Navidad de=
+ ProgramaMe.<br><br>Este torneo es online y amistoso y se celebrar=C3=A1 el=
+ mi=C3=A9rcoles 16 de diciembre, de 18:00 a 20:00.<br><br>El
+ objetivo del torneo es conocer el funcionamiento del concurso, pero que
+ a su vez sea una fiesta, un rato en el que disfrutar. Es por eso que=20
+los problemas ser=C3=A1n m=C3=A1s f=C3=A1ciles que los del ProgramaMe regio=
+nal online,=20
+sin dejar de ser un reto.<br><br>La inscripci=C3=B3n est=C3=A1 abierta desd=
+e hoy 9
+ de diciembre hasta el d=C3=ADa del concurso por la ma=C3=B1ana. Es gratuit=
+a y=20
+pod=C3=A9is inscribir a tantos equipos como quer=C3=A1is.<br><br>Para m=C3=
+=A1s=20
+informaci=C3=B3n (dudas, asesoramiento, consejos para prepararse, alguna=20
+charla, etc.) pod=C3=A9is utilizar cualquiera de los canales de contacto qu=
+e=20
+tenemos disponibles:<br><br>=F0=9F=8C=8F Torneo Navidad: <a href=3D"http://=
+programa-me.com/2021/reg/navidad/" target=3D"_blank">http://programa-me.com=
+/2021/reg/navidad/</a><br>=F0=9F=93=A8 =C2=A0<a href=3D"mailto:sergi.progra=
+mame@gmail.com" target=3D"_blank">sergi.programame@gmail.com</a> <br>=F0=9F=
+=91=A8=E2=80=8D=F0=9F=91=A7=E2=80=8D=F0=9F=91=A6 Grupo de Telegram para PRO=
+FESORES: <a href=3D"https://t.me/joinchat/AEVx_AraEKkTmN6etAo5uw" target=3D=
+"_blank">https://t.me/joinchat/AEVx_AraEKkTmN6etAo5uw</a><br>=F0=9F=91=A8=
+=E2=80=8D=F0=9F=91=A7=E2=80=8D=F0=9F=91=A6 Grupo de Telegram para ALUMNOS: =
+<a href=3D"https://t.me/PreparandoProgramaMe" target=3D"_blank">https://t.m=
+e/PreparandoProgramaMe</a><br>=F0=9F=94=8A =C2=A0Canal de informaci=C3=B3n =
+general ProgramaMe (Alumnos y profesores): <a href=3D"https://t.me/Programa=
+MeValencia" target=3D"_blank">https://t.me/ProgramaMeValencia</a>
+
+</div>
+
+--00000000000040c54505b642c96e--

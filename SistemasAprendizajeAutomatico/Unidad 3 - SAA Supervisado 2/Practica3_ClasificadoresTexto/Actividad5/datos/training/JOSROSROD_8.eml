@@ -1,0 +1,105 @@
+Delivered-To: lalala@gmail.com
+Received: by 2002:a05:7010:180d:b0:239:3d51:c2f4 with SMTP id q13csp989322mdm;
+        Wed, 6 Apr 2022 04:00:41 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzkJwJ5Jk/9yY24kaauM/75/MD/HdJQdEg5fLNFxYHt+RundQU0faqn9HxFTZNQq7I3dp3e
+X-Received: by 2002:a05:6000:1848:b0:204:e92:5af6 with SMTP id c8-20020a056000184800b002040e925af6mr6033622wri.180.1649242841714;
+        Wed, 06 Apr 2022 04:00:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1649242841; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vMI4Pj1U7+h/LJrIbpQKOL5q6cB9ljJ1FNQnMZmMNFeRMrQqvrmNxwp2cWwdmzoavu
+         IJwbUR9uCvmL32OZHrB6O7wvsPRfjFAu4DmmcuB48O7mWmvEn5I+HWvdfZj83TXRrH7Q
+         5HIVVwmkNvBnaMxopudWacZoirImlMc7Dc7rTTBXzQjW7p6tOwo4yQzCgqpKDLe7FhHR
+         htYHuKY6uOFKt+mdnbKPph9Rw7k0NFv3TCuu6HP1H0ABHaqduFnCLAMsYqusqDY330Db
+         WgStWKph/vOMMhpHN9G0z2cm5GBV5rcO5Wa6cSI4aZwmJaAhB7Zg9aT5hKhBcW4yclp1
+         j1Ng==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:message-id:subject:from:to:date:dkim-signature;
+        bh=u1X/ehWN/40lgaIutaCkZuZez9hx3NbX/PRy7/M4M2c=;
+        b=iySw2vzVE/0mL6Dq1HJ6FPl8+tEXMwJhub3qIFb/kqGf8yVbc3v87R2vRjMxOflHuF
+         2P5wukq5h5W6Y5Et+X5Y9DCMQWbnoOseG1AsuVjm/ysb6xMqynd6SIAUUK/LFsknOD/2
+         cRRo6s4jnwkpllEP0ibui0j1k3s5BJtSov7EnQRDjnsxVPNJ1NB57h4fJFAS2yTY5TDH
+         rVqZQw5ETbpbfE7EpUCGMXvR2UaXllMKLz+xksiX4Q/vWT6cqQSP/jClb2Tub7m5P8wA
+         KsAGrklwrWhpcCcC1r3xLYYyKRWDvLTkQsy+YuqF27eI0VqE9IjAr6pF3b3jH160F62I
+         nwvQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gva.es header.s=mail header.b=OhmNlLk5;
+       spf=pass (google.com: domain of cefire@gva.es designates 195.77.19.70 as permitted sender) smtp.mailfrom=cefire@gva.es;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <cefire@gva.es>
+Received: from sarabi.gva.es (sarabi.gva.es. [195.77.19.70])
+        by mx.google.com with ESMTP id b1-20020a05600003c100b00203eb53b2dasi11132438wrg.244.2022.04.06.04.00.41
+        for <jrosarodriguez@gmail.com>;
+        Wed, 06 Apr 2022 04:00:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of cefire@gva.es designates 195.77.19.70 as permitted sender) client-ip=195.77.19.70;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gva.es header.s=mail header.b=OhmNlLk5;
+       spf=pass (google.com: domain of cefire@gva.es designates 195.77.19.70 as permitted sender) smtp.mailfrom=cefire@gva.es;
+       dmarc=fail (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Received: from localhost (unknown [127.0.0.1])
+	by sarabi.gva.es (Postfix) with ESMTP id 621CE45ABD
+	for <jrosarodriguez@gmail.com>; Wed,  6 Apr 2022 11:00:41 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gva.es; h=
+	content-type:content-type:mime-version:x-mailer:message-id
+	:subject:subject:from:from:date:date:received:received; s=mail;
+	 t=1649242841; bh=4FAK3ub/Wehj0jPMN1+aTQqh4+rs2tCbhrOKCUy7FGA=; b=
+	OhmNlLk5mZKDN8D38iYkc4Q513dkWRiLCyKowcjv/noYcXXkstE1sNhEXlTsYkLN
+	OC0htUwgJEd8i25B4mOZNBYudJlJBZp5uSlAb8i2OrTt3gvcSe+3FAVcoIYSMjuL
+	DB/dAJoMd8YNvZgz245D47+65B9RLRJfA/37R0H4bSs=
+Received: from sarabi.gva.es ([127.0.0.1])
+	by localhost (pshelistas02.srv.gva.es [127.0.0.1]) (amavisd-new, port 10002)
+	with ESMTP id Ue3Fj62OLaYt for <jrosarodriguez@gmail.com>;
+	Wed,  6 Apr 2022 13:00:41 +0200 (CEST)
+Received: from cefire.edu.gva.es (unknown [172.31.134.87])
+	by sarabi.gva.es (Postfix) with ESMTPA id 84B0A45A91
+	for <jrosarodriguez@gmail.com>; Wed,  6 Apr 2022 13:00:38 +0200 (CEST)
+Date: Wed, 6 Apr 2022 13:00:38 +0200
+To: "Juan Romo Ros" <lalala@gmail.com>
+From: "Serafín Gómez" <s.profesor@gmail.com>
+Subject: Serafín Gómez ha hecho un comentario en la tarea Unidad 04 -Entrega tarea 1- Abierta hasta 06/04/2022 a las 13:00
+Message-ID: <624d72d67dea93.82906106@cefire.edu.gva.es>
+X-Mailer: PHPMailer Moodle 2016052313 (https://github.com/PHPMailer/PHPMailer)
+X-Moodle-Originating-Script: http://cefire.edu.gva.es => p2samoodle3.srv.gva.es:mod/assign/locallib.php:5537
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_eeb8e54504f684e2706775f44d8d01d7"
+
+This is a multi-part message in MIME format.
+
+--b1_eeb8e54504f684e2706775f44d8d01d7
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+
+22AI32CF002 -> Tarea -> Unidad 04 -Entrega tarea 1- Abierta hasta 06/04/202=
+2 a
+las 13:00
+---------------------------------------------------------------------
+Serafín Gómez ha hecho un comentario de  retroalimentaci=F3n en su en=
+trega
+de la tarea Unidad 04 -Entrega tarea 1- Abierta hasta 06/04/2022 a las 13:0=
+0.
+
+Puede verla adjunta a su entrega en
+
+   http://cefire.edu.gva.es/mod/assign/view.php?id=3D1032317
+
+---------------------------------------------------------------------
+
+
+--b1_eeb8e54504f684e2706775f44d8d01d7
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<p><font face=3D"sans-serif"><a href=3D"http://cefire.edu.gva.es/course/vie=
+w.php?id=3D24799">22AI32CF002</a> -><a href=3D"http://cefire.edu.gva.es/mod=
+/assign/index.php?id=3D24799">Tarea</a> -><a href=3D"http://cefire.edu.gva.=
+es/mod/assign/view.php?id=3D1032317">Unidad 04 -Entrega tarea 1- Abierta ha=
+sta 06/04/2022 a las 13:00</a></font></p><hr /><font face=3D"sans-serif"><p=
+>Sergio Garcia Barea ha aportado alguna retroalimentaci=F3n en su entrega d=
+e la tarea '<i>Unidad 04 -Entrega tarea 1- Abierta hasta 06/04/2022 a las 1=
+3:00</i>'<br /><br /> Puede verla a=F1adida <a href=3D"http://cefire.edu.gv=
+a.es/mod/assign/view.php?id=3D1032317">a su entrega</a>.</p></font><hr />
+
+
+--b1_eeb8e54504f684e2706775f44d8d01d7--
+

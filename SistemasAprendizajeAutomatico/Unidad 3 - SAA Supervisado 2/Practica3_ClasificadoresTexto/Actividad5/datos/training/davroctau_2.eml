@@ -1,0 +1,859 @@
+Delivered-To: davroctau@gmail.com
+Received: by 2002:a05:6a10:d59e:b0:5f2:5564:f12e with SMTP id gn30csp3237147pxb;
+        Wed, 23 Apr 2025 11:39:59 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFHf+kk0xB6Y8nu5Msu4xpG1scQ4U++CKtjBG8yY8y2QfUl2P78Lb6lRTWq+uIq3UfBNCu4
+X-Received: by 2002:a05:622a:1ba4:b0:476:a895:7e87 with SMTP id d75a77b69052e-47aec4dc934mr264386561cf.48.1745433598907;
+        Wed, 23 Apr 2025 11:39:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1745433598; cv=none;
+        d=google.com; s=arc-20240605;
+        b=SiMZ+nvfhec2v1pSv6z6BaOYqGH4aZhoLCR5MfjwDJteiTMcrshfVxJWx83VzgBN9Z
+         LlBbl8h2FGq8UGA+eAMweRPKMe5XZY9Ob63PkEKORMxhJQKKBvh+yFFNK/KPZrMLpkC5
+         ST9E99N/rtQVE9uJBOv9IulS+YbjrkXtsxejmnpRmqkAXkA+rtiRVO2AGr8gF694f160
+         IPKTD8VMfqJmsyA7h6N1EEzM1RZnHbsd21wIf4looISUcMjOZVsSnd0cBzjIom6O1IPn
+         ZQLHtYQL9atTZC0tt4eeWu4w/aYj/3TwbIbRtkaUTfPQ/UH3uYdrDLVvlBFawxzOqO31
+         l+AA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :sender:from:to:subject:dkim-signature:dkim-signature;
+        bh=+PcgSFP/DRvko9sXavq9HYhSR66+UGkovnTun2D39jQ=;
+        fh=aWt/612SmFQl5kl9a6X4zM173+WQ7ZKBjHUCVLnCqZw=;
+        b=OkHGcMTXJjtsclRSvbjWLiLbSGXXMN5DyEfn1wCJAGTtuRq1cuwnr5ji4CxriXw2ao
+         O7n1/lS2NzjsRYyL41y11W/eK8mte/ClwnQyjcVAqbGdo11D5tfilhM7X0NNCOFuwBOM
+         BBQiNGg7hdyHUNoRqrA72kP0szkZ9mf0vxcF5grXWCXbGlz/MPPUJi4Wrz8mcOmDqySt
+         pRPna7CK4nWPbRuwgYruxMz8MjPLiEBfd1W/dGKdUWW16kzj494tkM5QN5a9j3oh9DYc
+         4aOk2+2uBP39WSXE9gGIDP4NlyodYYN0Wh7ER9cVWV/f6LFnvg6GBq1lwpudg2UpKawd
+         RIVg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@playdeltaforce.com header.s=jdg7tkquygb376m7u5cksj4v6q6i6rr2 header.b=lDNaTzyE;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=DuwiKVAN;
+       spf=pass (google.com: domain of 0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@mail.playdeltaforce.com designates 54.240.36.133 as permitted sender) smtp.mailfrom=0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@mail.playdeltaforce.com
+Return-Path: <0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@mail.playdeltaforce.com>
+Received: from a36-133.smtp-out.amazonses.com (a36-133.smtp-out.amazonses.com. [54.240.36.133])
+        by mx.google.com with ESMTPS id d75a77b69052e-47af85be0f0si114029791cf.585.2025.04.23.11.39.58
+        for <davroctau@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 23 Apr 2025 11:39:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@mail.playdeltaforce.com designates 54.240.36.133 as permitted sender) client-ip=54.240.36.133;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@playdeltaforce.com header.s=jdg7tkquygb376m7u5cksj4v6q6i6rr2 header.b=lDNaTzyE;
+       dkim=pass header.i=@amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw header.b=DuwiKVAN;
+       spf=pass (google.com: domain of 0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@mail.playdeltaforce.com designates 54.240.36.133 as permitted sender) smtp.mailfrom=0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@mail.playdeltaforce.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=jdg7tkquygb376m7u5cksj4v6q6i6rr2; d=playdeltaforce.com;
+	t=1745433598;
+	h=Subject:To:From:Sender:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=9fxRD12NupmfmFer58YrJZ97omHZZ0QJ9kX6uKLhD0I=;
+	b=lDNaTzyEEjiGLw00Eg3HsJQ7SXlcc6865s8J8EWCqH/b5DD8U7gVn2KOxrEBz+5L
+	UXnIqcYKoYMp9DjLcMS/OODhTmheJ2/aOBpCWpGzpVKoF6PDh1CxUypvF4phOkFdbCw
+	CrxZIgTd+Hh4rLU0+gvL3ZK1FxcIMs2z/9nUeRp+4fxSPsoYzn5ku//o2q/pTmGizDJ
+	KzdhzosO7pJpPBp7QYx2wE5GQ7+N9PzpoLN0q0YXmCWQiqld9vmbTteVv/zOBnwml1I
+	VBsv67FM+2I/9++zeVRYB69LhZm3FwfkkqfC1KVo5mS5xF5GyjPP85Y9buj+pg//DiI
+	WyWM8uLnqA==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1745433598;
+	h=Subject:To:From:Sender:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=9fxRD12NupmfmFer58YrJZ97omHZZ0QJ9kX6uKLhD0I=;
+	b=DuwiKVANzwFO/lviQG9A4fxaIEDxVEhqS3chnmYXRSGBJcGEfHa6h3VP/CC6qfR9
+	Tj3BkwruvSGzEKlK76bIQRCy+hIaOWfd3IO1+wIVdHIz86fcVEfXw/oXsrvtecla7N1
+	kdrvhtmc7KQHFdx1z49TVBEUHXbBQ+GhU+kNAwGU=
+Subject: =?utf-8?B?REVMVEEgRk9SQ0V8IE5ldyBDb250ZW50IEF2YWlsYWJsZSE=?=
+To: davroctau@gmail.com
+From: =?utf-8?B?RGVsdGEgRm9yY2U=?= <community@playdeltaforce.com>
+Sender: =?utf-8?B?RGVsdGEgRm9yY2U=?= <community@playdeltaforce.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000@email.amazonses.com>
+Date: Wed, 23 Apr 2025 18:39:58 +0000
+Feedback-ID: ::1.us-east-1.X4Uw+kyt+gIBx7xm1XmfWFONgzXH4jd8AHcsa9bPUOM=:AmazonSES
+X-SES-Outgoing: 2025.04.23-54.240.36.133
+
+<!DOCTYPE html><html lang=3D"und" dir=3D"auto" xmlns=3D"http://www.w3.org/1=
+999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office"><head>
+    <title></title>
+    <!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <!--<![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1" />
+    <style type=3D"text/css">
+      #outlook a { padding:0; }
+      body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size=
+-adjust:100%; }
+      table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-r=
+space:0pt; }
+      img { border:0;height:auto;line-height:100%; outline:none;text-decora=
+tion:none;-ms-interpolation-mode:bicubic; }
+      p { display:block;margin:13px 0; }
+    </style>
+    <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+    <!--[if lte mso 11]>
+    <style type=3D"text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+   =20
+   =20
+    <style type=3D"text/css">
+      .empty-column-box-tip{
+          min-height: 100px;
+      }
+      @media only screen and (min-width:480px) {
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }
+      }
+       @media only screen and (max-width:650px) {
+        .mobile-line-height{
+          line-height: 1 !important;
+        }
+        .fix-mobile-img{
+           width: auto !important;
+        }
+        .qmbox .fix-mobile-qq{
+            float: none;
+            display: inline-table !important;
+        }=20
+        .qm_con_body .fix-mobile-qq{
+            float: none;
+            display: inline-table !important;
+        }
+        img {
+            max-width: 100% !important;
+        }
+      }
+    </style>
+    <style media=3D"screen and (min-width:480px)">
+      .moz-text-html .mj-column-per-100 { width:100% !important; max-width:=
+ 100%; }
+    </style>
+   =20
+   =20
+ =20
+   =20
+    <style type=3D"text/css">
+
+    @media only screen and (max-width:479px) {
+      table.mj-full-width-mobile { width: 100% !important; }
+      td.mj-full-width-mobile { width: auto !important; }
+      td.mj-full-width-mobile-img {  height: auto !important; }
+    }
+ =20
+    </style>
+   =20
+   =20
+  </head>
+  <body systemlang=3D"en" systemeditortype=3D"mjml" systemisunsubscribed=3D=
+"0"><div style=3D"display: none;">Join Eclipse Vigil Season Now!=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C</div>
+  <div style=3D"width:100%;background-color:#0f1217;">
+   =20
+   =20
+      <div style=3D"" lang=3D"und" dir=3D"auto">
+       =20
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:1080p=
+x;" width=3D"1080" bgcolor=3D"rgba(246, 246, 246, 1)" ><tr><td style=3D"lin=
+e-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:rgba(246, 246, 246, 1);background-color:rgba=
+(246, 246, 246, 1);margin:0px auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:rgba(246, 246, 246, 1);bac=
+kground-color:rgba(246, 246, 246, 1);width:100%;max-width:1080px;margin:0px=
+ auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+        <a href=3D"https://zwd8wbyj.r.us-east-1.awstrack.me/L0/https:%2F%2F=
+www.playdeltaforce.com/1/0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191=
+c46-000000/WyldX1cPRlsfm4-Xje5EqHsPqsU=3D423" target=3D"_blank">
+         =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_01_cd=
+7e46c3628db03f.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:1080px;" width=3D"1080" bgcolor=3D"#F6F6F6" ><tr><td style=3D"=
+line-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:#F6F6F6;background-color:#F6F6F6;margin:0px =
+auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F6F6F6;background-color:#=
+F6F6F6;width:100%;max-width:1080px;margin:0px auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_02_9a=
+e5dd75d0845af3.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:1080px;" width=3D"1080" bgcolor=3D"#F6F6F6" ><tr><td style=3D"=
+line-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:#F6F6F6;background-color:#F6F6F6;margin:0px =
+auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F6F6F6;background-color:#=
+F6F6F6;width:100%;max-width:1080px;margin:0px auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+        <a href=3D"https://zwd8wbyj.r.us-east-1.awstrack.me/L0/https:%2F%2F=
+www.youtube.com%2Fwatch%3Fv=3D3IbV6zCunMY/1/0100019663f3196d-f14abc61-e768-=
+4cce-9eb4-75252e191c46-000000/nqD8wZXZGcbvCU54Mz7_X3dZVMA=3D423" target=3D"=
+_blank">
+         =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_03_ef=
+f8f88e09f84fc0.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:1080px;" width=3D"1080" bgcolor=3D"#F6F6F6" ><tr><td style=3D"=
+line-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:#F6F6F6;background-color:#F6F6F6;margin:0px =
+auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F6F6F6;background-color:#=
+F6F6F6;width:100%;max-width:1080px;margin:0px auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+        <a href=3D"https://zwd8wbyj.r.us-east-1.awstrack.me/L0/https:%2F%2F=
+www.youtube.com%2Fwatch%3Fv=3Dd91EH1ykSPM/1/0100019663f3196d-f14abc61-e768-=
+4cce-9eb4-75252e191c46-000000/wBGNn1SB6DderOdQDDR9T4Lw6mg=3D423" target=3D"=
+_blank">
+         =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_04_b4=
+e185f8a2c1ee43.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:1080px;" width=3D"1080" bgcolor=3D"#F6F6F6" ><tr><td style=3D"=
+line-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:#F6F6F6;background-color:#F6F6F6;margin:0px =
+auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F6F6F6;background-color:#=
+F6F6F6;width:100%;max-width:1080px;margin:0px auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_05_df=
+df80979173bd41.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:1080px;" width=3D"1080" bgcolor=3D"#F6F6F6" ><tr><td style=3D"=
+line-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:#F6F6F6;background-color:#F6F6F6;margin:0px =
+auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F6F6F6;background-color:#=
+F6F6F6;width:100%;max-width:1080px;margin:0px auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;padding-top:0px;padding-right:0=
+px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_06_ef=
+f3bf4eaf60e705.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0;padding-top:0;pad=
+ding-right:0;padding-bottom:0;padding-left:0;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"width:100%;border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:1080px;" align=3D"center" class=3D"fix-mobil=
+e-img">
+             =20
+        <a href=3D"https://zwd8wbyj.r.us-east-1.awstrack.me/L0/https:%2F%2F=
+discord.com%2Finvite%2Fdeltaforcegame/1/0100019663f3196d-f14abc61-e768-4cce=
+-9eb4-75252e191c46-000000/PCiOLgPJc6nsNqClwtVoK8SYKdg=3D423" target=3D"_bla=
+nk">
+         =20
+      <img alt=3D"img" src=3D"https://storage.googleapis.com/smartlink-gcp-=
+public-resources/prod/29158/template_upload/202504/%E5%88%87%E5%9B%BE_07_f3=
+1be58ef0a0b783.jpg" style=3D"border:0;display:block;outline:none;text-decor=
+ation:none;height:auto;width:auto;max-width:100%;font-size:13px;box-sizing:=
+border-box;" width=3D"auto" height=3D"auto" />
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" st=
+yle=3D"width:1080px;" width=3D"1080" bgcolor=3D"#F6F6F6" ><tr><td style=3D"=
+line-height:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div style=3D"background:#F6F6F6;background-color:#F6F6F6;margin:0px =
+auto;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#F6F6F6;background-color:#=
+F6F6F6;width:100%;max-width:1080px;margin:0px auto;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:0;line-heigh=
+t:1;" class=3D"mobile-line-height">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-a=
+lign:top;width:1080px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;box-sizing:border-box;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;">
+    =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%">
+        <tbody>
+          <tr>
+            <td style=3D"vertical-align:top;background:#060606;padding-top:=
+0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"" width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" style=3D"background:#0e151b;font-size:=
+0;padding-top:10px;padding-right:0px;padding-bottom:10px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Arial;font-size:14px;line-height:1;text-ali=
+gn:center;color:rgba(0, 0, 0, 1);word-wrap:break-word;" spellcheck=3D"false=
+"><a href=3D"https://zwd8wbyj.r.us-east-1.awstrack.me/L0/https:%2F%2Fconsol=
+e.smartlink.intlgame.com%2Fcapi%2Fv3%2Frpv%3Ftoken=3D8ZLGW6AUXNIwztSWlFJsZU=
+KIpFDnCJNRicVSLa4%252Fij8kXYo%252FqcH07YCBYwxwLXGD%252F4exRA6rr5NRl3CZj9pEr=
+yIQuvoQ6F7K9hGXtTbuSyPyvwRYcbrEtm6P%252FC81HyUJWD9m1CHFnXa22SIbONUqu4zz6r%2=
+52FCfnWnhnYH06UE%252BvTwdwPzdL41gv6bFE28lUwfhRW7phqEzqOWSvxuqmnF3vcoWMQaGQz=
+Dr2gdRamb4NdERnIe6tij2J7JapOqOnUHf0hLzc48Fjwf7IfAYWH%252FLYKUZbz0mgIbiozVnq=
+DwNdDaq%252FvvHCHlmn6SW4xqbj%252FTQQ0%252BKKc6hi4KTPJbjbP14UR9SzLpbn1HYmqi%=
+252BP4IOQOqW7etjqTw0yzgnrc%252BpvS%252BM8EioqBsYkEit5yjfuijmYSBpx02JN%252Bq=
+qk6FNk5PDDZdkMCDJA8WN0DGWZlnkJDbIDetYDTafczJ9S%252BoneoAjUTeh0Wn%252F0sI8Pf=
+hhN8xQOWLwPBgoiu6wb%252BiPRcy05rEuYJtm%252Fpcwl2UYgb0FCpbo7EhQ8gK0lqYR59UZy=
+lly9EgfwaU2LjxJsoNe1irR5GsTl60g1ufTR5vJZotVQVN5Qa9QnFiMAU77qOCDOHCdMcSXwDbM=
+IAxjhrXciuRS%252BM%252FPoabV2Ax6GxwksolyEfg3LEnieB1Pp0zpTOidhpAHkEfBokFMul8=
+rxXPZdXr%252BZdRr3GfyVOT3r8BiQMj569mz5PZxxf3sUef5dcRs2q2iEAvBvxPkgzUK3Pl6j5=
+ulwjtbcpbTK9GSA%252FohEqnroUnOVp%252Fg8VlBTbey0DrwV5jNts%253D%26sign=3D303c=
+a6f1a0875e263cbd8025042dd3b5/1/0100019663f3196d-f14abc61-e768-4cce-9eb4-752=
+52e191c46-000000/JjMT5hbY1VvdzDgPrrRNTn6v6Uk=3D423" target=3D"_blank" style=
+=3D"color:rgb(141, 141, 141);">View in browser</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"background:#0f1217;font-size:=
+0;padding-top:10px;padding-right:0px;padding-bottom:10px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Arial;font-size:14px;line-height:1;text-ali=
+gn:center;color:#000000;word-wrap:break-word;" spellcheck=3D"false"><span s=
+tyle=3D"color:#8D8D8D"><span style=3D"color:#8D8D8D"><a href=3D"https://zwd=
+8wbyj.r.us-east-1.awstrack.me/L0/https:%2F%2Fsm-unsubscribe.intlgame.com%2F=
+preferenceConfig%3Ftoken=3D3Wq4zEy3H24rZ7O46VWXGiMQLgqfSh6kmlFTgpUsKRNHWkWo=
+8h5XO8gMmGCVHGxUPTsocakFvFatHmilXoMk6d6hAtnlAs0cdN7UtLaB7cF1DglW7%252BegXjM=
+N73jjmDQV%26sign=3D524b7623e37d37341f7fef9ed5d14809%26lang=3Den%26version=
+=3Dv2%26preference=3D1%26email=3Ddavroctau@gmail.com/1/0100019663f3196d-f=
+14abc61-e768-4cce-9eb4-75252e191c46-000000/UPOCwIXnuawxHTUcxiCPNBbGPB0=3D42=
+3" target=3D"_blank" style=3D"color:rgb(141, 141, 141);">Update preferences=
+</a>=C2=A0|=C2=A0</span></span><a href=3D"https://zwd8wbyj.r.us-east-1.awst=
+rack.me/L0/https:%2F%2Fsm-unsubscribe.intlgame.com%2Funsubscribe%3Ftoken=3D=
+3Wq4zEy3H24rZ7O46VWXGiMQLgqfSh6kmlFTgpUsKRNHWkWo8h5XO8gMmGCVHGxUPTsocakFvFa=
+tHmilXoMk6d6hAtnlAs0cdN7UtLaB7cF1DglW7%252BegXjMN73jjmDQV%26sign=3D524b7623=
+e37d37341f7fef9ed5d14809%26lang=3Den%26taskId=3D1008255%26version=3Dv2%26re=
+gion=3D724%26email=3Ddavroctau@gmail.com%26period=3D0%26expUUID=3D%26expS=
+tage=3D0%26preference=3D1/1/0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e=
+191c46-000000/ZC9fm3maqgmAYp0LcOdKM9X2qR0=3D423" target=3D"_blank" style=3D=
+"color:rgb(141, 141, 141);">Unsubscribe</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+      </div>
+   =20
+   </div>
+ =20
+
+  </body></html><img alt=3D"" src=3D"https://zwd8wbyj.r.us-east-1.awstrack.=
+me/I0/0100019663f3196d-f14abc61-e768-4cce-9eb4-75252e191c46-000000/iH37Spgq=
+mwgWmdSQjeHUYr04Avs=3D423" style=3D"display: none; width: 1px; height: 1px;=
+">

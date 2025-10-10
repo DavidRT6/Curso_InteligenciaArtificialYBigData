@@ -1,0 +1,1636 @@
+Delivered-To: davroctau@gmail.com
+Received: by 2002:a05:6a10:6d0:b0:5f2:5564:f12e with SMTP id c16csp6006723pxv;
+        Fri, 16 May 2025 09:54:27 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGxkwGOhR8bIwBZYxM7gKKlAO5elu8P7UZLwKu+SL3y9ITf6s29VrvJTCUF3jKJohtU1yPY
+X-Received: by 2002:a05:622a:2447:b0:48e:1f6c:227c with SMTP id d75a77b69052e-494ae42c5f2mr62824151cf.39.1747414467120;
+        Fri, 16 May 2025 09:54:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1747414467; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QO+TcTZSBzyYPd4e7vtlp+HhSruJEfHbf2uAYYESXejZUSbdb330hBr1FR3rVUpqpn
+         10+giUu74bSi06cNwT2gcnAyK/lEjEiu/RJJZDNhC3hMohMPLbLTXD6ygUk0eJ8+we51
+         BS/rgG3Hc3zqOyLvtWG6kfyo4I+WMwBQq5Y17/J44oGD3/ysNPfdfSpKKpoQgIRLNmIu
+         w1gIidSM42zv6W+o3WgKpUw3jRVSU6b+PRHjBe0c655mFkez3yxeGReumdMxtesl78lm
+         Rd1am/gXvMRD0VkcYjmZ8soIQKXvOa71EygAkitzdY9S/nyeSB8cjXRZxRI12/tOqv2X
+         TYdA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=diOh27SxEvVkWyoxuVOjq+KoYi2chDxNckf2TCR/bp4=;
+        fh=rr6R16mOB7fMRjtcVIkwdWZ5uia7yiRRIMub9Z3n8kQ=;
+        b=NeHk5FjExKgYo5IqztdeAVso7fMV+T3qtfTmhzfayK2NndNzMaFMGSJy0qFoaU9g3q
+         H4HlJtRc+MGIXnyuWZM2iBlLIydrZ1KcpecvCpgt8PRexL3qDDppGyv3WxAYqoGliyx3
+         ypfQJGhC6torhsp3H4PqUd8rgPpe4lnxKCXniUTitfcAxYVNI029JEFNihPnrpMSwG09
+         S+nw5EHXxoDub/S/QLVm6PLlPNuc9aX3P1ymq6h0wJRcvRauVuIO/ZSmXZ65kNUQBPVv
+         lexMRpD3pt+ICbiCPGDhXWRL7cuRTJGCCP6qsBD/kS3oUFR5Ks9B67/Iz1VkX7M4+4qf
+         QpHw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.nintendo-europe.com header.s=200608 header.b=uUu5PpKh;
+       dkim=pass header.i=@s7.y.mc.salesforce.com header.s=fbldkim7 header.b=DuyVFDl1;
+       spf=pass (google.com: domain of bounce-672_html-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com designates 136.147.136.6 as permitted sender) smtp.mailfrom=bounce-672_HTML-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mail.nintendo-europe.com
+Return-Path: <bounce-672_HTML-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com>
+Received: from mta.ccg.nintendo.net (mta.ccg.nintendo.net. [136.147.136.6])
+        by mx.google.com with ESMTPS id d75a77b69052e-494ae594233si25720251cf.568.2025.05.16.09.54.26
+        for <davroctau@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 16 May 2025 09:54:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-672_html-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com designates 136.147.136.6 as permitted sender) client-ip=136.147.136.6;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.nintendo-europe.com header.s=200608 header.b=uUu5PpKh;
+       dkim=pass header.i=@s7.y.mc.salesforce.com header.s=fbldkim7 header.b=DuyVFDl1;
+       spf=pass (google.com: domain of bounce-672_html-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com designates 136.147.136.6 as permitted sender) smtp.mailfrom=bounce-672_HTML-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=mail.nintendo-europe.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=mail.nintendo-europe.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Message-ID:Content-Type; i=nintendo@mail.nintendo-europe.com;
+ bh=diOh27SxEvVkWyoxuVOjq+KoYi2chDxNckf2TCR/bp4=;
+ b=uUu5PpKhmUrnV4M48TKA03SriXY7It74jOA8F6JZ2MiiKcmv5nGervO1T6yKytNJJdhfmmv33jeM
+   PfaAJYbQupX9s3X2/2/8mvFvi7qA+dM0pEaZvzguV6ePymUmx1iHHTtTURg6jeiWxgTcsb6eAlVo
+   CVWt8tiTf+qw9N5ftuE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim7; d=s7.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Message-ID:Content-Type;
+ bh=diOh27SxEvVkWyoxuVOjq+KoYi2chDxNckf2TCR/bp4=;
+ b=DuyVFDl1+9rVMfWtihIdZ/k1YuxBWx/iiVLHZR+ciVrJAL5fpFLjXX3WUCvkYxr5akG9rV4UR4RR
+   Xg5YGxXc7ATenCAMjAJBBI2I2OQZ7KZfTEiUc2S5DOfGUzjthKdegeIr9ZpcAmlLHyU2p74Pkyak
+   YxxcJzjBl44Otb9Ew/u44ZwK9LvzC/YAmEbefFNrha51Ei6D+Kj6izY+T728FZcu4fIcdgiVunnN
+   vCzpYHIXO8qVKM5m9yfjRjfgSdoBQWmsQiLVzgfZRvau9G/yKQiPDAKZJghT//OW+WOtyanHBCtG
+   diiNXaCjk7Po12Hfp8FcmpbS08VZ0Dh5kdF5fg==
+Received: by mta.ccg.nintendo.net id h4tms62fmd4m for <davroctau@gmail.com>; Fri, 16 May 2025 16:54:23 +0000 (envelope-from <bounce-672_HTML-213392845-3340986-7230703-19084@bounce.mail.nintendo-europe.com>)
+From: "Nintendo" <nintendo@mail.nintendo-europe.com>
+To: <davroctau@gmail.com>
+Subject: =?UTF-8?Q?Presentamos_GameChat,_una_nueva_funci=C3=B3n_de_Nintend?=
+ =?UTF-8?Q?o_Switch_2?=
+Date: Fri, 16 May 2025 10:54:22 -0600
+List-Unsubscribe: <https://click.ccg.nintendo.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI3MjMwNzAzIiwicyI6IjIxMzM5Mjg0NSIsImxpZCI6IjY3MiIsImoiOiIzMzQwOTg2IiwiamIiOiIxOTA4NCIsImQiOiI3MDI1MiJ9.uxdU6uwP_q6yYw-eufCJcqQqMXB9OGDYn9NvjI7PYA4>, <mailto:leave-fd4c1277770b5c392848-fe2a167176670d7f7d1075-fe8e177371640d7573-fe9913727664037d76-fef91579756c00@leave.ccg.nintendo.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+X-SFMC-Stack: 7
+x-job: 7230703_3340986
+Message-ID: <2a2e8ca0-ca9a-4e1a-a87b-e52646b6e485@atl1s07mta3288.xt.local>
+Feedback-ID: 7230703:3340986:136.147.136.6:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="M9ANmlL5EI9P=_?:"
+
+This is a multi-part message in MIME format.
+
+--M9ANmlL5EI9P=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+***********************************************************************
+Chatea, comparte y disfruta en compañía sin importar la distancia. ¡Solo en Nintendo Switch 2!
+***********************************************************************
+¡Hola, fan de Nintendo!
+
+Lamentablemente tu programa o proveedor de correo 
+electrónico no es compatible con HTML. También es posible 
+que la compatibilidad con HTML haya sido desactivada en el
+menú de seguridad de tu servicio de correo electrónico.
+
+Para ver el contenido de este boletín de Nintendo, pulsa en el 
+enlace seguro que te ofrecemos a continuación:
+
+https://view.ccg.nintendo.com/?qs=b7d927ac7246b1b6dcc4a2d1323910f3b664305b9fed8d15f0fea0593ed120a9d813899d6669fc2c5cec5e80f6a980834941428711c1ec070b196d1b86ca611f0f71933cd585562256707605f5dc0a77 
+
+*********************************************************************** 
+© 2025 Nintendo Co., Ltd. | Nintendo 3DS, Wii U and Nintendo Switch are trademarks of Nintendo.
+*********************************************************************** 
+
+Este correo electrónico está relacionado con tu cuenta Nintendo. Has recibido este correo electrónico en castellano porque tu cuenta Nintendo está configurada en castellano.
+Para cambiar tu configuración de correo electrónico o cancelar tu suscripción a los correos electrónicos de la cuenta Nintendo, haz clic aquí.
+https://click.ccg.nintendo.com/?qs=0c10733f0d299e9210fd1118b6601c03ce78531ad32ef548e533d955eafdfbe15f140fac4869f8ce1c20574c168e5262ef05dbad90baa9b959ead6466b9dd763
+
+Para obtener más información sobre la gestión de tus datos personales por parte de Nintendo, consulta la política de privacidad de la cuenta Nintendo.
+https://click.ccg.nintendo.com/?qs=0c10733f0d299e9238936d2134c8a56d306657897c8efdb43b11fc2602586bc8b2c4af55acd026834e31a1b3c9967bb93b30cc3214de32fd1b5ba107146e4cf4
+
+Para obtener información sobre la atención al cliente, visita https://support.nintendo.com.
+https://click.ccg.nintendo.com/?qs=0c10733f0d299e925871f33af5c80a59e606a9ae187db1f4aab7c1e10b1ae23114bcdd166b6f0a3122b9bdd8b223b9031384c8d93bc2735cdc8c1ea6f03ea65b
+
+No respondas a este mensaje.
+
+Nintendo Co., Ltd., 11-1 Hokotate-cho, Kamitoba, Minami-ku, Kioto 601-8501, Japón. Número de registro: 1300-01-011420. Directores representativos: Shuntaro Furukawa y Shigeru Miyamoto.
+
+
+--M9ANmlL5EI9P=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://cdn03.nintendo-europe.com/media/images/01_website_elements/icons/favicon.ico">
+  <link rel="icon" href="https://cdn03.nintendo-europe.com/media/images/01_website_elements/icons/favicon.ico">
+  <title>Nintendo</title>
+  <style type="text/css">
+    blockquote,
+    body {
+      margin: 0;
+      padding: 0
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    table {
+      border-collapse: collapse;
+      mso-table-lspace: 0;
+      mso-table-rspace: 0
+    }
+
+    u+.body a {
+      color: inherit;
+      text-decoration: none;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0
+    }
+  </style>
+  <style type="text/css">
+    div[style*='margin: 16px 0'] {
+      margin: 0 !important
+    }
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important
+    }
+
+    input {
+      display: none
+    }
+  </style>
+  <style type="text/css">
+    .rate:hover,
+    .rate:hover~.rate {
+      background-color: #ffbc00 !important
+    }
+
+    .rate:hover a,
+    .rate:hover~.rate a {
+      color: #222 !important
+    }
+
+    .btn-hover {
+      transition: box-shadow .2s
+    }
+
+    .btn-hover:hover {
+      box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, .3)
+    }
+
+    .imgjump {
+      transition: padding .5s
+    }
+
+    .imgjump:hover {
+      padding-top: 5px !important;
+      padding-bottom: 16px
+    }
+
+    @supports (--css:variables) {
+      .icon-pad {
+        padding-top: 0 !important
+      }
+
+      .icon-pos {
+        margin-top: -30px !important;
+        display: block
+      }
+    }
+
+    @media (max-width:700px) and (min-width:640px) {
+
+      .inner-fill,
+      .w100pc {
+        width: 100% !important
+      }
+
+      .mobpad,
+      .mobpad-inner {
+        padding-left: 4.2857142857% !important;
+        padding-right: 4.2857142857% !important
+      }
+
+      .w-mobpad {
+        width: 30px !important
+      }
+
+      .slider-wrap {
+        padding-left: 8% !important;
+        padding-right: 8% !important
+      }
+    }
+
+    @media screen and (max-width:640px) {
+
+      .fill,
+      .inner-fill,
+      .w100pc {
+        width: 100% !important;
+        height: auto !important
+      }
+
+      .show {
+        display: block !important
+      }
+
+      .show-cell {
+        display: table-cell !important
+      }
+
+      .nomob {
+        display: none !important
+      }
+
+      .colsplit {
+        width: 100% !important;
+        float: left !important;
+        display: block !important
+      }
+
+      .coljoin {
+        display: inline-block !important;
+        width: 50% !important;
+        vertical-align: top !important
+      }
+
+      .colsplit-top {
+        width: 100% !important;
+        display: table-row-group !important
+      }
+
+      .colsplit-bottom {
+        width: 100% !important;
+        display: table-footer-group !important
+      }
+
+      .mobpad,
+      .mobpad-inner {
+        padding-left: 4.2857142857% !important;
+        padding-right: 4.2857142857% !important
+      }
+
+      .pl-0,
+      .px-0 {
+        padding-left: 0 !important
+      }
+
+      .pr-0,
+      .px-0 {
+        padding-right: 0 !important
+      }
+
+      .mobleft {
+        text-align: left !important
+      }
+
+      .p-0 {
+        padding: 0 !important
+      }
+
+      .pl-5 {
+        padding-left: 5px !important
+      }
+
+      .pr-5 {
+        padding-right: 5px !important
+      }
+
+      .py-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important
+      }
+
+      .pl-10 {
+        padding-left: 10px !important
+      }
+
+      .pr-10 {
+        padding-right: 10px !important
+      }
+
+      .py-15 {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important
+      }
+
+      .pt-30 {
+        padding-top: 30px !important
+      }
+
+      .pt-26 {
+        padding-top: 26px !important
+      }
+
+      .mb-5 {
+        margin-bottom: 5px !important
+      }
+
+      .mx-5 {
+        margin-left: 5px !important;
+        margin-right: 5px !important
+      }
+
+      .mx-10 {
+        margin-left: 10px !important;
+        margin-right: 10px !important
+      }
+
+      .font-14 {
+        font-size: 14px !important;
+        line-height: 15.3px !important
+      }
+
+      .font-20 {
+        font-size: 20px !important;
+        line-height: 21.3px !important
+      }
+
+      .w-10 {
+        width: 10px !important
+      }
+
+      .w-20 {
+        width: 20px !important
+      }
+
+      .w-120 {
+        width: 120px !important
+      }
+
+      .mw-150 {
+        max-width: 150px !important
+      }
+
+      .mw-310 {
+        max-width: 310px !important
+      }
+
+      .mw-330 {
+        max-width: 330px !important
+      }
+
+      .mw-510 {
+        max-width: 510px !important
+      }
+
+      .h-30vw {
+        height: 30vw !important
+      }
+
+      .w-auto {
+        width: auto !important
+      }
+
+      .h-auto,
+      .mobpoints>table {
+        height: auto !important
+      }
+
+      .points {
+        padding: 0 !important;
+        background-color: transparent !important;
+        border-radius: 0 !important
+      }
+
+      .mobpoints {
+        background-color: #ba000f !important;
+        padding: 6px 0 !important;
+        border-radius: 25px !important
+      }
+
+      .footer .mobpoints {
+        background-color: #333 !important;
+        padding: 6px 10px !important
+      }
+
+      .f-button {
+        padding: 10px !important
+      }
+
+      .w-mobpad {
+        width: 4.2857142857% !important
+      }
+
+      .w-33pc {
+        width: 33.3333333333% !important
+      }
+
+      .w-50pc {
+        width: 50% !important
+      }
+
+      .txtcenter {
+        text-align: center !important
+      }
+
+      .ps-card {
+        padding: 0 8px 20px;
+        border: 2px solid #ededed;
+        border-top: none;
+        border-radius: 0 0 5px 5px
+      }
+
+      .left img,
+      .right img {
+        border-radius: 5px !important
+      }
+
+      .card-wrap {
+        border: none !important;
+        padding: 0 !important
+      }
+    }
+
+    @media screen and (max-width:390px) {
+      .rate a {
+        padding: 8px 20px !important
+      }
+
+      .w-120 {
+        width: 90px !important
+      }
+    }
+
+    @media screen and (max-width:350px) {
+      .ps-card {
+        padding: 0 6px 18px
+      }
+
+      .ps-card .mx-5 {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+      }
+
+      .ps-card .font-20 {
+        font-size: 16px !important
+      }
+
+      .ps-card .callout p {
+        padding: 4px !important;
+        font-size: 14px !important
+      }
+
+      .col-1-3 {
+        padding: 10px 2% !important
+      }
+
+      .txt-xsm {
+        font-size: 10px !important
+      }
+    }
+
+    @media (min-width:800px) {
+      .w100pc {
+        width: 800px !important
+      }
+
+      .mobpad {
+        padding-left: 80px !important;
+        padding-right: 80px !important
+      }
+    }
+  </style>
+  <style type="text/css">
+    @media screen {
+      @font-face {
+        font-family: Open Sans;
+        src: url(https://www.nintendo.com/eu/media/styles/fonts/OpenSans/font.css);
+        font-weight: 300
+      }
+
+      @font-face {
+        font-family: Open Sans;
+        src: url(https://www.nintendo.com/eu/media/styles/fonts/OpenSans/font.css);
+        font-weight: 400
+      }
+
+      @font-face {
+        font-family: Open Sans;
+        src: url(https://www.nintendo.com/eu/media/styles/fonts/OpenSans/font.css);
+        font-weight: 700
+      }
+    }
+  </style>
+  <style type="text/css">
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark
+    }
+
+    @media (prefers-color-scheme:dark) {
+
+      .button,
+      .button-2 {
+        border-color: #e60012 !important
+      }
+
+      td,
+      th {
+        background-color: #151312 !important
+      }
+
+      * {
+        color: #fff !important
+      }
+
+      .dm-outer {
+        background-color: #0e0c0c !important
+      }
+
+      .light {
+        background-color: transparent !important
+      }
+
+      .accent {
+        background-color: #333 !important
+      }
+
+      .button {
+        background-color: #e60012 !important;
+        background-image: linear-gradient(#e60012, #e60012) !important
+      }
+
+      .button-2,
+      .button-3 {
+        background-color: transparent !important;
+        background-image: none !important
+      }
+
+      .button-3 {
+        border-color: transparent !important
+      }
+
+      .eshop .button-1 {
+        background-color: #ff7d00 !important;
+        background-image: linear-gradient(#ff7d00, #ff7d00) !important;
+        border-color: #ff7d00 !important
+      }
+
+      .eshop .button-2,
+      .hidebg {
+        background-image: none !important
+      }
+
+      .eshop .button-2 {
+        background-color: transparent !important;
+        border-color: #ff7d00 !important
+      }
+
+      .bg-1 {
+        background-color: #e60012 !important
+      }
+
+      .bg-3 {
+        background-color: #ba000f !important
+      }
+
+      .button td {
+        background-color: transparent !important;
+      }
+    }
+
+    [data-ogsb] .button,
+    [data-ogsb] .button-2 {
+      border-color: #e60012 !important
+    }
+
+    @media (prefers-color-scheme:dark) and (max-width:640px) {
+      td.points {
+        background-color: transparent !important
+      }
+    }
+
+    [data-ogsb] .lightimage {
+      display: none !important
+    }
+
+    [data-ogsb] .darkimage {
+      display: block !important
+    }
+
+    [data-ogsb] td,
+    [data-ogsb] th {
+      background-color: #151312 !important
+    }
+
+    [data-ogsb] * {
+      color: #fff !important
+    }
+
+    [data-ogsb] .black {
+      color: #212121 !important
+    }
+
+    [data-ogsb] .light {
+      background-color: transparent !important
+    }
+
+    [data-ogsb] .accent {
+      background-color: #333 !important
+    }
+
+    [data-ogsb] .button {
+      background-color: #e60012 !important;
+      background-image: linear-gradient(#e60012, #e60012) !important
+    }
+
+    [data-ogsb] .button-2,
+    [data-ogsb] .button-3 {
+      background-color: transparent !important;
+      background-image: none !important
+    }
+
+    [data-ogsb] .button-3 {
+      border-color: transparent !important
+    }
+
+    [data-ogsb] .eshop .button-1 {
+      background-color: #ff7d00 !important;
+      background-image: linear-gradient(#ff7d00, #ff7d00) !important;
+      border-color: #ff7d00 !important
+    }
+
+    [data-ogsb] .eshop .button-2,
+    [data-ogsb] .hidebg {
+      background-image: none !important
+    }
+
+    [data-ogsb] .eshop .button-2 {
+      background-color: transparent !important;
+      border-color: #ff7d00 !important
+    }
+
+    [data-ogsb] .bg-1 {
+      background-color: #e60012 !important
+    }
+
+    [data-ogsb] .bg-3 {
+      background-color: #ba000f !important
+    }
+
+    [data-ogsb] .button td {
+      background-color: transparent !important
+    }
+
+    @media screen and (max-width:640px) {
+      [data-ogsb] td.points {
+        background-color: transparent !important
+      }
+    }
+  </style>
+  <style type="text/css">
+    .& .menutray {
+      display: none;
+    }
+  </style>
+  <style type="text/css">
+    u+.body .menutray {
+      display: none;
+    }
+  </style>
+  <!--[if mso]> <style> a { text-decoration: none; } ul, li { list-style-type: none; } </style> <noscript> <xml> <o:OfficeDocumentSettings> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> </noscript> <![endif]-->
+</head>
+
+<body class="body" xml:lang="en" style="background-color: #f3f3f3;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Chatea, comparte y disfruta en compañía sin importar la distancia. ¡Solo en Nintendo Switch 2!</div>
+  <div role="article" aria-roledescription="email" aria-label="Nintendo" lang="en" dir="ltr" style="font-size: medium; font-size: max(16px, 1rem)">
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<!-- 01A - HEADER PROFILE -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+<tr>
+<td align="left" class="mobpad-inner bg-1" style="background-color: #e60012; padding: 20px 30px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td align="center" class="light">
+<a href="https://click.ccg.nintendo.com/?qs=6bfa41420c60ab1210fa2fe4b10685ff27016d12cac2b87e48970c90c78318177779081b3ee42b0bb10cef0cf172753202bc3f859419a56903f75c0390e6770f" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/b3d1458e-a451-4115-a027-2296b9982c9f.png" alt="Nintendo" width="120" style="display: block">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr></table>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table>
+</td></tr></table>
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 02 - HERO -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+<tr>
+<td align="center" style="padding-bottom:30px;">
+<a href="https://click.ccg.nintendo.com/?qs=86e50a044991500cde39fd6a711ed50347b19be803d4c68eca6970ba894b13a0e0e2371e03209e8462999f0afe60a2193878a6c3ae1aa452466a0f91f58c93e7" target="new" >
+<img class="w100pc" src="https://assets.nintendo.eu/image/private/s--HpY-CPFP--/t_downsize_to_1280px_width_nonprogressive/jp700ti0kub3bxhw24xy.jpg" alt="Todos juntos, cuando queráis y donde queráis" width="700" style="display: block; width: 100%; ">
+</a>
+</td>
+</tr>
+
+
+<tr>
+<td align="left" class="mobpad" style="padding: 0px 30px 30px">
+
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td style="padding-bottom: 30px">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+
+<td valign="middle">
+<h1 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 30px; font-weight: bold; line-height: 34px">Todos juntos, cuando queráis y donde queráis</h1>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0px">Con <b>GameChat</b>, puedes jugar y<b> pasar tiempo con tus amigos como si estuvieras con ellos en la misma habitación</b>, sin importar lo lejos que se encuentren en realidad. ¡Solamente en Nintendo Switch 2!</p>
+
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 10 - VIDEO -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+<tr>
+<td align="center" class="mobpad" style="padding: 0px 30px 30px 30px"> 
+<table border="0" cellpadding="0" cellspacing="0" role="none" width="100%">
+<tr>
+<td align="center">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td class="button button-1 btn-hover" style="background-color: #e60012; border-radius: 25px; padding: 14px 26px;">
+<table border="0" cellpadding="0" cellspacing="0" role="none" style="border-collapse: separate">
+<tr>
+<td align="center">
+<a href="https://click.ccg.nintendo.com/?qs=86e50a044991500cc10ca018fc7276b55964ce227ab88af164e8f5e870f73583b6703faf27f29e4a1aea0572a76e8fd33044385875eb2d2e3fa24f85ff789d19" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; line-height: 1; padding: 0; text-decoration: none;" target="new" >
+Mira el tráiler
+</a>
+</td>
+<td align="center" style="padding-left: 10px;">
+<a href="https://click.ccg.nintendo.com/?qs=86e50a044991500cc10ca018fc7276b55964ce227ab88af164e8f5e870f73583b6703faf27f29e4a1aea0572a76e8fd33044385875eb2d2e3fa24f85ff789d19" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/75c06aea-6928-4122-99a4-cbace5349252.png" alt="" width="18" style="border-radius: 5px; display: inline-block; margin-left: 6px; vertical-align: middle">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table></td></tr></table> 
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 05 - IMAGE LEFT -->
+    <table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+      <tr>
+        <td align="center" class="dm-outer">
+          <table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+            <tr>
+              <td align="center" class="mobpad-inner" style="padding: 30px 0">
+                <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                  <tr>
+                    <th width="48%" class="colsplit left">
+                      
+                        <img class="inner-fill" src="https://assets.nintendo.eu/image/private/s--RaE2wVJX--/t_downsize_to_640px_width/f2dskvzkxnqhydejdkiq.jpg" alt="Micrófono integrado" width="380" style="border-radius: 0 5px 5px 0; display: block">
+                      
+                    </th>
+                    <th width="52%" class="colsplit px-0" align="left" style="padding: 0 30px">
+                      <table border="0" cellspacing="0" cellpadding="0" role="none">
+                        <tr>
+                          <td class="pt-30">
+                            
+                            <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                              <tr>
+                                <td style="padding-bottom: 24px">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="none">
+                                    <tr>
+                                      
+                                      <td valign="middle">
+                                        <h3 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; line-height: 34px">Micrófono integrado</h3>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            
+                            <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0px">¡Nintendo Switch 2 cuenta con un micrófono integrado! Independientemente del modo en que juegues (<b>televisor, sobremesa o portátil</b>), el micrófono <b>ajustará tu voz</b> según el entorno.</p>
+                            
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </th>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table></td></tr></table></td></tr></table> 
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 05 - IMAGE RIGHT -->
+    <table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+      <tr>
+        <td align="center" class="dm-outer">
+          <table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+            <tr>
+              <td align="center" class="mobpad-inner" style="padding: 30px 0">
+                <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                  <tr>
+                    <th width="52%" class="colsplit-bottom px-0" align="left" style="padding: 0 30px">
+                      <table border="0" cellspacing="0" cellpadding="0" role="none">
+                        <tr>
+                          <td class="pt-30">
+                            
+                            <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                              <tr>
+                                <td style="padding-bottom: 24px">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="none">
+                                    <tr>
+                                      
+                                      <td valign="middle">
+                                        <h3 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; line-height: 34px">Comparte tu pantalla en tiempo real</h3>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            
+                            <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0px">Muéstrales a tus amigos tu pantalla de juego mientras chateas, sin importar si estás jugando con ellos <b>al mismo título o a uno distinto</b>.</p>
+                            
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </th>
+                    <th width="48%" class="colsplit-top right" align="right">
+                      
+                        <img class="inner-fill" src="https://assets.nintendo.eu/image/private/s--1Bh71otN--/t_downsize_to_640px_width/lmdshfsjzbb3gleql9lm.jpg" alt="Comparte tu pantalla en tiempo real" width="380" style="border-radius: 5px 0 0 5px; display: block">
+                      
+                    </th>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table></td></tr></table></td></tr></table> 
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 05 - IMAGE LEFT -->
+    <table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+      <tr>
+        <td align="center" class="dm-outer">
+          <table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+            <tr>
+              <td align="center" class="mobpad-inner" style="padding: 30px 0">
+                <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                  <tr>
+                    <th width="48%" class="colsplit left">
+                      
+                        <img class="inner-fill" src="https://assets.nintendo.eu/image/private/s--Rc2LdQ4v--/t_downsize_to_800px_width_nonprogressive/kyvi9xerpslqafo7zsue.jpg" alt="Habla con tus amigos mediante el chat de voz y de vídeo" width="380" style="border-radius: 0 5px 5px 0; display: block">
+                      
+                    </th>
+                    <th width="52%" class="colsplit px-0" align="left" style="padding: 0 30px">
+                      <table border="0" cellspacing="0" cellpadding="0" role="none">
+                        <tr>
+                          <td class="pt-30">
+                            
+                            <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                              <tr>
+                                <td style="padding-bottom: 24px">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="none">
+                                    <tr>
+                                      
+                                      <td valign="middle">
+                                        <h3 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; line-height: 34px">Habla con tus amigos mediante el chat de voz y de vídeo</h3>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            
+                            <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0px">Conecta una cámara USB-C compatible (a la venta por separado) a tu consola Nintendo Switch 2 y... ¡<b>observa las caras</b> y muestras de entusiasmo de todo el mundo mientras os lo pasáis en grande!</p>
+                            
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </th>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table></td></tr></table></td></tr></table> 
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 05 - IMAGE RIGHT -->
+    <table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+      <tr>
+        <td align="center" class="dm-outer">
+          <table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+            <tr>
+              <td align="center" class="mobpad-inner" style="padding: 30px 0">
+                <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                  <tr>
+                    <th width="52%" class="colsplit-bottom px-0" align="left" style="padding: 0 30px">
+                      <table border="0" cellspacing="0" cellpadding="0" role="none">
+                        <tr>
+                          <td class="pt-30">
+                            
+                            <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                              <tr>
+                                <td style="padding-bottom: 24px">
+                                  <table border="0" cellspacing="0" cellpadding="0" role="none">
+                                    <tr>
+                                      
+                                      <td valign="middle">
+                                        <h3 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; line-height: 34px">Pasa tiempo con tus amigos... ¡dentro del juego!</h3>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            
+                            <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0px">En juegos compatibles, ¡puedes <b>aparecer en la pantalla</b> junto con hasta tres personas más gracias a CameraPlay!</p>
+                            
+                            
+                          </td>
+                        </tr>
+                      </table>
+                    </th>
+                    <th width="48%" class="colsplit-top right" align="right">
+                      
+                        <img class="inner-fill" src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/4c6bcdee-a624-491a-8ec0-5236fd3ba60d.png" alt="Pasa tiempo con tus amigos... ¡dentro del juego!" width="380" style="border-radius: 5px 0 0 5px; display: block">
+                      
+                    </th>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table></td></tr></table></td></tr></table> 
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- 10 - VIDEO -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+<tr>
+<td align="center" class="mobpad" style="padding: 0px 30px 30px 30px"> 
+<table border="0" cellpadding="0" cellspacing="0" role="none" width="100%">
+<tr>
+<td align="center">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td class="button button-1 btn-hover" style="background-color: #e60012; border-radius: 25px; padding: 14px 26px;">
+<table border="0" cellpadding="0" cellspacing="0" role="none" style="border-collapse: separate">
+<tr>
+<td align="center">
+<a href="https://click.ccg.nintendo.com/?qs=86e50a044991500c99f70f7eb6dd725b446e8df8ebd4c89b6eb3672af9335cd0e57cad1f560c211a6b4b59af165734d0f67518da820f7009255d5d7655075890" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; line-height: 1; padding: 0; text-decoration: none;" target="new" >
+Mira el tráiler
+</a>
+</td>
+<td align="center" style="padding-left: 10px;">
+<a href="https://click.ccg.nintendo.com/?qs=86e50a044991500c99f70f7eb6dd725b446e8df8ebd4c89b6eb3672af9335cd0e57cad1f560c211a6b4b59af165734d0f67518da820f7009255d5d7655075890" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/75c06aea-6928-4122-99a4-cbace5349252.png" alt="" width="18" style="border-radius: 5px; display: inline-block; margin-left: 6px; vertical-align: middle">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- GLOBAL WRAPPER -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+  <tr>
+    <td align="center" class="dm-outer">
+      <table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px; background-image: linear-gradient(to bottom right, #ebc8be, #f5d9be, #e1e1e1, #cce8e6, #c0dee6);">
+        <tr>
+          <td height="60">&nbsp;</td>
+        </tr>
+<!-- HW HERO AND TITLE -->
+  <tr>
+    <td align="left" class="mobpad" style="padding: 0px 30px 0px 30px">
+      <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+        <tr>
+          <td class="mobpad-inner accent" style="background-color: #f4f4f4; padding: 40px 40px 30px 40px;">
+            <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+              <tr>
+                <td align="center" class="accent" style="padding-bottom:30px">
+                  <a href="https://click.ccg.nintendo.com/?qs=4cb37a9138f5ec8289660a36c562fc15ec525f3a4ac7ecfbece70741db3101669ae6efa3de259c83fe8272752e337dbd5c14eae6fefcf6d6c27632162b377992" target="new" >
+                    <img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/9d19121c-44a5-49ef-ac06-8ff574c723be.jpg" alt="Nintendo Switch 2" class="w100pc" width="560" style="border-radius: 5px; display: block; max-width: 560px; width: 100%;">
+                  </a>
+                </td>
+              </tr>
+            </table>
+            
+            <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+              <tr>
+                <td class="accent" align="center">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none">
+                    <tr>
+                      <td class="accent" valign="middle">
+                        <h2 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 28px; font-weight: bold; line-height: 34px">Disponible el 5 de junio de 2025</h2>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+<!-- USP TABLE-->
+  <tr>
+    <td align="center" class="mobpad" style="padding:0px 30px 0px 30px">
+      <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+        <tr>
+          <td class="mobpad-inner accent" style="background-color: #f4f4f4; padding: 0px 40px 0px 40px">
+            <table border="0" cellspacing="0" cellpadding="0" role="none" style="border-collapse: separate">
+              <tr>
+                <th width="48%" class="colsplit" valign="middle" style="border-radius: 5px; overflow: hidden; background-color: #ffffff;">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                    <tr>
+                      <td align="center" style="padding: 5px 5px 5px 5px" width="100%">
+                        <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0; text-align:center; font-weight:regular">Pantalla 1,6 veces más grande que la de Nintendo Switch</p>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+                <th class="colsplit accent" style="width: 20px; height: 15px"></th>
+                <th width="48%" class="colsplit" valign="middle" style="border-radius: 5px; overflow: hidden; background-color:#ffffff">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                    <tr>
+                      <td align="center" style="padding: 5px 5px 5px 5px">
+                        <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0; text-align:center; font-weight:regular">Resolución de hasta 4K en el modo televisor</p>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+              <tr>
+                <td class="accent" height="15px" style="line-height:0px; font-size: 0px">&nbsp;</td>
+              </tr>
+              <tr>
+                <th width="48%" class="colsplit" valign="middle" style="border-radius: 5px; overflow: hidden; background-color: #ffffff;">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                    <tr>
+                      <td align="center" style="padding: 5px 5px 5px 5px" width="100%">
+                        <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0; text-align:center; font-weight:regular">Resolución de hasta 1080p en el modo portátil</p>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+                <th class="colsplit accent" style="width: 20px; height: 15px"></th>
+                <th width="48%" class="colsplit" valign="middle" style="border-radius: 5px; overflow: hidden; background-color:#ffffff">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                    <tr>
+                      <td align="center" style="padding: 5px 5px 5px 5px">
+                        <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0; text-align:center; font-weight:regular">Hasta 120 fps</p>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+              <tr>
+                <td class="accent" height="15px" style="line-height:0px; font-size: 0px">&nbsp;</td>
+              </tr>
+              <tr>
+                <th width="48%" class="colsplit" valign="middle" style="border-radius: 5px; overflow: hidden; background-color: #ffffff;">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                    <tr>
+                      <td align="center" style="padding: 5px 5px 5px 5px" width="100%">
+                        <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0; text-align:center; font-weight:regular">Compatible con el alto rango dinámico (HDR)</p>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+                <th class="colsplit accent" style="width: 20px; height: 15px"></th>
+                <th width="48%" class="colsplit" valign="middle" style="border-radius: 5px; overflow: hidden; background-color:#ffffff">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+                    <tr>
+                      <td align="center" style="padding: 5px 5px 5px 5px">
+                        <p style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0; text-align:center; font-weight:regular">Permite jugar a títulos compatibles de Nintendo Switch*</p>
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+<!-- FIRST BUTTON -->
+<tr>
+    <td align="left" class="mobpad" style="padding: 0px 30px 0px 30px">
+      <table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+        <tr>
+          <td class="mobpad-inner accent" style="background-color: #f4f4f4; padding: 40px 40px 40px 40px">
+            <table border="0" cellpadding="0" cellspacing="0" role="none" width="100%">
+              <tr>
+                <td class="accent" align="center">
+                  <table border="0" cellspacing="0" cellpadding="0" role="none">
+                    <tr>
+                      <td class="button button-1 btn-hover" style="background-color: #e60012; border-radius: 25px; padding: 14px 26px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="none" style="border-collapse: separate">
+                          <tr>
+                            <td align="center">
+                              <a href="https://click.ccg.nintendo.com/?qs=4cb37a9138f5ec82816c90c29b1822153ec9f41d685b9d56b5aeccb3854e7596823fce8c0592f933ab78e1ad7cebd9c61907b696de7245c1b63d83d9af971472" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; line-height: 1; padding: 0; text-decoration: none;" target="new" >Échale un vistazo a Nintendo Switch 2</a>
+                            </td>
+                            <td align="center" style="padding-left: 10px;">
+                              <a href="https://click.ccg.nintendo.com/?qs=4cb37a9138f5ec82816c90c29b1822153ec9f41d685b9d56b5aeccb3854e7596823fce8c0592f933ab78e1ad7cebd9c61907b696de7245c1b63d83d9af971472" target="new" >
+                              <img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/75c06aea-6928-4122-99a4-cbace5349252.png" alt="" width="18" style="border-radius: 5px; display: inline-block; margin-left: 6px; vertical-align: middle">
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+
+<!-- SOFTWARE MODULE --> 
+<tr>
+<td align="left" class="mobpad" style="padding: 0px 30px 0px 30px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td class="mobpad-inner accent" style="background-color: #f4f4f4; padding: 40px 40px 40px 40px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td class="accent" style="padding-bottom: 20px" align="center">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td class="accent" valign="middle" align="center">
+<h3 style="color: #000000; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 26px; font-weight: bold; line-height: 34px">¡Ya se han anunciado más de 50 juegos!</h3>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td class="accent" align="center" style="padding-bottom: 40px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<th class="colsplit accent" valign="top">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td class="accent" align="center" valign="top" style="width: 134px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=b2629f6224eb3f020cbb33d1694675962530311a4b3dc11ec3225c1197deb7afb67ecaefe352e227dcf3120643b82a5e23a04c61316fdc7e4bc21ecf6c0184b6" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/19cf9475-a08e-4b0c-8855-0af0b32bbeb1.jpg" alt="Mario Kart World" width="134" style="display: block; width: 100%; max-width: 300px">
+</a>
+
+</td>
+</tr>
+</table>
+</td>
+<td class="accent" style="width: 8px"></td>
+<td class="accent" align="center" valign="top" style="width: 134px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=b2629f6224eb3f02baccdb16aecab3ad1d5495b03c96172a42490f372a9816c78d88c9bfe67dca13b3b33d587cdc33f1745d18d6c24fc13c6c4cb92c1a66a3f6" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/19d42959-5661-49b3-955b-3db8d58d6871.jpg" alt="Elden Ring" width="134" style="display: block; width: 100%; max-width: 300px">
+</a>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</th>
+<th class="colsplit accent" style="width: 8px; height: 30px"></th>
+<th class="colsplit accent" valign="top">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td class="accent" align="center" valign="top" style="width: 134px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=b2629f6224eb3f020e10060bfc3eeb218def28b938635e81a6765511635987408250bb7479600932429ad891f633961c8b16f869dcf8a419fb0204225ed4d08c" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/b7f1fde5-3a22-4122-9028-78c1092e5811.jpg" alt="Donkey Kong Bananza" width="134" style="display: block; width: 100%; max-width: 300px">
+</a>
+
+</td>
+</tr>
+</table>
+</td>
+<td class="accent" style="width: 8px"></td>
+<td class="accent" align="center" valign="top" style="width: 134px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=b2629f6224eb3f028b10be59ce2f32928b934e6b6440613f4c4dbaea23f29fe55262ca086389aa6425d7cdf9218a143b3f4dc8f93887e3ee5b64cdf882125d0f" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/cbeb15f3-8221-43e1-bbc7-1d2f4754182f.jpg" alt="Cyberpunk 2077" width="134" style="display: block; width: 100%; max-width: 300px">
+</a>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</th>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" role="none" width="100%">
+<tr>
+<td class="accent" align="center">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td class="button button-1 btn-hover" style="background-color: #e60012; border-radius: 25px; padding: 14px 26px;">
+<table border="0" cellpadding="0" cellspacing="0" role="none" style="border-collapse: separate">
+<tr>
+<td align="center">
+<a href="https://click.ccg.nintendo.com/?qs=b2629f6224eb3f024cdad8cf215f78ba043361b0cff6e774d43aa695f2c0b44785b8d5950d83acda40576c7ed575898967cb268b6c58bd2604a510430a761c7e" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; line-height: 1; padding: 0; text-decoration: none;" target="new" >
+Consulta los títulos destacados
+</a>
+</td>
+<td align="center" style="padding-left: 10px;">
+<a href="https://click.ccg.nintendo.com/?qs=b2629f6224eb3f024cdad8cf215f78ba043361b0cff6e774d43aa695f2c0b44785b8d5950d83acda40576c7ed575898967cb268b6c58bd2604a510430a761c7e" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/75c06aea-6928-4122-99a4-cbace5349252.png" alt="" width="18" style="border-radius: 5px; display: inline-block; margin-left: 6px; vertical-align: middle">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+<!-- END OF SECTIONS -->
+  <tr>
+    <td height="60">&nbsp;</td>
+  </tr>
+</table>
+    </td>
+  </tr>
+</table></td></tr></table></td></tr></table> 
+    <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+<!-- 30PX SPACE -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #dfdfdf; width: 700px">
+<tr>
+<td height="30">
+&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- 09 - 2019 RATING -->
+<table role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #dfdfdf; width: 700px">
+<tr>
+<td align="left" class="mobpad accent" style="padding: 20px 30px">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td align="center" class="accent">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<th class="colsplit accent" align="center" valign="middle">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td class="accent" align="center" valign="middle" style="width: 342px">
+<p style="color: #5b5b5b; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; line-height: 26px; margin: 0px;font-weight:bold;">Valora este correo</p>
+</td>
+<td class="nomob accent" style="width: 12px"></td>
+<td class="nomob accent" align="center" valign="top" style="width: 40px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="overflow: hidden">
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/5/854e2653-1fd8-4547-a4f7-968d962fac1a.png" alt="" width="6" style="display: block; width: 100%; max-width: 6px">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</th>
+<th class="colsplit accent" style="width: 12px; height: 30px"></th>
+<th class="colsplit accent" valign="top">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td class="accent" align="center" valign="top" style="width: 151px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=bed002b80b73181f45585417c064dbc3a45c578985b214b0089b2b621aef273b81d90ee833cc6428ab7df9f366661839848e9a3d900422276362bb59f286db00" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/9/62c1e383-9f73-41bc-b63a-e1077af43472.png" alt="1" width="44" style="display: block; width: 100%; max-width: 44px">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td class="accent" style="width: 12px"></td>
+<td class="accent" align="center" valign="top" style="width: 151px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e5cce01e0be928b766e751a4b45896137e27f1943309769641fa1942f33a23a9fbcf73dbbf5218bb991ac004d3f2d3d0184bffe50ec6b752d9" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/9/2731076e-b7d4-4db3-b348-e6253bbe407c.png" alt="2" width="44" style="display: block; width: 100%; max-width: 44px">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td class="accent" style="width: 12px"></td>
+<td class="accent" align="center" valign="top" style="width: 151px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e52aedbb946c6fefd9c7e70e5611f4ecb527892c8b8830809032ce7c3aa75251a94bddf66728b983d014462b9f01c7a127fef6c32526810f91" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/9/f2739c66-aaf3-4978-8dc7-9a0546d1444f.png" alt="3" width="44" style="display: block; width: 100%; max-width: 44px">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td class="accent" style="width: 12px"></td>
+<td class="accent" align="center" valign="top" style="width: 151px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e534c7a114af33563dab2515557c5b3e3485165ab505b5e20089ad6efa459f3451f9969661b4de29ebf08f08731de81ca2dddc16e5328235e6" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/9/8c5ebacd-b98f-4c62-892e-0191c945e830.png" alt="4" width="44" style="display: block; width: 100%; max-width: 44px">
+</a>
+</td>
+</tr>
+</table>
+</td>
+<td class="accent" style="width: 12px"></td>
+<td class="accent" align="center" valign="top" style="width: 151px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%" style="border-collapse: separate">
+<tr>
+<td class="accent" align="center" style="border-radius: 5px; overflow: hidden">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e5b15a6ca0036ca8793b1bad931cacfd275bd3e9a675a13cfde39cea7bfeb310d5bc9ccbc0bb0cb14e3b47f89c0a8f583318f2f64e5363306b" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/9/3ee9476a-2e55-497b-9d9f-41ad2a74d72d.png" alt="5" width="44" style="display: block; width: 100%; max-width: 44px">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</th>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!-- FOOTER -->
+<table class="footer" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #f4f4f4; width: 100%">
+<tr>
+<td align="center" class="dm-outer">
+<table class="w100pc" role="none" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; width: 700px">
+<tr>
+<td align="center" class="mobpad" style="background-color: #222222; padding: 10px 30px">
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="100%">
+<tr>
+<td align="center" style="padding: 24px 0 40px">
+<!-- SOCIAL BLOCK -->
+<table border="0" cellspacing="0" cellpadding="0" role="none" width="330" class="fill mw-330">
+<tr>
+<td align="center" valign="middle" style="width: 66px">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e58d0d0b7bbf3dee1774ca2df0d5f7a1311d1396a947efa924a5baad89829c24ac3ee28756ac3ae2ca888925ecd775ef545305f7b2cf4f8705" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/4b024145-abb5-479e-a1fe-a84dd71c03ad.png" alt="Facebook" width="40" style="display: block">
+</a>
+</td>
+<td align="center" valign="middle" style="width: 66px">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e509ac24a10ffc6770a68c467b46a7c7d140a4bd885cc16b767d84c209287cbfd64b20e09331f94c6b7754dae16c0207793e7e98a5e4725435" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/7955d40b-d174-42c9-a4f1-0cff13e4b2bb.png" alt="X" width="40" style="display: block">
+</a>
+</td>
+<td align="center" valign="middle" style="width: 66px">
+<a href="https://click.ccg.nintendo.com/?qs=e9a93ed0ec7788e503be61d7f054bfbf2b79636b33cfbd9d377d6fb032a337bb600cd898c00f4258f28a857a338e44ac2c4478d6ea71045d62b2ec5ce25219b2" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/205472ee-728a-4217-8a9e-1f5a354b5486.png" alt="YouTube" width="40" style="display: block">
+</a>
+</td>
+<td align="center" valign="middle" style="width: 66px">
+<a href="https://click.ccg.nintendo.com/?qs=60cc0e14be9da35d0380a4758423034435e03adb0b3e909760c35cd1d5d6b9044ce06ce9ceb4c1182cfeaf6fef6ffc1001d3c7744956a444388bf44e509a020e" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/9d26ac75-c199-4b0f-afc5-9181bcb548a7.png" alt="Twitch" width="40" style="display: block">
+</a>
+</td>
+<td align="center" valign="middle" style="width: 66px">
+<a href="https://click.ccg.nintendo.com/?qs=60cc0e14be9da35d89ae722c75bca7977794eed595088d7caf85dd2a0161cbc9d417acb2f14241d1aa6b45cdadd57b5882fb0695be43b5693e3a31a1f993e635" target="new" >
+<img src="https://image.ccg.nintendo.com/lib/fe9913727664037d76/m/1/df05def0-5605-470c-8942-87810e882bf0.png" alt="Instagram" width="40" style="display: block">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<table border="0" cellspacing="0" cellpadding="0" role="none" style="max-width: 440px; width: 100%">
+<tr>
+<td style="border-top: 2px solid #333333; margin: 10px 0 0">&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 24px 0 40px">
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td align="center">
+<p style="color: #999999; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 18px; margin: 0px 0 30px">
+© 2025 Nintendo Co., Ltd.
+<br>
+Nintendo Switch is a trademark of Nintendo.
+</p>
+
+<table border="0" cellspacing="0" cellpadding="0" role="none">
+<tr>
+<td class="colsplit h-auto" align="center" valign="middle" style="background-color: #333333; border-radius: 5px; height: 48px; width: 118px">
+<a href="https://view.ccg.nintendo.com/?qs=b7d927ac7246b1b6dcc4a2d1323910f3b664305b9fed8d15f0fea0593ed120a9d813899d6669fc2c5cec5e80f6a980834941428711c1ec070b196d1b86ca611f2413c878c227b8e5b96d87f4ea47a94a" class="f-button" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; line-height: 18px; padding: 6px 14px; text-decoration: none"  target="new">Ver en el navegador</a>
+</td>
+<td class="colsplit" style="width: 5px; height: 10px"></td>
+<td class="colsplit h-auto" align="center" valign="middle" style="background-color: #333333; border-radius: 5px; height: 48px; width: 118px">
+<a href="https://click.ccg.nintendo.com/?qs=60cc0e14be9da35d155b882cc263e5de0cb58d7a1c251d9c6274ee8ac840dd3b66302f8388c310ac7ebfebb99620e41b409cd1265eaa03c1b23d8a8483be0972" class="f-button" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; line-height: 18px; padding: 6px 14px; text-decoration: none"  target="new">Política de privacidad</a>
+</td>
+<td class="colsplit" style="width: 5px; height: 10px"></td>
+<td class="colsplit h-auto" align="center" valign="middle" style="background-color: #333333; border-radius: 5px; height: 48px; width: 118px">
+<a href="https://click.ccg.nintendo.com/?qs=60cc0e14be9da35d7f0366b4e3e280bfbf5e64f516b3e8c6a600fbe6bac197453443cb7471a9f23c827c9170c7c06ac44098f1ec56eabcac6cd18cdcf90c9c8a" class="f-button" style="color: #ffffff; display: block; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 300; line-height: 18px; padding: 6px 14px; text-decoration: none"  target="new">Ayuda</a>
+</td>
+</tr>
+</table>
+<p style="color: #999999; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 18px; margin: 30px 0 0">
+Este correo electrónico está relacionado con tu cuenta Nintendo. Has recibido este correo electrónico en castellano porque tu cuenta Nintendo está configurada en castellano. Para cambiar tu configuración de correo electrónico o cancelar tu suscripción a los correos electrónicos de la cuenta Nintendo,  <a href="https://click.ccg.nintendo.com/?qs=60cc0e14be9da35d3b8eec7818631f65787f6dfb51f989927e1314dd38d2400894dc3ea648780016522de05f2eda8f83b24d56369cac733858ad9a525d1d48c0" style="color: #ffffff; text-decoration: underline"  target="new">haz clic aquí</a>.
+</p>
+<p style="color: #999999; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 18px; margin: 30px 0 0">
+
+ 
+Promoción de bienvenida a GameChat: Hasta el 31 de marzo de 2026, se podrá disfrutar de GameChat gratuitamente. Pasada esa fecha, será necesario contar con una suscripción a Nintendo Switch Online. 
+<br><br>* En Nintendo Switch 2 es posible jugar tanto a títulos de Nintendo Switch 2 como a títulos compatibles de Nintendo Switch, ya sea en formato físico o digital. Es posible que algunos títulos de Nintendo Switch sean incompatibles o no compatibles en su totalidad con Nintendo Switch 2. <a href="https://www.nintendo.com/es-es/Hardware/Nintendo-Switch-2/Compatibilidad-con-juegos-de-Nintendo-Switch-2786092.html" target="_blank" style="color: #ffffff;  text-decoration: underline; display: inline-block;">Se recoge más información en el sitio web oficial de Nintendo</a>. 
+<br><br>Para utilizar los servicios en línea, es necesario crear una cuenta Nintendo y aceptar el contrato correspondiente. Se aplica la política de privacidad de la cuenta Nintendo. Se requiere conexión a internet y disponer de una suscripción de pago a Nintendo Switch Online. Para utilizar la función GameChat, es necesario registrar un número de teléfono móvil. Algunos servicios en línea podrían no estar disponibles en todos los países. <a href="https://www.nintendo.com/es-es/Hardware/Nintendo-Switch-2/GameChat/Nintendo-Switch-2-GameChat-2785625.html" target="_blank" style="color: #ffffff;  text-decoration: underline; display: inline-block;">Se recoge más información en el sitio web oficial de Nintendo</a>. 
+
+
+<br><br>© Nintendo 
+</p>
+<p style="color: #999999; font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; line-height: 18px; margin: 24px 0 40px; max-width: 370px; width: 100%">
+No respondas a este mensaje.
+<br>
+<br>
+Nintendo Co., Ltd., 11-1 Hokotate-cho, Kamitoba, Minami-ku, Kioto 601-8501, Japón. Número de registro: 1300-01-011420. Directores representativos: Shuntaro Furukawa y Shigeru Miyamoto.
+</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table></td></tr></table></td></tr></table> 
+    
+    
+  </div>
+  <img src="https://click.ccg.nintendo.com/open.aspx?ffcb10-fe8e177371640d7573-fe27167770660779731275-fe9913727664037d76-ff60127777-fe2a167176670d7f7d1075-fef91579756c00&d=70252&bmt=0" width="1" height="1" alt="">
+</body>
+
+</html>
+
+--M9ANmlL5EI9P=_?:--
+

@@ -1,0 +1,1405 @@
+Delivered-To: lalala@gmail.com
+Received: by 2002:a05:7208:7086:b0:8c:bc25:dc76 with SMTP id p6csp22420rba;
+        Thu, 22 Aug 2024 21:31:30 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEELxzbgMZvWNyxufsytZGzYty4yGqkV0fEGwSxJ+0pzkmiP8PUBMXPVH68i8F4D67C8B4e
+X-Received: by 2002:a05:6402:3508:b0:5be:ed72:ce01 with SMTP id 4fb4d7f45d1cf-5c0891ac2f0mr416501a12.35.1724387489823;
+        Thu, 22 Aug 2024 21:31:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1724387489; cv=none;
+        d=google.com; s=arc-20160816;
+        b=uAILWIpoYdwY0HBbNnYFSn1YmMLRT7nlrkORV+I4PtAekEv6a1rWXhLQBIw+/4eKCO
+         RKaH75O4tjCi8qNmYi2krccFouf8ePxnd9PvipW/ddwYcvnL0urNNE6azTpd9Gsa/iIZ
+         8BbMLRZlUrkGT0vSRuuD0r/lWcV9QDyuK7moibS7wyM2bo3M0mdygFyrgy5wy5HBkUnU
+         pLrvVrywTY3omx6r+nu9P17YQqbUrAUsty9S7Qgwe5Fkfr8JcBfOsTaGAJyLfHzBnwyD
+         wEOAx8drWuZAmSmXuAwc48/6glJzS28pBBZFr+4o8pi+E0ARkDM8SCuQc9i7fq9tA1+t
+         9aGw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-id:list-unsubscribe-post:list-unsubscribe
+         :content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=hAOrYk2HF3+ZS/a6pBd0LNkQUkPIRl57za7kzLn2MZo=;
+        fh=NIrg2ho+hQHcMAhHn2Vf0Mwf8UOaggc0xWuvv5G0dI4=;
+        b=hkGOfCzaRi9SjC12SEPuqoLtbf9OOaV0ARIfD8EdHLGj96s2bJ1vxh8OukYH0hiu5G
+         r+xofRpZZNA3wQf/tUvMyx83XA+lqF35G++pL44gKLW7XTSNwCLAKNu2XtdbT5K62Rmt
+         7bZLRy6vQZwB3rnU6aaRC7dUtpxhNvkEHQsWfMC1o4itpg+J4vLPdGmW0usovDtmwuQL
+         s7fMMcnO+alKdBmRfQQJMPEuO47kiN9Xs+jCMdlUbzrSp2R0aiFRFc3YiFBVDDaMh0Fz
+         tlIIuLG6/6DBGVskjdG/JpuY3RtPICVeZnP1v9gwvjsyzK5rquZhnAPzzuu+YYl6q0Ee
+         l/jQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@r.grouponmail.es header.s=s2048d20190430 header.b=ivQwbfDq;
+       spf=pass (google.com: domain of 27102ffd-fe85-40c7-b13d-4958445eaf5b@bounce.r.grouponmail.es designates 50.115.218.242 as permitted sender) smtp.mailfrom=27102ffd-fe85-40c7-b13d-4958445eaf5b@bounce.r.grouponmail.es;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=grouponmail.es
+Return-Path: <27102ffd-fe85-40c7-b13d-4958445eaf5b@bounce.r.grouponmail.es>
+Received: from mta242d8.r.grouponmail.es (mta242d8.r.grouponmail.es. [50.115.218.242])
+        by mx.google.com with ESMTPS id 4fb4d7f45d1cf-5c0515cb781si1989621a12.415.2024.08.22.21.31.29
+        for <jrosarodriguez@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 22 Aug 2024 21:31:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 27102ffd-fe85-40c7-b13d-4958445eaf5b@bounce.r.grouponmail.es designates 50.115.218.242 as permitted sender) client-ip=50.115.218.242;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@r.grouponmail.es header.s=s2048d20190430 header.b=ivQwbfDq;
+       spf=pass (google.com: domain of 27102ffd-fe85-40c7-b13d-4958445eaf5b@bounce.r.grouponmail.es designates 50.115.218.242 as permitted sender) smtp.mailfrom=27102ffd-fe85-40c7-b13d-4958445eaf5b@bounce.r.grouponmail.es;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=grouponmail.es
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=r.grouponmail.es;
+	s=s2048d20190430; t=1724387488;
+	bh=hAOrYk2HF3+ZS/a6pBd0LNkQUkPIRl57za7kzLn2MZo=;
+	h=Date:From:To:Message-ID:Subject:Content-Type;
+	b=ivQwbfDq4MYReU90mRXnteohcKDTx6nl7J+cJ9zLczLCQ1W+G2374zdN9a/KfWQYO
+	 QPy82imENJ2FeXHEX6fzXQL7obr3Eurp38aZF29PmVXweNnp1/w5uqAS5X3Hulidek
+	 gFDkSWnbKpuF2BIWRdznG2byYzdLjWE0fzyZbSCxuW7rkPRMqBeYG4Th1a8vbxs6j3
+	 CXyjWKD3Ixq4EHiTxNAAGYuGEgazsB7nCe74JAN44yYXs6OBphxzFnqeGliahzYoaP
+	 dOnGZhhf4LzWh5tX9e2WBNiQ8x+6bCmcch0p0oGb1wNSeTb679GrVZg+mj33/CJE+u
+	 0IhL5f1ZHkQPw==
+Date: Fri, 23 Aug 2024 04:31:28 +0000
+From: =?UTF-8?Q?Groupon_=F0=9F=9F=A2?= <noreply@r.grouponmail.es>
+To: jrosarodriguez@gmail.com
+Message-ID: <1849921439.48513.1724387488210.JavaMail.root@rocketman-commercial--email-consumer--default-3.hbu-svc-rocketman-commercial--email-consumer--default.rocketman-commercial-production.svc.cluster.local>
+Subject: Sampur, tu mejor aliado para un regreso lleno de bienestar.
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-RM-SendId: 0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823
+X-RM-Clr: 27102ffd-fe85-40c7-b13d-4958445eaf5b
+X-Brand: groupon
+X-RM-EmailName: channel-goods_gg_coop1_es_im_GM_BU_20240823
+X-RM-SenderScore: 10
+X-MSFBL: MjcxMDJmZmQtZmU4NS00MGM3LWIxM2QtNDk1ODQ0NWVhZjViOmJhdGNoOjA5NDVkMmYxLTVjZjYtNDQ0Yy05YjYwLTQxZTQzNzk4YWVhYV8wXzIwMjQwODIzOm51bGw6RVM=
+List-Unsubscribe: <mailto:27102ffd-fe85-40c7-b13d-4958445eaf5b@unsub.r.grouponmail.es?subject=MjcxMDJmZmQtZmU4NS00MGM3LWIxM2QtNDk1ODQ0NWVhZjViOmJhdGNoOjA5NDVkMmYxLTVjZjYtNDQ0Yy05YjYwLTQxZTQzNzk4YWVhYV8wXzIwMjQwODIzOm51bGw6RVM=>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-RPCampaign: Grouponchannelgoodsggcoop1esimGMBU2024082320240823
+X-RPTags: channel-goods_gg_coop1_es_im_GM_BU_20240823
+X-Recruiting: Interested in headers? Join us: www.groupon.com/techjobs/
+List-Id: <channel-goods_gg_coop1_es_im_GM_BU_20240823_20240823.groupon>
+X-Feedback-ID: r.grouponmail.es:channel-goods_gg_coop1_es_im_GM_BU_20240823:0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823:groupon
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:s=
+chemas-microsoft-com:office:office"> <head> <meta http-equiv=3D"Content-Typ=
+e" content=3D"text/html; charset=3Dutf-8" /> <meta name=3D"format-detection=
+" content=3D"address=3Dno"> <meta name=3D"viewport" content=3D"width=3Ddevi=
+ce-width, initial-scale=3D1.0"> <title>Groupon</title> <style type=3D"text/=
+css"> .ExternalClass *{line-height:100%}table{font-family:'Open Sans',Arial=
+,sans-serif!important}table.helvetica{font-family:Helvetica,Arial,sans-seri=
+f!important}table.ls_nav_font{font-family:Nunito,'Open Sans',Arial,sans-ser=
+if!important}a,div,li,p,td{-webkit-text-size-adjust:none}img[class=3D"100"]=
+{width:100%!important;min-width:100%!important;max-width:100%!important}.ap=
+pleLinks a,.appleLinksBlack a{color:#333!important;text-decoration:none}.ap=
+pleLinksGrey a{color:#75787b!important;text-decoration:none}.appleLinksGray=
+ a{color:#999!important;text-decoration:none}.appleLinksBlue a{color:#0093e=
+a!important;text-decoration:none}.bg-color:hover{background-color:#367806!i=
+mportant}@media only screen and (max-width:599px){div[class=3Dpattern-105],=
+div[class=3Dpattern-117],div[class=3Dpattern-80]{position:relative!importan=
+t;overflow:hidden!important;width:100%!important}div[class=3Dpattern-80]{he=
+ight:80px!important}div[class=3Dpattern-105] img,div[class=3Dpattern-117] i=
+mg,div[class=3Dpattern-80] img{position:absolute!important;top:0!important;=
+left:50%!important;margin-left:-300px!important}div[class=3Dpattern-105]{he=
+ight:105px!important}div[class=3Dpattern-117]{height:117px!important}}@medi=
+a only screen and (max-width:580px){table[class=3Dinner_container],table[cl=
+ass=3Douter_container]{border-spacing:0!important;border-collapse:collapse!=
+important;margin:0 auto!important;padding:0!important}td[class=3DfloatLeft-=
+name],td[class=3DfloatLeft-ship]{text-align:left!important;font-size:13px!i=
+mportant;width:100%!important;float:left!important}table[class=3Dcontainer]=
+{margin:0 auto!important;width:100%!important;min-width:100%!important}th[c=
+lass=3Dcontainer]{margin:0 auto!important;width:100%!important;height:auto!=
+important;min-width:100%!important;display:block!important}th[class=3D"cont=
+ainer mobile-padding"]{margin:0 auto!important;width:100%!important;height:=
+auto!important;min-width:100%!important;display:block!important;padding:0!i=
+mportant}td[class=3Dcontainer]{width:100%!important;min-width:100%!importan=
+t;float:left!important;position:relative!important;padding:0!important}tabl=
+e[class=3Douter_container]{width:95%!important}table[class=3Dinner_containe=
+r]{width:100%!important;min-width:100%!important}td[class=3Dinner_container=
+]{width:100%!important;background-size:100%!important;margin:0 auto!importa=
+nt}td[class=3Dtd_featured]{width:100%!important;height:150px!important;back=
+ground-size:100%!important;background-position:100% 50%;background-repeat:n=
+o-repeat;padding:0!important;margin:0 auto!important}td[class=3D"100"],td[c=
+lass=3Dw100]{width:100%!important;min-width:100%!important;height:auto!impo=
+rtant;float:left!important}td[class=3Dmobile-hdr-logo-center]{padding:25px =
+0 10px!important}img[class=3D"100"],img[class=3Dimg-mobile]{width:100%!impo=
+rtant;min-width:100%!important;max-width:100%!important}[class=3Dcollapse-l=
+eft],[class=3Dcollapse-right-rtl]{width:100%!important;float:left!important=
+;position:relative!important;padding:20px 0!important;border-bottom:1px sol=
+id #ccc!important}[class=3Dcollapse-left-rtl],[class=3Dcollapse-right]{widt=
+h:100%!important;float:left!important;position:relative!important;padding:2=
+0px 0!important;border:none!important}td[class=3Dcollapse-trxn]{width:100%!=
+important;float:left!important;position:relative!important;padding:30px 0 0=
+!important}td[class=3Dcontainer-33]{min-width:33%!important}td[class=3Dcol-=
+4-mobile]{width:65%!important}td[class=3Dtax-mobile]{white-space:normal!imp=
+ortant}td[class=3Dmobile-container-padding]{padding:20px 10px!important}td[=
+class=3Dclo-redesign-container-padding]{padding:11px 37px 0!important}td[cl=
+ass=3Dmobile-container-padding-none]{padding:0!important}td.ga-mobile-pad{p=
+adding:20px 0 15px 10px!important}td[class=3Dweekend-mobile-container-paddi=
+ng]{padding:0 10px 20px!important}td[class=3Dmobile-container-nav-padding]{=
+padding:10px 0!important}td[class=3Dmobile-container-category]{padding:10px=
+!important}td[class=3DfloatLeft-ship]{border:0!important;padding:5px 0 15px=
+!important;line-height:14px!important}td[class=3DfloatLeft-name]{border:0!i=
+mportant;padding:5px 0!important;line-height:14px!important;font-weight:700=
+!important}td[class=3Dno-padding]{padding:0!important}td[class=3Dno-border-=
+no-padding]{padding:0!important;border:none!important}.no-border{border:non=
+e!important}[class=3Ddisplay-off]{display:none!important}[class=3Dbadge-mob=
+ile]{font-size:11px!important}[class=3Dmerchant-name-mobile]{font-size:13px=
+!important;height:auto!important}[class=3Dratings-mobile]{font-size:11px!im=
+portant;vertical-align:middle!important}[class=3Dprice-mobile]{font-size:13=
+px!important}[class=3Dprice-padding]{padding-top:6px!important;display:inli=
+ne!important}[class=3Dpercent-mobile]{vertical-align:middle!important}td[cl=
+ass=3Dshipment-col-4-mobile]{width:50%!important}[class=3Dcontainer-white]{=
+width:100%!important;background-color:#fff!important;padding:0!important}[c=
+lass=3DtextAlignCenter]{text-align:center!important}table[class=3Dbutton-wi=
+dth]{width:80px!important}td[class=3DviewButtonMobile]{padding:12px 10px!im=
+portant}[class=3Dmobile-banner-nopad],[class=3Dmobile-banner]{width:100%!im=
+portant;max-height:none!important;height:auto!important;display:block!impor=
+tant;padding:0!important;color:#000!important;font-size:32px!important;line=
+-height:24px!important}[class=3Dmobile-banner-img-bn],[class=3Dmobile-banne=
+r-img-holiday],[class=3Dmobile-banner-img]{color:#000!important;font-size:1=
+2px!important;display:block!important;width:100%!important}[class=3Dmobile-=
+banner-img]{max-height:none!important;height:auto!important;padding:0!impor=
+tant}[class=3Dmobile-banner-img-holiday]{max-height:none!important;height:a=
+uto!important;padding:16px 0 0!important}[class=3Dmobile-banner-img-bn]{hei=
+ght:100%!important;max-width:154px!important;max-height:100%!important;padd=
+ing:0!important}img[class=3D"2up-image-mobile-bn"],img[class=3Dmobile-banne=
+r-img-bn-center],img[class=3Dmobile-banner-img-bn-right],img[class=3Dmobile=
+-banner-img-bn]{width:100%!important;height:auto!important;display:block!im=
+portant}[class=3Dmobile-banner-img-bn-center],[class=3Dmobile-banner-img-bn=
+-right]{width:100%!important;height:100%!important;max-width:154px!importan=
+t;max-height:100%!important;padding:0!important;display:block!important}[cl=
+ass=3D"2up-image-mobile-bn"]{width:100%!important;height:100%!important;max=
+-width:230px!important;max-height:100%!important;display:inline!important;f=
+ont-size:0!important}[class=3Dmobile-banner-img-pad],[class=3Dmobile-banner=
+-img-padding]{color:#000!important;font-size:12px!important;max-height:none=
+!important;display:block!important;height:auto!important;width:100%!importa=
+nt}[class=3Dmobile-banner-img-padding]{padding:14px 0 0!important}[class=3D=
+mobile-banner-img-pad]{padding:0 0 10px!important}[class=3D"2up-image-mobil=
+e"]{width:100%!important;max-height:none!important;height:auto!important;di=
+splay:block!important;float:left!important}[class=3Dheading_style]{-webkit-=
+text-size-adjust:none!important;font-size:13px!important;font-style:normal!=
+important;font-variant:normal!important;font-weight:400!important;font-fami=
+ly:Arial,Verdana,sans-serif!important;color:#cdf5ff!important;line-height:1=
+8px!important}[class=3Dfont-13],td[class=3Dmobile-font]{font-size:13px!impo=
+rtant}span[class=3DnameFont],td[class=3DheroNameFont],td[class=3DnameFont]{=
+font-size:18px!important;line-height:22px!important}td[class=3DthemeFont]{f=
+ont-size:30px!important;line-height:34px!important}a[class=3DheroNameFont]{=
+text-decoration:none!important;font-size:18px!important;line-height:22px!im=
+portant}[class=3Dfont-10-trxnl],[class=3Dfont-10]{font-size:10px!important;=
+line-height:16px!important}[class=3Dfont-10-trxnl]{padding:16px 0 0!importa=
+nt}[class=3Dfont-12]{font-size:12px!important}[class=3Dfont-13-padding]{fon=
+t-size:13px!important;padding:0!important}[class=3Dfont-16]{font-size:16px!=
+important}[class=3Dfont-18]{font-size:18px!important}[class=3Dfont-24]{font=
+-size:24px!important}img[class=3Dglive-deal-image]{width:80%!important;heig=
+ht:auto!important;display:block;margin:0 auto;padding:0}[class=3Duniversal-=
+padding]{padding:31px 14px 28.5px!important}[class=3Duniversal-padding-trxn=
+l]{padding:24px 24px 32px!important}[class=3Dapp-logo]{width:29px!important=
+}td[class=3Dapp-text]{padding:7px 0 0 5px!important}img[class=3Dinstagram-l=
+ogo]{width:22px!important}img[class=3Dfacebook-logo]{width:9.5px!important}=
+img[class=3Dtwitter-logo]{width:27px!important}td[class=3Dinstagram-logo]{m=
+ax-width:22px!important;padding:0 40px 0 0!important}td[class=3Dfacebook-lo=
+go]{max-width:9.5px!important;padding:0 40.5px 0 0!important}td[class=3Dtwi=
+tter-logo]{max-width:27px!important}div[class=3Dgmailfix]{display:none;disp=
+lay:none!important}[class=3DpostcardButtonPadding]{padding:10px 0 0 1px!imp=
+ortant}[class=3Done_hundred]{width:100%!important;min-width:100%!important;=
+max-width:100%!important}[class=3Dno-padding]{padding:0!important}.display_=
+block,[class=3Ddisplay_block]{display:block!important}.border-top{border-le=
+ft:none!important;border-top:1px solid #000;border-collapse:collapse;displa=
+y:block}.two-up-title{font-size:13px!important;line-height:1.38!important}.=
+two-up-badge-icon{width:12px!important;height:auto!important}.one-up-badge-=
+icon{width:16px!important;height:auto!important}[class=3Dstar-mobile]{heigh=
+t:auto!important}th.fifty-percent{width:50%!important}[class=3Dgoogle-mobil=
+e]{padding:13px 0 0 0!important}} *[class].viewButton {-moz-border-radius: =
+4px 4px 4px 4px; -webkit-border-radius: 4px 4px 4px 4px; -khtml-border-radi=
+us: 4px 4px 4px 4px; border-radius: 4px 4px 4px 4px;} </style> <!--[if !mso=
+]><!--> <style> @media only screen and (max-width: 580px) { .app-store-mobi=
+le { width: 113px !important; height: 37px !important; } .google-play-mobil=
+e { width: 129px !important; height: 37px !important; } td[class=3D"collaps=
+e-left-postcard"]{ width: 100% !important; float: left !important; position=
+: relative !important; padding: 20px 0 20px 0 !important; } table[class=3D"=
+seo-button-width"]{ width: 158px !important; } table[class=3D"container_bor=
+der"]{ width: 100% !important; padding: 0 0 0 0 !important; } *[class=3D"ma=
+rgin_zero_auto"]{ margin: 0 auto !important; display: block !important; } *=
+[class=3D"text_pad"]{ padding:7px 0 0 0 !important; } *[class=3D"display_ta=
+ble"]{ display: block !important; width:100% !important; } } </style> <!--<=
+![endif]--> <link href=3D'https://fonts.googleapis.com/css?family=3DOpen+Sa=
+ns:100,200,400,300,500,600,700,800' rel=3D'stylesheet' type=3D'text/css' />=
+ <link href=3D"https://fonts.googleapis.com/css?family=3DNunito:700" rel=3D=
+"stylesheet"> <link href=3D"https://fonts.googleapis.com/css?family=3DNunit=
+o+Sans:400,600,700" rel=3D"stylesheet"> </head> <body style=3D"margin:0 !im=
+portant; padding:0 !important; background: #f2f2f2 !important;"> <div class=
+=3D"gmailfix" style=3D"white-space:nowrap; font:15px courier; line-height:0=
+;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div> <img=
+ src =3D "https://www.groupon.es/analytic/trackintl.gif?p=3D1&utm_domain=3D=
+gmail.com&utm_campaign=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&de=
+als=3D01b9d0b0-f385-456a-b486-02e5c45d42ec,f8bf475d-dd36-4fc2-9f74-d7efeb35=
+4931,c80bb45a-94f7-4220-ba5a-e92acee76327,77b9912b-388e-44ba-856c-14a17d734=
+568,2c5ce39a-ec3d-4255-b908-89f15c27ea14,8b7f1526-2a5b-4bed-9484-f77f383d7c=
+ac,f3209bc3-4a5e-40a8-b76f-e0ceddddd428,7c6e44f4-1913-4355-be3d-8d99c63201a=
+9,787d9731-03aa-43c9-99ad-7400a568fb95,3bdf7479-8ebc-4bd0-afad-863b6b78a998=
+,9bb0e7ac-0489-43eb-a94a-9ced5023de96,48020e45-9fcb-4c66-ace1-027999d5b778,=
+a7013346-8916-4fc9-ae39-65c7a7a1ea0e,78fa4358-6c4b-4b4d-872d-f9ecae02989b,6=
+dce0a5d-0099-4b4d-900a-648e67972dba,678ed395-3ae5-4489-9381-905532b29dbd,74=
+9eb02c-235e-4482-9898-7d0befa1d96e,8245f39f-7202-4dce-8cbe-cb76c533d43e,a6c=
+4184f-d613-4b6d-8d01-118a9285b50c,e304c1ab-030d-4657-a926-87bd09bef495,a047=
+9e89-b3bf-4d74-86f7-7065e6f05673&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b1=
+3d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=
+=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=
+=3D20242308&sender=3Drm&s=3Dbody&c=3Dtracking_pixel_uuid&d=3Dnone" height=
+=3D"1" width=3D"1" style=3D"display: none !important;" /> <span style=3D"co=
+lor: #ffffff; font-size: 0px;" height=3D"0"> <span class=3D"previewCopy" he=
+ight=3D"0" style=3D"font-size: 1px !important; height: 0px; display: none;"=
+> Cubrecolch=C3=B3n Nuage, de Sampur &nbsp;| Almohadas Royal Softly de Samp=
+ur&nbsp;| Almohada Sampur&nbsp;| 1, 2 o 4 almohadas con relleno de plumas d=
+e Sampur </span> </span> <table cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica,=
+ Arial, sans-serif; color:#000000; font-weight: normal; text-align: left; w=
+idth: 100%; background: #f2f2f2;" align=3D"center"> <tr> <td align=3D"cente=
+r" style=3D"padding: 20px 0 15px 0;" class=3D"mobile-hdr-logo-center"><a hr=
+ef=3D"https://www.groupon.es?nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4=
+958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0=
+945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D2=
+0242308&sender=3Drm&s=3Dheader&c=3Dimage&d=3Dgroupon?&utm_term=3Dheader_ico=
+ns" style=3D"font-size: 34px; color: #333333; font-weight: normal; color:#f=
+fffff; font-weight: 700;" target=3D"_blank"><img src=3D"https://img.groupon=
+cdn.com/deal/464QAzwtkcSuBtgj3Go5R9wAW25u/46-517x84" style=3D"display: bloc=
+k; border: none; width: 151px;" width=3D"151" alt=3D"GROUPON&reg;" title=3D=
+"GROUPON&reg;" /></a></td> </tr> </table> <table cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"width: 100%; background: #f2f2f2;" align=3D"center"> <tr=
+> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 670px; backgro=
+und: #ffffff;" bgcolor=3D"#ffffff" align=3D"center" class=3D"container"> <t=
+r> <td align=3D"center"> <table cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"width: 600px; min-width:600px; background: #ffffff;" bgcolor=3D"#ffffff=
+" align=3D"center" class=3D"container"> <tr> <td align=3D"center" style=3D"=
+padding: 0 0 40px 0;" class=3D"mobile-container-padding"> <table cellpaddin=
+g=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-=
+family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; font-weig=
+ht: normal; text-align: left; width: 100%; background-color: #ffffff;" alig=
+n=3D"center"> <tr> <td style=3D"padding: 0px; display:none; font-size:0; ma=
+x-height:0; line-height:0; mso-hide: all;" class=3D"mobile-banner"><a href=
+=3D"https://www.groupon.es/landing/linareve-73?p=3D1&nlp=3D&CID=3DES&uu=3D2=
+7102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&ut=
+m_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_di=
+vision=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbanner&d=3Ddynamic=
+-banner-1" style=3D"color:#0185C6; text-decoration:none;" target=3D"_blank"=
+> <img src=3D"https://img.grouponcdn.com/deal/4BeSbpCL4b3JJMUeu2wCpy4eKdT8/=
+4B-460x120" style=3D"padding:0px; display:none; font-size:0; max-height:0; =
+line-height:0; mso-hide: all;" class=3D"mobile-banner-img" alt=3D"Groupon" =
+/></a> </td> </tr> </table> <table cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica=
+, Arial, sans-serif; color:#000000; font-weight: normal; text-align: left; =
+width: 100%; min-width:290px; background-color: #ffffff;" align=3D"center" =
+class=3D"display-off"> <tr> <td align=3D"center" style=3D"padding: 10px 0 1=
+0px 0; min-width:290px;"><a href=3D"https://www.groupon.es/landing/linareve=
+-73?p=3D1&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&=
+utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9=
+b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm=
+&s=3Dbody&c=3Dbanner&d=3Ddynamic-banner-1" style=3D"color:#0185C6; text-dec=
+oration:none;" target=3D"_blank"> <img src=3D"https://img.grouponcdn.com/de=
+al/LRfGBoTWSf7eQgjeeBsyjs8bR4X/LR-600x110" style=3D"display: block; border:=
+ none; min-width:290px;" alt=3D"Groupon" /></a> </td> </tr> </table> <table=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"width: 600px; min-width:600px=
+;" width=3D"600" align=3D"center" class=3D"container"> <tr> <td align=3D"ce=
+nter" style=3D"width:600px; min-width:600px;" width=3D"600" class=3D"contai=
+ner"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; b=
+order-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; c=
+olor:#000000; font-weight: normal; text-align: left; width: 600px;" align=
+=3D"center" class=3D"container"> <tr> <td align=3D"center" colspan=3D"2" st=
+yle=3D"width:100%; padding: 10px 0 0 0;" width=3D"100%"><a href=3D"https://=
+www.groupon.es/deals/cubrecolchon-nuage-sampur?p=3D2&utm_content=3Dcubrecol=
+chon-nuage-sampur&utm_term=3Dw2up-hero-deal_card&nlp=3D&CID=3DES&uu=3D27102=
+ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_me=
+dium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_divisi=
+on=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page&ut=
+m_campaign=3Dcubrecolchon-nuage-sampur" target=3D"_blank" style=3D"display:=
+ block; border: none;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"width: 100%;"> <tr> <td><a href=3D"https://www.groupon.es/deals/cubrecolch=
+on-nuage-sampur?p=3D2&utm_content=3Dcubrecolchon-nuage-sampur&utm_term=3Dw2=
+up-hero-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b=
+&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf=
+6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sen=
+der=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page&utm_campaign=3Dcubrecolchon-nuage=
+-sampur" target=3D"_blank" style=3D"display: block; border: none;"><img src=
+=3D"https://img.grouponcdn.com/deal/AC79CPecmDGJWNZmCjSpGHwfQx4/AC-1067x640=
+/v1/c700x420.jpg" alt=3D"" style=3D"display: block; border: none; width:600=
+px; min-width:290px;" width=3D"600" class=3D"100" /></a></td> </tr> </table=
+> </a></td> </tr> <tr> <td align=3D"left" style=3D"padding: 15px 5px 10px 0=
+;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; bor=
+der-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; col=
+or:#000000; font-weight: normal; text-align: left; width: 100%;" align=3D"c=
+enter"> <tr> <td style=3D"font-size: 16px; color: #333333; font-weight: nor=
+mal;" align=3D"left">Cubrecolch=C3=B3n Nuage, de Sampur </td> </tr> <tr> <t=
+d align=3D"left" colspan=3D"2" style=3D"font-size: 13px; color: #999999; fo=
+nt-weight: normal; padding: 5px 0 0 0;"> </td> </tr> <tr> <td style=3D"padd=
+ing: 3px 0 0 0;" align=3D"left"> <span style=3D"font-size: 16px; text-decor=
+ation: line-through; color:#848484; font-weight: normal; color:#848484;"> 2=
+49,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 18px; color: #53A318=
+; font-weight: bold;"> Desde 28,99&nbsp;=E2=82=AC </span> </td> </tr> </tab=
+le> </td> <td align=3D"right" style=3D"padding: 10px 0 10px 0;" valign=3D"m=
+iddle"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none;=
+ border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif;=
+ color:#000000; font-weight: normal; text-align: left;"> <tr> <td style=3D"=
+color: #ffffff; background: #53A318; font-size: 12px; text-align: center; f=
+ont-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://w=
+ww.groupon.es/deals/cubrecolchon-nuage-sampur?p=3D2&utm_content=3Dcubrecolc=
+hon-nuage-sampur&utm_term=3Dw2up-hero-deal_card&nlp=3D&CID=3DES&uu=3D27102f=
+fd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_med=
+ium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_divisio=
+n=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" t=
+arget=3D"_blank" style=3D"text-decoration: none; color: #ffffff; display: i=
+nline-block; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-ra=
+dius: 3px; background-color: #53A318; border-top: 12px solid #53A318; borde=
+r-bottom: 12px solid #53A318; border-right: 18px solid #53A318; border-left=
+: 18px solid #53A318; white-space:nowrap;">Descubre</a></td> </tr> </table>=
+ </td> </tr> </table> <table cellpadding=3D"0" cellspacing=3D"0" style =3D =
+"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Ar=
+ial, sans-serif; color:#000000; font-weight: normal; text-align: left; widt=
+h: 600px;" align=3D "center" class=3D"container" > <tr> <td align=3D"left" =
+valign=3D"top" class=3D"mobileContainerPadding"> <table cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: '=
+Open Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: norma=
+l; text-align: left; width:290px; background: #ffffff;" class=3D"container"=
+ align=3D'left'> <tr> <td valign=3D"top" style=3D"padding: 20px 0 0 0;" ali=
+gn=3D'left'> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 =
+none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-s=
+erif; color:#000000; font-weight: normal; text-align: left; width: 100%;"> =
+<tr> <td valign=3D"top" colspan=3D"2"><a href=3D"https://www.groupon.es/dea=
+ls/almohada-real?p=3D3&utm_content=3Dalmohada-real&utm_term=3Dw2up-hero-dea=
+l_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm=
+_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60=
+-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=
+=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; =
+text-decoration:none;"><img src=3D"https://img.grouponcdn.com/deal/392jwaBC=
+DBmsR88EBBp73Y8X4eqf/39-1500x900/v1//c300x182" style=3D"display: block; bor=
+der: none; width: 290px;" width=3D"290" alt=3D"Almohadas Royal Softly de Sa=
+mpur" title=3D"Almohadas Royal Softly de Sampur" class=3D"100"></a></td> </=
+tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #333333; font-=
+weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Almohadas Royal Softly de=
+ Sampur</td> </tr> <tr> <td align=3D"left" style=3D"font-size: 13px; color:=
+ #999999; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr=
+> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D"fon=
+t-size: 16px; text-decoration: line-through; color:#848484; font-weight: no=
+rmal; color:#848484;"> 119,00&nbsp;=E2=82=AC </span> <span style=3D"font-si=
+ze: 18px; color: #53A318; font-weight: bold;"> Desde 19,99&nbsp;=E2=82=AC <=
+/span> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;"> <table cell=
+padding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacing: 0;=
+ font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; fon=
+t-weight: normal; text-align: left;"> <tr> <td style=3D"color: #ffffff; bac=
+kground: #53A318; font-size: 12px; text-align: center; font-family: 'Helvet=
+ica',Arial,sans-serif,'Open Sans';"><a href=3D"https://www.groupon.es/deals=
+/almohada-real?p=3D3&utm_content=3Dalmohada-real&utm_term=3Dw2up-hero-deal_=
+card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_s=
+ource=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-4=
+1e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3D=
+body&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decoration: =
+none; color: #ffffff; display: inline-block; border-radius: 3px; -webkit-bo=
+rder-radius: 3px; -moz-border-radius: 3px; background-color: #53A318; borde=
+r-top: 12px solid #53A318; border-bottom: 12px solid #53A318; border-right:=
+ 18px solid #53A318; border-left: 18px solid #53A318; white-space:nowrap;">=
+Descubre</a></td> </tr> </table> </td> </tr> </table> </td> </tr> </table> =
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-=
+spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#=
+000000; font-weight: normal; text-align: left; width:290px; background: #ff=
+ffff;" class=3D"container" align=3D'right'> <tr> <td valign=3D"top" style=
+=3D"padding: 20px 0 0 0;" align=3D'right'> <table cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open S=
+ans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; tex=
+t-align: left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a href=
+=3D"https://www.groupon.es/deals/almohada-sampur?p=3D4&utm_content=3Dalmoha=
+da-sampur&utm_term=3Dw2up-hero-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85=
+-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3De=
+mail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmad=
+rid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D=
+"_blank" style=3D"color:#0185C6; text-decoration:none;"><img src=3D"https:/=
+/img.grouponcdn.com/deal/2gs9yyU4arApZLgmz2LaqgdyZw6y/2g-2000x1200/v1//c300=
+x182" style=3D"display: block; border: none; width: 290px;" width=3D"290" a=
+lt=3D"Almohada Sampur" title=3D"Almohada Sampur" class=3D"100"></a></td> </=
+tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #333333; font-=
+weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Almohada Sampur</td> </tr=
+> <tr> <td align=3D"left" style=3D"font-size: 13px; color: #999999; font-we=
+ight: normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=
+=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D"font-size: 16px; te=
+xt-decoration: line-through; color:#848484; font-weight: normal; color:#848=
+484;"> 99,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 18px; color: =
+#53A318; font-weight: bold;"> Desde 34,99&nbsp;=E2=82=AC </span> </td> <td =
+align=3D"right" style=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" cel=
+lspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Op=
+en Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal;=
+ text-align: left;"> <tr> <td style=3D"color: #ffffff; background: #53A318;=
+ font-size: 12px; text-align: center; font-family: 'Helvetica',Arial,sans-s=
+erif,'Open Sans';"><a href=3D"https://www.groupon.es/deals/almohada-sampur?=
+p=3D4&utm_content=3Dalmohada-sampur&utm_term=3Dw2up-hero-deal_card&nlp=3D&C=
+ID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchann=
+el_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0=
+_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutt=
+on&d=3Ddeal-page" target=3D"_blank" style=3D"text-decoration: none; color: =
+#ffffff; display: inline-block; border-radius: 3px; -webkit-border-radius: =
+3px; -moz-border-radius: 3px; background-color: #53A318; border-top: 12px s=
+olid #53A318; border-bottom: 12px solid #53A318; border-right: 18px solid #=
+53A318; border-left: 18px solid #53A318; white-space:nowrap;">Descubre</a><=
+/td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> <=
+tr> <td> </td> </tr> </table> </td> </tr> </table> <table cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"width: 600px; min-width:600px;" width=3D"600" a=
+lign=3D"center" class=3D"container"> <tr> <td align=3D"center" style=3D"wid=
+th:600px; min-width:600px;" width=3D"600" class=3D"container"> <table cellp=
+adding=3D"0" cellspacing=3D"0" style =3D "border: 0 none; border-spacing: 0=
+; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; fo=
+nt-weight: normal; text-align: left; width: 600px;" align=3D "center" class=
+=3D"container"> <tr> <td align=3D"left" valign=3D"top" class=3D"mobileConta=
+inerPadding"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0=
+ none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-=
+serif; color:#000000; font-weight: normal; text-align: left; width:290px; b=
+ackground: #ffffff;" class=3D"container" align=3D'left'> <tr> <td valign=3D=
+"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'left' class=3D"split-card=
+-no-border"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 =
+none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-s=
+erif; color:#000000; font-weight: normal; text-align: left; width: 100%;"> =
+<tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"https://w=
+ww.groupon.es/deals/almohada-espuma-memoria-sampur-4?p=3D6&offer_type=3DSAL=
+E&utm_content=3Dalmohada-espuma-memoria-sampur-4&utm_term=3Dw2up-deal_card&=
+nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=
+=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e437=
+98aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&=
+c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; text-dec=
+oration:none;"><img src=3D"https://img.grouponcdn.com/deal/2f4FpxHzm9ne1aF8=
+yMrbj6HLRZu/2f-2048x1229/v1/c300x182.jpg" style=3D"display: block; border: =
+none; width: 290px;" width=3D"290" alt=3D"Almohada de espuma con memoria de=
+ Sampur" title=3D"Almohada de espuma con memoria de Sampur" class=3D"100"><=
+/a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #33=
+3333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Almohada de es=
+puma con memoria de Sampur</td> </tr> <tr> <td align=3D"left" style=3D"font=
+-size: 13px; color: #999999; font-weight: normal; padding: 5px 0 0 0;"colsp=
+an=3D"2"></td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left">=
+ <span style=3D"font-size: 16px; text-decoration: line-through; color:#8484=
+84; font-weight: normal; color:#848484;"> 229,00&nbsp;=E2=82=AC </span> <sp=
+an style=3D"font-size: 18px; color: #53A318; font-weight: bold; text-decora=
+tion:line-through;"> 67,99&nbsp;=E2=82=AC </span> <span style=3D"font-size:=
+ 16px; line-height: 20px; font-weight: 600; text-decoration: none; color: #=
+ff2552;"> Desde 63,99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" styl=
+e=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica,=
+ Arial, sans-serif; color:#000000; font-weight: normal; text-align: left;">=
+ <tr> <td style=3D"color: #ffffff; background: #53A318; font-size: 12px; te=
+xt-align: center; font-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><=
+a href=3D"https://www.groupon.es/deals/almohada-espuma-memoria-sampur-4?p=
+=3D6&offer_type=3DSALE&utm_content=3Dalmohada-espuma-memoria-sampur-4&utm_t=
+erm=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445ea=
+f5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-=
+5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&=
+sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"t=
+ext-decoration: none; color: #ffffff; display: inline-block; border-radius:=
+ 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-color=
+: #53A318; border-top: 12px solid #53A318; border-bottom: 12px solid #53A31=
+8; border-right: 18px solid #53A318; border-left: 18px solid #53A318; white=
+-space:nowrap;"> Descubre </a></td> </tr> </table> </td> </tr> <td valign=
+=3D"top" style=3D"font-size: 11px; text-decoration: none; color: #ff2552; f=
+ont-weight: normal; text-align: left; padding: 4px 0 0 0;" class=3D""> La p=
+romoci=C3=B3n termina el 25/8 </td> </table> </td> </tr> </table> <table ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacing: =
+0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; f=
+ont-weight: normal; text-align: left; width:290px; background: #ffffff;" cl=
+ass=3D"container" align=3D'right'> <tr> <td valign=3D"top" style=3D"padding=
+: 10px 0 0 0; ; ;" align=3D'right' class=3D"split-card-no-border"> <table c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacing:=
+ 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; =
+font-weight: normal; text-align: left; width: 100%;"> <tr> <td valign=3D"to=
+p" colspan=3D"2"><a id=3D"deal_link" href=3D"https://www.groupon.es/deals/a=
+lmohada-plumas?p=3D7&utm_content=3Dalmohada-plumas&utm_term=3Dw2up-deal_car=
+d&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_sour=
+ce=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e4=
+3798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbod=
+y&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; text-d=
+ecoration:none;"><img src=3D"https://img.grouponcdn.com/deal/4NL59fc1h3Mypd=
+jaKXL5PL3UmPGd/4N-960x576/v1/c300x182.jpg" style=3D"display: block; border:=
+ none; width: 290px;" width=3D"290" alt=3D"Almohada de plumas" title=3D"Alm=
+ohada de plumas" class=3D"100"></a></td> </tr> <tr> <td align=3D"left" styl=
+e=3D"font-size: 16px; color: #333333; font-weight: normal; padding: 5px 0 0=
+ 0;"colspan=3D"2">Almohada de plumas</td> </tr> <tr> <td align=3D"left" sty=
+le=3D"font-size: 13px; color: #999999; font-weight: normal; padding: 5px 0 =
+0 0;"colspan=3D"2"></td> </tr> <td align=3D"left" style=3D"padding: 4px 0 0=
+ 0; " class=3D""> <span><img src=3D"https://s3.grouponcdn.com/email/images/=
+icons/review_stars/5@3x.png" style=3D"display: block; border: none; display=
+:inline; width: 69px;" width=3D"69" class=3D"" /></span><span style=3D"font=
+-size: 13px; color: #a5a8ab;" class=3D"display-off">&nbsp;(1)</span><br /> =
+</td> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D=
+"font-size: 16px; text-decoration: line-through; color:#848484; font-weight=
+: normal; color:#848484;"> 99,00&nbsp;=E2=82=AC </span> <span style=3D"font=
+-size: 18px; color: #53A318; font-weight: bold;"> Desde 13,99&nbsp;=E2=82=
+=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;"> <table=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacin=
+g: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000=
+; font-weight: normal; text-align: left;"> <tr> <td style=3D"color: #ffffff=
+; background: #53A318; font-size: 12px; text-align: center; font-family: 'H=
+elvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://www.groupon.es/=
+deals/almohada-plumas?p=3D7&utm_content=3Dalmohada-plumas&utm_term=3Dw2up-d=
+eal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&u=
+tm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b=
+60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&=
+s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decorati=
+on: none; color: #ffffff; display: inline-block; border-radius: 3px; -webki=
+t-border-radius: 3px; -moz-border-radius: 3px; background-color: #53A318; b=
+order-top: 12px solid #53A318; border-bottom: 12px solid #53A318; border-ri=
+ght: 18px solid #53A318; border-left: 18px solid #53A318; white-space:nowra=
+p;"> Descubre </a></td> </tr> </table> </td> </tr> </table> </td> </tr> </t=
+able> </td> </tr> <tr> <td> </td> </tr> <tr> <td align=3D"left" valign=3D"t=
+op" class=3D"mobileContainerPadding"> <table cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans'=
+, Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; text-al=
+ign: left; width:290px; background: #ffffff;" class=3D"container" align=3D'=
+left'> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'=
+left' class=3D"split-card-no-border"> <table cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans'=
+, Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; text-al=
+ign: left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"de=
+al_link" href=3D"https://www.groupon.es/deals/almohada-plumas-memoria-sopor=
+te-semifirme-sampur?p=3D8&utm_content=3Dalmohada-plumas-memoria-soporte-sem=
+ifirme-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-=
+40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Dem=
+ail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadr=
+id&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"=
+_blank" style=3D"color:#0185C6; text-decoration:none;"><img src=3D"https://=
+img.grouponcdn.com/deal/2jxeU8n1trG4sWXYboMJcuF2sYMd/2j-1890x1134/v1/c300x1=
+82.jpg" style=3D"display: block; border: none; width: 290px;" width=3D"290"=
+ alt=3D"Almohada de plumas de memoria, de soporte semifirme, de Sampur " ti=
+tle=3D"Almohada de plumas de memoria, de soporte semifirme, de Sampur " cla=
+ss=3D"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px=
+; color: #333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Al=
+mohada de plumas de memoria, de soporte semifirme, de Sampur </td> </tr> <t=
+r> <td align=3D"left" style=3D"font-size: 13px; color: #999999; font-weight=
+: normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=3D"p=
+adding: 3px 0 0 0;" align=3D"left"> <span style=3D"font-size: 16px; text-de=
+coration: line-through; color:#848484; font-weight: normal; color:#848484;"=
+> 119,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 18px; color: #53A=
+318; font-weight: bold;"> Desde 16,99&nbsp;=E2=82=AC </span> </td> <td alig=
+n=3D"right" style=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open S=
+ans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; tex=
+t-align: left;"> <tr> <td style=3D"color: #ffffff; background: #53A318; fon=
+t-size: 12px; text-align: center; font-family: 'Helvetica',Arial,sans-serif=
+,'Open Sans';"><a href=3D"https://www.groupon.es/deals/almohada-plumas-memo=
+ria-soporte-semifirme-sampur?p=3D8&utm_content=3Dalmohada-plumas-memoria-so=
+porte-semifirme-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102=
+ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_me=
+dium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_divisi=
+on=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" =
+target=3D"_blank" style=3D"text-decoration: none; color: #ffffff; display: =
+inline-block; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-r=
+adius: 3px; background-color: #53A318; border-top: 12px solid #53A318; bord=
+er-bottom: 12px solid #53A318; border-right: 18px solid #53A318; border-lef=
+t: 18px solid #53A318; white-space:nowrap;"> Descubre </a></td> </tr> </tab=
+le> </td> </tr> </table> </td> </tr> </table> <table cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Ope=
+n Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; =
+text-align: left; width:290px; background: #ffffff;" class=3D"container" al=
+ign=3D'right'> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" a=
+lign=3D'right' class=3D"split-card-no-border"> <table cellpadding=3D"0" cel=
+lspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Op=
+en Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal;=
+ text-align: left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a =
+id=3D"deal_link" href=3D"https://www.groupon.es/deals/cubreolchon-5-cm-gros=
+or-sampur?p=3D9&utm_content=3Dcubreolchon-5-cm-grosor-sampur&utm_term=3Dw2u=
+p-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D=
+0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c=
+-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3D=
+rm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185=
+C6; text-decoration:none;"><img src=3D"https://img.grouponcdn.com/deal/433M=
+TEg3ncRXki8QcPYEafzGhboq/43-1000x600/v1/c300x182.jpg" style=3D"display: blo=
+ck; border: none; width: 290px;" width=3D"290" alt=3D"Cubrecolch=C3=B3n con=
+ 5 cm de grosor, de Sampur" title=3D"Cubrecolch=C3=B3n con 5 cm de grosor, =
+de Sampur" class=3D"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"f=
+ont-size: 16px; color: #333333; font-weight: normal; padding: 5px 0 0 0;"co=
+lspan=3D"2">Cubrecolch=C3=B3n con 5 cm de grosor, de Sampur</td> </tr> <tr>=
+ <td align=3D"left" style=3D"font-size: 13px; color: #999999; font-weight: =
+normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <td align=3D"left" st=
+yle=3D"padding: 4px 0 0 0; " class=3D""> <span><img src=3D"https://s3.group=
+oncdn.com/email/images/icons/review_stars/4@3x.png" style=3D"display: block=
+; border: none; display:inline; width: 69px;" width=3D"69" class=3D"" /></s=
+pan><span style=3D"font-size: 13px; color: #a5a8ab;" class=3D"display-off">=
+&nbsp;(1)</span><br /> </td> <tr> <td style=3D"padding: 3px 0 0 0;" align=
+=3D"left"> <span style=3D"font-size: 16px; text-decoration: line-through; c=
+olor:#848484; font-weight: normal; color:#848484;"> 149,00&nbsp;=E2=82=AC <=
+/span> <span style=3D"font-size: 18px; color: #53A318; font-weight: bold;">=
+ Desde 27,99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" style=3D"padd=
+ing: 5px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"borde=
+r: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, s=
+ans-serif; color:#000000; font-weight: normal; text-align: left;"> <tr> <td=
+ style=3D"color: #ffffff; background: #53A318; font-size: 12px; text-align:=
+ center; font-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D=
+"https://www.groupon.es/deals/cubreolchon-5-cm-grosor-sampur?p=3D9&utm_cont=
+ent=3Dcubreolchon-5-cm-grosor-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=
+=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel=
+_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_2=
+0240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton=
+&d=3Ddeal-page" target=3D"_blank" style=3D"text-decoration: none; color: #f=
+fffff; display: inline-block; border-radius: 3px; -webkit-border-radius: 3p=
+x; -moz-border-radius: 3px; background-color: #53A318; border-top: 12px sol=
+id #53A318; border-bottom: 12px solid #53A318; border-right: 18px solid #53=
+A318; border-left: 18px solid #53A318; white-space:nowrap;"> Descubre </a><=
+/td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> <=
+tr> <td> </td> </tr> <tr> <td align=3D"left" valign=3D"top" class=3D"mobile=
+ContainerPadding"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bord=
+er: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, =
+sans-serif; color:#000000; font-weight: normal; text-align: left; width:290=
+px; background: #ffffff;" class=3D"container" align=3D'left'> <tr> <td vali=
+gn=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'left' class=3D"split=
+-card-no-border"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"borde=
+r: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, s=
+ans-serif; color:#000000; font-weight: normal; text-align: left; width: 100=
+%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"http=
+s://www.groupon.es/deals/edredon-sampur-relleno-microfibra?p=3D10&utm_conte=
+nt=3Dedredon-sampur-relleno-microfibra&utm_term=3Dw2up-deal_card&nlp=3D&CID=
+=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel=
+_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_2=
+0240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&=
+d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; text-decoration:no=
+ne;"><img src=3D"https://img.grouponcdn.com/deal/33gbeJF3QV2DujYeS9zvni4roY=
+5o/33-1400x840/v1/c300x182.jpg" style=3D"display: block; border: none; widt=
+h: 290px;" width=3D"290" alt=3D"Edred=C3=B3n Sampur relleno de microfibra "=
+ title=3D"Edred=C3=B3n Sampur relleno de microfibra " class=3D"100"></a></t=
+d> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #333333; =
+font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Edred=C3=B3n Sampur =
+relleno de microfibra </td> </tr> <tr> <td align=3D"left" style=3D"font-siz=
+e: 13px; color: #999999; font-weight: normal; padding: 5px 0 0 0;"colspan=
+=3D"2"></td> </tr> <td align=3D"left" style=3D"padding: 4px 0 0 0; " class=
+=3D""> <span><img src=3D"https://s3.grouponcdn.com/email/images/icons/revie=
+w_stars/4-5@3x.png" style=3D"display: block; border: none; display:inline; =
+width: 69px;" width=3D"69" class=3D"" /></span><span style=3D"font-size: 13=
+px; color: #a5a8ab;" class=3D"display-off">&nbsp;(2)</span><br /> </td> <tr=
+> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D"font-siz=
+e: 16px; text-decoration: line-through; color:#848484; font-weight: normal;=
+ color:#848484;"> 159,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 1=
+8px; color: #53A318; font-weight: bold;"> Desde 28,99&nbsp;=E2=82=AC </span=
+> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;"> <table cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font=
+-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; font-wei=
+ght: normal; text-align: left;"> <tr> <td style=3D"color: #ffffff; backgrou=
+nd: #53A318; font-size: 12px; text-align: center; font-family: 'Helvetica',=
+Arial,sans-serif,'Open Sans';"><a href=3D"https://www.groupon.es/deals/edre=
+don-sampur-relleno-microfibra?p=3D10&utm_content=3Dedredon-sampur-relleno-m=
+icrofibra&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7=
+-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&=
+sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&d=
+ate=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_bl=
+ank" style=3D"text-decoration: none; color: #ffffff; display: inline-block;=
+ border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; b=
+ackground-color: #53A318; border-top: 12px solid #53A318; border-bottom: 12=
+px solid #53A318; border-right: 18px solid #53A318; border-left: 18px solid=
+ #53A318; white-space:nowrap;"> Descubre </a></td> </tr> </table> </td> </t=
+r> </table> </td> </tr> </table> <table cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helv=
+etica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: l=
+eft; width:290px; background: #ffffff;" class=3D"container" align=3D'right'=
+> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'right=
+' class=3D"split-card-no-border"> <table cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Hel=
+vetica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: =
+left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_li=
+nk" href=3D"https://www.groupon.es/deals/edredon-hipoalergenico-reversible?=
+p=3D11&utm_content=3Dedredon-hipoalergenico-reversible&utm_term=3Dw2up-deal=
+_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_=
+source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-=
+41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=
+=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; =
+text-decoration:none;"><img src=3D"https://img.grouponcdn.com/deal/8oAwb9Z9=
+CFGv2SZoYAcek7JxS6c/8o-1000x600/v1/c300x182.jpg" style=3D"display: block; b=
+order: none; width: 290px;" width=3D"290" alt=3D"Edred=C3=B3n hipoalerg=C3=
+=A9nico reversible" title=3D"Edred=C3=B3n hipoalerg=C3=A9nico reversible" c=
+lass=3D"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16=
+px; color: #333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">=
+Edred=C3=B3n hipoalerg=C3=A9nico reversible</td> </tr> <tr> <td align=3D"le=
+ft" style=3D"font-size: 13px; color: #999999; font-weight: normal; padding:=
+ 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;=
+" align=3D"left"> <span style=3D"font-size: 16px; text-decoration: line-thr=
+ough; color:#848484; font-weight: normal; color:#848484;"> 165,00&nbsp;=E2=
+=82=AC </span> <span style=3D"font-size: 18px; color: #53A318; font-weight:=
+ bold;"> Desde 25,99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" style=
+=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica,=
+ Arial, sans-serif; color:#000000; font-weight: normal; text-align: left;">=
+ <tr> <td style=3D"color: #ffffff; background: #53A318; font-size: 12px; te=
+xt-align: center; font-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><=
+a href=3D"https://www.groupon.es/deals/edredon-hipoalergenico-reversible?p=
+=3D11&utm_content=3Dedredon-hipoalergenico-reversible&utm_term=3Dw2up-deal_=
+card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_s=
+ource=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-4=
+1e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3D=
+body&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decoration: =
+none; color: #ffffff; display: inline-block; border-radius: 3px; -webkit-bo=
+rder-radius: 3px; -moz-border-radius: 3px; background-color: #53A318; borde=
+r-top: 12px solid #53A318; border-bottom: 12px solid #53A318; border-right:=
+ 18px solid #53A318; border-left: 18px solid #53A318; white-space:nowrap;">=
+ Descubre </a></td> </tr> </table> </td> </tr> </table> </td> </tr> </table=
+> </td> </tr> <tr> <td> </td> </tr> <tr> <td align=3D"left" valign=3D"top" =
+class=3D"mobileContainerPadding"> <table cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Hel=
+vetica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: =
+left; width:290px; background: #ffffff;" class=3D"container" align=3D'left'=
+> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'left'=
+ class=3D"split-card-no-border"> <table cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helv=
+etica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: l=
+eft; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_lin=
+k" href=3D"https://www.groupon.es/deals/edredon-reversible-calido-sampur?p=
+=3D12&utm_content=3Dedredon-reversible-calido-sampur&utm_term=3Dw2up-deal_c=
+ard&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_so=
+urce=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41=
+e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Db=
+ody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; text=
+-decoration:none;"><img src=3D"https://img.grouponcdn.com/deal/RCnodH2VKqcb=
+JTJd6HHts8TUfHU/RC-1333x800/v1/c300x182.jpg" style=3D"display: block; borde=
+r: none; width: 290px;" width=3D"290" alt=3D"Edred=C3=B3n reversible c=C3=
+=A1lido Sampur" title=3D"Edred=C3=B3n reversible c=C3=A1lido Sampur" class=
+=3D"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; =
+color: #333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Edre=
+d=C3=B3n reversible c=C3=A1lido Sampur</td> </tr> <tr> <td align=3D"left" s=
+tyle=3D"font-size: 13px; color: #999999; font-weight: normal; padding: 5px =
+0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;" ali=
+gn=3D"left"> <span style=3D"font-size: 16px; text-decoration: line-through;=
+ color:#848484; font-weight: normal; color:#848484;"> 159,00&nbsp;=E2=82=AC=
+ </span> <span style=3D"font-size: 18px; color: #53A318; font-weight: bold;=
+"> Desde 28,99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" style=3D"pa=
+dding: 5px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bor=
+der: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial,=
+ sans-serif; color:#000000; font-weight: normal; text-align: left;"> <tr> <=
+td style=3D"color: #ffffff; background: #53A318; font-size: 12px; text-alig=
+n: center; font-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=
+=3D"https://www.groupon.es/deals/edredon-reversible-calido-sampur?p=3D12&ut=
+m_content=3Dedredon-reversible-calido-sampur&utm_term=3Dw2up-deal_card&nlp=
+=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3D=
+channel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798a=
+eaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=
+=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decoration: none; =
+color: #ffffff; display: inline-block; border-radius: 3px; -webkit-border-r=
+adius: 3px; -moz-border-radius: 3px; background-color: #53A318; border-top:=
+ 12px solid #53A318; border-bottom: 12px solid #53A318; border-right: 18px =
+solid #53A318; border-left: 18px solid #53A318; white-space:nowrap;"> Descu=
+bre </a></td> </tr> </table> </td> </tr> </table> </td> </tr> </table> <tab=
+le cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spac=
+ing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#0000=
+00; font-weight: normal; text-align: left; width:290px; background: #ffffff=
+;" class=3D"container" align=3D'right'> <tr> <td valign=3D"top" style=3D"pa=
+dding: 10px 0 0 0; ; ;" align=3D'right' class=3D"split-card-no-border"> <ta=
+ble cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spa=
+cing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000=
+000; font-weight: normal; text-align: left; width: 100%;"> <tr> <td valign=
+=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"https://www.groupon.es/d=
+eals/almohada-espuma-memoria-sampur?p=3D13&utm_content=3Dalmohada-espuma-me=
+moria-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-4=
+0c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Dema=
+il&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadri=
+d&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_=
+blank" style=3D"color:#0185C6; text-decoration:none;"><img src=3D"https://i=
+mg.grouponcdn.com/deal/3B5zPSDmVRzSTmYKu2XpbgTb6ZLu/3B-1333x800/v1/c300x182=
+.jpg" style=3D"display: block; border: none; width: 290px;" width=3D"290" a=
+lt=3D"Almohada de espuma con memoria de Sampur" title=3D"Almohada de espuma=
+ con memoria de Sampur" class=3D"100"></a></td> </tr> <tr> <td align=3D"lef=
+t" style=3D"font-size: 16px; color: #333333; font-weight: normal; padding: =
+5px 0 0 0;"colspan=3D"2">Almohada de espuma con memoria de Sampur</td> </tr=
+> <tr> <td align=3D"left" style=3D"font-size: 13px; color: #999999; font-we=
+ight: normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=
+=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D"font-size: 16px; te=
+xt-decoration: line-through; color:#848484; font-weight: normal; color:#848=
+484;"> 109,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 18px; color:=
+ #53A318; font-weight: bold;"> Desde 21,99&nbsp;=E2=82=AC </span> </td> <td=
+ align=3D"right" style=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'O=
+pen Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal=
+; text-align: left;"> <tr> <td style=3D"color: #ffffff; background: #53A318=
+; font-size: 12px; text-align: center; font-family: 'Helvetica',Arial,sans-=
+serif,'Open Sans';"><a href=3D"https://www.groupon.es/deals/almohada-espuma=
+-memoria-sampur?p=3D13&utm_content=3Dalmohada-espuma-memoria-sampur&utm_ter=
+m=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5=
+b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5c=
+f6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&se=
+nder=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"tex=
+t-decoration: none; color: #ffffff; display: inline-block; border-radius: 3=
+px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-color: =
+#53A318; border-top: 12px solid #53A318; border-bottom: 12px solid #53A318;=
+ border-right: 18px solid #53A318; border-left: 18px solid #53A318; white-s=
+pace:nowrap;"> Descubre </a></td> </tr> </table> </td> </tr> </table> </td>=
+ </tr> </table> </td> </tr> <tr> <td> </td> </tr> <tr> <td align=3D"left" v=
+align=3D"top" class=3D"mobileContainerPadding"> <table cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'O=
+pen Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal=
+; text-align: left; width:290px; background: #ffffff;" class=3D"container" =
+align=3D'left'> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" =
+align=3D'left' class=3D"split-card-no-border"> <table cellpadding=3D"0" cel=
+lspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Op=
+en Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal;=
+ text-align: left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a =
+id=3D"deal_link" href=3D"https://www.groupon.es/deals/somier-metalico-luxfl=
+ex-sampur?p=3D14&utm_content=3Dsomier-metalico-luxflex-sampur&utm_term=3Dw2=
+up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=
+=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-4=
+44c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=
+=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0=
+185C6; text-decoration:none;"><img src=3D"https://img.grouponcdn.com/deal/3=
+mJY4FsGttnoDTZ3p69bkvviyDVt/3m-1333x800/v1/c300x182.jpg" style=3D"display: =
+block; border: none; width: 290px;" width=3D"290" alt=3D"Somier met=C3=A1li=
+co "Luxflex" de Sampur" title=3D"Somier met=C3=A1lico "Luxflex" de Sampur" =
+class=3D"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 1=
+6px; color: #333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2"=
+>Somier met=C3=A1lico "Luxflex" de Sampur</td> </tr> <tr> <td align=3D"left=
+" style=3D"font-size: 13px; color: #999999; font-weight: normal; padding: 5=
+px 0 0 0;"colspan=3D"2"></td> </tr> <td align=3D"left" style=3D"padding: 4p=
+x 0 0 0; " class=3D""> <span><img src=3D"https://s3.grouponcdn.com/email/im=
+ages/icons/review_stars/5@3x.png" style=3D"display: block; border: none; di=
+splay:inline; width: 69px;" width=3D"69" class=3D"" /></span><span style=3D=
+"font-size: 13px; color: #a5a8ab;" class=3D"display-off">&nbsp;(2)</span><b=
+r /> </td> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span sty=
+le=3D"font-size: 16px; text-decoration: line-through; color:#848484; font-w=
+eight: normal; color:#848484;"> 799,00&nbsp;=E2=82=AC </span> <span style=
+=3D"font-size: 18px; color: #53A318; font-weight: bold;"> Desde 129,99&nbsp=
+;=E2=82=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;">=
+ <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border=
+-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:=
+#000000; font-weight: normal; text-align: left;"> <tr> <td style=3D"color: =
+#ffffff; background: #53A318; font-size: 12px; text-align: center; font-fam=
+ily: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://www.grou=
+pon.es/deals/somier-metalico-luxflex-sampur?p=3D14&utm_content=3Dsomier-met=
+alico-luxflex-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ff=
+d-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medi=
+um=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=
+=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" ta=
+rget=3D"_blank" style=3D"text-decoration: none; color: #ffffff; display: in=
+line-block; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-rad=
+ius: 3px; background-color: #53A318; border-top: 12px solid #53A318; border=
+-bottom: 12px solid #53A318; border-right: 18px solid #53A318; border-left:=
+ 18px solid #53A318; white-space:nowrap;"> Descubre </a></td> </tr> </table=
+> </td> </tr> </table> </td> </tr> </table> <table cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open =
+Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; te=
+xt-align: left; width:290px; background: #ffffff;" class=3D"container" alig=
+n=3D'right'> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" ali=
+gn=3D'right' class=3D"split-card-no-border"> <table cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open=
+ Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; t=
+ext-align: left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=
+=3D"deal_link" href=3D"https://www.groupon.es/deals/edredon-3d-microfibra-s=
+ampur?p=3D15&utm_content=3Dedredon-3d-microfibra-sampur&utm_term=3Dw2up-dea=
+l_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm=
+_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60=
+-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=
+=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; =
+text-decoration:none;"><img src=3D"https://img.grouponcdn.com/deal/3kB4YGVz=
+ddWwGBPSBkaah7bwNiEQ/3k-1890x1134/v1/c300x182.jpg" style=3D"display: block;=
+ border: none; width: 290px;" width=3D"290" alt=3D"Edred=C3=B3n 3D con micr=
+ofibra Sampur" title=3D"Edred=C3=B3n 3D con microfibra Sampur" class=3D"100=
+"></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: =
+#333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Edred=C3=B3=
+n 3D con microfibra Sampur</td> </tr> <tr> <td align=3D"left" style=3D"font=
+-size: 13px; color: #999999; font-weight: normal; padding: 5px 0 0 0;"colsp=
+an=3D"2"></td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left">=
+ <span style=3D"font-size: 16px; text-decoration: line-through; color:#8484=
+84; font-weight: normal; color:#848484;"> 149,00&nbsp;=E2=82=AC </span> <sp=
+an style=3D"font-size: 18px; color: #53A318; font-weight: bold;"> Desde 34,=
+99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0=
+ 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none;=
+ border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif;=
+ color:#000000; font-weight: normal; text-align: left;"> <tr> <td style=3D"=
+color: #ffffff; background: #53A318; font-size: 12px; text-align: center; f=
+ont-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://w=
+ww.groupon.es/deals/edredon-3d-microfibra-sampur?p=3D15&utm_content=3Dedred=
+on-3d-microfibra-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D2710=
+2ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_m=
+edium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_divis=
+ion=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page"=
+ target=3D"_blank" style=3D"text-decoration: none; color: #ffffff; display:=
+ inline-block; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-=
+radius: 3px; background-color: #53A318; border-top: 12px solid #53A318; bor=
+der-bottom: 12px solid #53A318; border-right: 18px solid #53A318; border-le=
+ft: 18px solid #53A318; white-space:nowrap;"> Descubre </a></td> </tr> </ta=
+ble> </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td> </td> =
+</tr> <tr> <td align=3D"left" valign=3D"top" class=3D"mobileContainerPaddin=
+g"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; bor=
+der-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; col=
+or:#000000; font-weight: normal; text-align: left; width:290px; background:=
+ #ffffff;" class=3D"container" align=3D'left'> <tr> <td valign=3D"top" styl=
+e=3D"padding: 10px 0 0 0; ; ;" align=3D'left' class=3D"split-card-no-border=
+"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; bord=
+er-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; colo=
+r:#000000; font-weight: normal; text-align: left; width: 100%;"> <tr> <td v=
+align=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"https://www.groupon=
+.es/deals/almohada-espuma-viscoelastica-sampur-2?p=3D16&utm_content=3Dalmoh=
+ada-espuma-viscoelastica-sampur-2&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES=
+&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_good=
+s_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_202408=
+23&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Dd=
+eal-page" target=3D"_blank" style=3D"color:#0185C6; text-decoration:none;">=
+<img src=3D"https://img.grouponcdn.com/deal/4BKVF88G4xgqvjDiet4xtR4mJV4d/4B=
+-1694x1016/v1/c300x182.jpg" style=3D"display: block; border: none; width: 2=
+90px;" width=3D"290" alt=3D"Almohada con espuma viscoel=C3=A1stica de Sampu=
+r" title=3D"Almohada con espuma viscoel=C3=A1stica de Sampur" class=3D"100"=
+></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #=
+333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Almohada con=
+ espuma viscoel=C3=A1stica de Sampur</td> </tr> <tr> <td align=3D"left" sty=
+le=3D"font-size: 13px; color: #999999; font-weight: normal; padding: 5px 0 =
+0 0;"colspan=3D"2"></td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;" align=
+=3D"left"> <span style=3D"font-size: 16px; text-decoration: line-through; c=
+olor:#848484; font-weight: normal; color:#848484;"> 119,00&nbsp;=E2=82=AC <=
+/span> <span style=3D"font-size: 18px; color: #53A318; font-weight: bold;">=
+ Desde 18,90&nbsp;=E2=82=AC </span> </td> <td align=3D"right" style=3D"padd=
+ing: 5px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"borde=
+r: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, s=
+ans-serif; color:#000000; font-weight: normal; text-align: left;"> <tr> <td=
+ style=3D"color: #ffffff; background: #53A318; font-size: 12px; text-align:=
+ center; font-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D=
+"https://www.groupon.es/deals/almohada-espuma-viscoelastica-sampur-2?p=3D16=
+&utm_content=3Dalmohada-espuma-viscoelastica-sampur-2&utm_term=3Dw2up-deal_=
+card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_s=
+ource=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-4=
+1e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3D=
+body&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decoration: =
+none; color: #ffffff; display: inline-block; border-radius: 3px; -webkit-bo=
+rder-radius: 3px; -moz-border-radius: 3px; background-color: #53A318; borde=
+r-top: 12px solid #53A318; border-bottom: 12px solid #53A318; border-right:=
+ 18px solid #53A318; border-left: 18px solid #53A318; white-space:nowrap;">=
+ Descubre </a></td> </tr> </table> </td> </tr> </table> </td> </tr> </table=
+> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; borde=
+r-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color=
+:#000000; font-weight: normal; text-align: left; width:290px; background: #=
+ffffff;" class=3D"container" align=3D'right'> <tr> <td valign=3D"top" style=
+=3D"padding: 10px 0 0 0; ; ;" align=3D'right' class=3D"split-card-no-border=
+"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; bord=
+er-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; colo=
+r:#000000; font-weight: normal; text-align: left; width: 100%;"> <tr> <td v=
+align=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"https://www.groupon=
+.es/deals/silla-estilo-escandinavo-asiento-blando-redondo-sampur-2?p=3D17&u=
+tm_content=3Dsilla-estilo-escandinavo-asiento-blando-redondo-sampur-2&utm_t=
+erm=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445ea=
+f5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-=
+5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&=
+sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=3D"co=
+lor:#0185C6; text-decoration:none;"><img src=3D"https://img.grouponcdn.com/=
+deal/3MMYm9XgB11o8Hn9SXK9v5hKLpPH/3M-2000x1200/v1/c300x182.jpg" style=3D"di=
+splay: block; border: none; width: 290px;" width=3D"290" alt=3D"Silla de es=
+tilo escandinavo con asiento blando redondo, de Sampur" title=3D"Silla de e=
+stilo escandinavo con asiento blando redondo, de Sampur" class=3D"100"></a>=
+</td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #33333=
+3; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Silla de estilo e=
+scandinavo con asiento blando redondo, de Sampur</td> </tr> <tr> <td align=
+=3D"left" style=3D"font-size: 13px; color: #999999; font-weight: normal; pa=
+dding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=3D"padding: 3px =
+0 0 0;" align=3D"left"> <span style=3D"font-size: 16px; text-decoration: li=
+ne-through; color:#848484; font-weight: normal; color:#848484;"> 129,00&nbs=
+p;=E2=82=AC </span> <span style=3D"font-size: 18px; color: #53A318; font-we=
+ight: bold;"> Desde 54,99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" =
+style=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvet=
+ica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: lef=
+t;"> <tr> <td style=3D"color: #ffffff; background: #53A318; font-size: 12px=
+; text-align: center; font-family: 'Helvetica',Arial,sans-serif,'Open Sans'=
+;"><a href=3D"https://www.groupon.es/deals/silla-estilo-escandinavo-asiento=
+-blando-redondo-sampur-2?p=3D17&utm_content=3Dsilla-estilo-escandinavo-asie=
+nto-blando-redondo-sampur-2&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D=
+27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&u=
+tm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_d=
+ivision=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-p=
+age" target=3D"_blank" style=3D"text-decoration: none; color: #ffffff; disp=
+lay: inline-block; border-radius: 3px; -webkit-border-radius: 3px; -moz-bor=
+der-radius: 3px; background-color: #53A318; border-top: 12px solid #53A318;=
+ border-bottom: 12px solid #53A318; border-right: 18px solid #53A318; borde=
+r-left: 18px solid #53A318; white-space:nowrap;"> Descubre </a></td> </tr> =
+</table> </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td> </=
+td> </tr> <tr> <td align=3D"left" valign=3D"top" class=3D"mobileContainerPa=
+dding"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none;=
+ border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif;=
+ color:#000000; font-weight: normal; text-align: left; width:290px; backgro=
+und: #ffffff;" class=3D"container" align=3D'left'> <tr> <td valign=3D"top" =
+style=3D"padding: 10px 0 0 0; ; ;" align=3D'left' class=3D"split-card-no-bo=
+rder"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; =
+border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; =
+color:#000000; font-weight: normal; text-align: left; width: 100%;"> <tr> <=
+td valign=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"https://www.gro=
+upon.es/deals/edredon-calido-600g-grand-froid-sampur?p=3D18&utm_content=3De=
+dredon-calido-600g-grand-froid-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=
+=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel=
+_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_2=
+0240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&=
+d=3Ddeal-page" target=3D"_blank" style=3D"color:#0185C6; text-decoration:no=
+ne;"><img src=3D"https://img.grouponcdn.com/deal/36KHkPq4bQ2py2Q4PYkKFEAyMm=
+if/36-2048x1229/v1/c300x182.jpg" style=3D"display: block; border: none; wid=
+th: 290px;" width=3D"290" alt=3D"Edred=C3=B3n c=C3=A1lido de 600 g Grand fr=
+oid, de Sampur" title=3D"Edred=C3=B3n c=C3=A1lido de 600 g Grand froid, de =
+Sampur" class=3D"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"font=
+-size: 16px; color: #333333; font-weight: normal; padding: 5px 0 0 0;"colsp=
+an=3D"2">Edred=C3=B3n c=C3=A1lido de 600 g Grand froid, de Sampur</td> </tr=
+> <tr> <td align=3D"left" style=3D"font-size: 13px; color: #999999; font-we=
+ight: normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> <td style=
+=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D"font-size: 16px; te=
+xt-decoration: line-through; color:#848484; font-weight: normal; color:#848=
+484;"> 259,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 18px; color:=
+ #53A318; font-weight: bold;"> Desde 46,99&nbsp;=E2=82=AC </span> </td> <td=
+ align=3D"right" style=3D"padding: 5px 0 0 0;"> <table cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'O=
+pen Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal=
+; text-align: left;"> <tr> <td style=3D"color: #ffffff; background: #53A318=
+; font-size: 12px; text-align: center; font-family: 'Helvetica',Arial,sans-=
+serif,'Open Sans';"><a href=3D"https://www.groupon.es/deals/edredon-calido-=
+600g-grand-froid-sampur?p=3D18&utm_content=3Dedredon-calido-600g-grand-froi=
+d-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-=
+b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&s=
+id=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&da=
+te=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_bla=
+nk" style=3D"text-decoration: none; color: #ffffff; display: inline-block; =
+border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; ba=
+ckground-color: #53A318; border-top: 12px solid #53A318; border-bottom: 12p=
+x solid #53A318; border-right: 18px solid #53A318; border-left: 18px solid =
+#53A318; white-space:nowrap;"> Descubre </a></td> </tr> </table> </td> </tr=
+> </table> </td> </tr> </table> <table cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helve=
+tica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: le=
+ft; width:290px; background: #ffffff;" class=3D"container" align=3D'right'>=
+ <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'right'=
+ class=3D"split-card-no-border"> <table cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helv=
+etica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: l=
+eft; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_lin=
+k" href=3D"https://www.groupon.es/deals/edredon-reversible-microfibra-veran=
+o-invierno-sampur?p=3D19&utm_content=3Dedredon-reversible-microfibra-verano=
+-invierno-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe=
+85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=
+=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=
+=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" tar=
+get=3D"_blank" style=3D"color:#0185C6; text-decoration:none;"><img src=3D"h=
+ttps://img.grouponcdn.com/deal/gJ9RSkKZXHtPNAwbpjx2Z1APRiw/gJ-1500x900/v1/c=
+300x182.jpg" style=3D"display: block; border: none; width: 290px;" width=3D=
+"290" alt=3D"Edred=C3=B3n reversible de microfibra para verano e invierno, =
+de Sampur" title=3D"Edred=C3=B3n reversible de microfibra para verano e inv=
+ierno, de Sampur" class=3D"100"></a></td> </tr> <tr> <td align=3D"left" sty=
+le=3D"font-size: 16px; color: #333333; font-weight: normal; padding: 5px 0 =
+0 0;"colspan=3D"2">Edred=C3=B3n reversible de microfibra para verano e invi=
+erno, de Sampur</td> </tr> <tr> <td align=3D"left" style=3D"font-size: 13px=
+; color: #999999; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2"></=
+td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span styl=
+e=3D"font-size: 16px; text-decoration: line-through; color:#848484; font-we=
+ight: normal; color:#848484;"> 259,00&nbsp;=E2=82=AC </span> <span style=3D=
+"font-size: 18px; color: #53A318; font-weight: bold;"> Desde 44,99&nbsp;=E2=
+=82=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;"> <ta=
+ble cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spa=
+cing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#000=
+000; font-weight: normal; text-align: left;"> <tr> <td style=3D"color: #fff=
+fff; background: #53A318; font-size: 12px; text-align: center; font-family:=
+ 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://www.groupon.=
+es/deals/edredon-reversible-microfibra-verano-invierno-sampur?p=3D19&utm_co=
+ntent=3Dedredon-reversible-microfibra-verano-invierno-sampur&utm_term=3Dw2u=
+p-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D=
+0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c=
+-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3D=
+rm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decor=
+ation: none; color: #ffffff; display: inline-block; border-radius: 3px; -we=
+bkit-border-radius: 3px; -moz-border-radius: 3px; background-color: #53A318=
+; border-top: 12px solid #53A318; border-bottom: 12px solid #53A318; border=
+-right: 18px solid #53A318; border-left: 18px solid #53A318; white-space:no=
+wrap;"> Descubre </a></td> </tr> </table> </td> </tr> </table> </td> </tr> =
+</table> </td> </tr> <tr> <td> </td> </tr> <tr> <td align=3D"left" valign=
+=3D"top" class=3D"mobileContainerPadding"> <table cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open S=
+ans', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; tex=
+t-align: left; width:290px; background: #ffffff;" class=3D"container" align=
+=3D'left'> <tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=
+=3D'left' class=3D"split-card-no-border"> <table cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sa=
+ns', Helvetica, Arial, sans-serif; color:#000000; font-weight: normal; text=
+-align: left; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D=
+"deal_link" href=3D"https://www.groupon.es/deals/silla-estilo-escandinavo-c=
+hristie-asiento-redondo-sampur?p=3D20&utm_content=3Dsilla-estilo-escandinav=
+o-christie-asiento-redondo-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES=
+&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_good=
+s_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_202408=
+23&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Dd=
+eal-page" target=3D"_blank" style=3D"color:#0185C6; text-decoration:none;">=
+<img src=3D"https://img.grouponcdn.com/deal/2vxcEChgdfz3PvPVV7oWs9d6WpX9/2v=
+-2048x1229/v1/c300x182.jpg" style=3D"display: block; border: none; width: 2=
+90px;" width=3D"290" alt=3D"Silla de estilo escandinavo Christie con asient=
+o redondo, de Sampur" title=3D"Silla de estilo escandinavo Christie con asi=
+ento redondo, de Sampur" class=3D"100"></a></td> </tr> <tr> <td align=3D"le=
+ft" style=3D"font-size: 16px; color: #333333; font-weight: normal; padding:=
+ 5px 0 0 0;"colspan=3D"2">Silla de estilo escandinavo Christie con asiento =
+redondo, de Sampur</td> </tr> <tr> <td align=3D"left" style=3D"font-size: 1=
+3px; color: #999999; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2"=
+></td> </tr> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span s=
+tyle=3D"font-size: 16px; text-decoration: line-through; color:#848484; font=
+-weight: normal; color:#848484;"> 89,00&nbsp;=E2=82=AC </span> <span style=
+=3D"font-size: 18px; color: #53A318; font-weight: bold;"> Desde 47,99&nbsp;=
+=E2=82=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;"> =
+<table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-=
+spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#=
+000000; font-weight: normal; text-align: left;"> <tr> <td style=3D"color: #=
+ffffff; background: #53A318; font-size: 12px; text-align: center; font-fami=
+ly: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://www.group=
+on.es/deals/silla-estilo-escandinavo-christie-asiento-redondo-sampur?p=3D20=
+&utm_content=3Dsilla-estilo-escandinavo-christie-asiento-redondo-sampur&utm=
+_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445=
+eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f=
+1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D2024230=
+8&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D=
+"text-decoration: none; color: #ffffff; display: inline-block; border-radiu=
+s: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background-col=
+or: #53A318; border-top: 12px solid #53A318; border-bottom: 12px solid #53A=
+318; border-right: 18px solid #53A318; border-left: 18px solid #53A318; whi=
+te-space:nowrap;"> Descubre </a></td> </tr> </table> </td> </tr> </table> <=
+/td> </tr> </table> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bor=
+der: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial,=
+ sans-serif; color:#000000; font-weight: normal; text-align: left; width:29=
+0px; background: #ffffff;" class=3D"container" align=3D'right'> <tr> <td va=
+lign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'right' class=3D"sp=
+lit-card-no-border"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial=
+, sans-serif; color:#000000; font-weight: normal; text-align: left; width: =
+100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"h=
+ttps://www.groupon.es/deals/edredon-palace-algodon-sampur?p=3D21&utm_conten=
+t=3Dedredon-palace-algodon-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES=
+&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_good=
+s_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_202408=
+23&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Dd=
+eal-page" target=3D"_blank" style=3D"color:#0185C6; text-decoration:none;">=
+<img src=3D"https://img.grouponcdn.com/deal/8GBeTKMgJ7FphxBLj7YzPa4x2CK/8G-=
+1800x1080/v1/c300x182.jpg" style=3D"display: block; border: none; width: 29=
+0px;" width=3D"290" alt=3D"Edred=C3=B3n Palace 100 % de algod=C3=B3n de Sam=
+pur" title=3D"Edred=C3=B3n Palace 100 % de algod=C3=B3n de Sampur" class=3D=
+"100"></a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; col=
+or: #333333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Edred=
+=C3=B3n Palace 100 % de algod=C3=B3n de Sampur</td> </tr> <tr> <td align=3D=
+"left" style=3D"font-size: 13px; color: #999999; font-weight: normal; paddi=
+ng: 5px 0 0 0;"colspan=3D"2"></td> </tr> <td align=3D"left" style=3D"paddin=
+g: 4px 0 0 0; " class=3D""> <span><img src=3D"https://s3.grouponcdn.com/ema=
+il/images/icons/review_stars/4@3x.png" style=3D"display: block; border: non=
+e; display:inline; width: 69px;" width=3D"69" class=3D"" /></span><span sty=
+le=3D"font-size: 13px; color: #a5a8ab;" class=3D"display-off">&nbsp;(1)</sp=
+an><br /> </td> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left"> <spa=
+n style=3D"font-size: 16px; text-decoration: line-through; color:#848484; f=
+ont-weight: normal; color:#848484;"> 309,00&nbsp;=E2=82=AC </span> <span st=
+yle=3D"font-size: 18px; color: #53A318; font-weight: bold;"> Desde 67,99&nb=
+sp;=E2=82=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0 0 0;=
+"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; bord=
+er-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; colo=
+r:#000000; font-weight: normal; text-align: left;"> <tr> <td style=3D"color=
+: #ffffff; background: #53A318; font-size: 12px; text-align: center; font-f=
+amily: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://www.gr=
+oupon.es/deals/edredon-palace-algodon-sampur?p=3D21&utm_content=3Dedredon-p=
+alace-algodon-sampur&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ff=
+d-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medi=
+um=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=
+=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" ta=
+rget=3D"_blank" style=3D"text-decoration: none; color: #ffffff; display: in=
+line-block; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-rad=
+ius: 3px; background-color: #53A318; border-top: 12px solid #53A318; border=
+-bottom: 12px solid #53A318; border-right: 18px solid #53A318; border-left:=
+ 18px solid #53A318; white-space:nowrap;"> Descubre </a></td> </tr> </table=
+> </td> </tr> </table> </td> </tr> </table> </td> </tr> <tr> <td> </td> </t=
+r> <tr> <td align=3D"left" valign=3D"top" class=3D"mobileContainerPadding">=
+ <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border=
+-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:=
+#000000; font-weight: normal; text-align: left; width:290px; background: #f=
+fffff;" class=3D"container" align=3D'left'> <tr> <td valign=3D"top" style=
+=3D"padding: 10px 0 0 0; ; ;" align=3D'left' class=3D"split-card-no-border"=
+> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; borde=
+r-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color=
+:#000000; font-weight: normal; text-align: left; width: 100%;"> <tr> <td va=
+lign=3D"top" colspan=3D"2"><a id=3D"deal_link" href=3D"https://www.groupon.=
+es/deals/almohada-espuma-memoria-sampur-2?p=3D22&utm_content=3Dalmohada-esp=
+uma-memoria-sampur-2&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ff=
+d-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medi=
+um=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=
+=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" tar=
+get=3D"_blank" style=3D"color:#0185C6; text-decoration:none;"><img src=3D"h=
+ttps://img.grouponcdn.com/deal/2gTyebAhca3as9NETvSitQRzXQeD/2g-2048x1229/v1=
+/c300x182.jpg" style=3D"display: block; border: none; width: 290px;" width=
+=3D"290" alt=3D"Almohada de espuma con memoria de Sampur" title=3D"Almohada=
+ de espuma con memoria de Sampur" class=3D"100"></a></td> </tr> <tr> <td al=
+ign=3D"left" style=3D"font-size: 16px; color: #333333; font-weight: normal;=
+ padding: 5px 0 0 0;"colspan=3D"2">Almohada de espuma con memoria de Sampur=
+</td> </tr> <tr> <td align=3D"left" style=3D"font-size: 13px; color: #99999=
+9; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <tr> =
+<td style=3D"padding: 3px 0 0 0;" align=3D"left"> <span style=3D"font-size:=
+ 16px; text-decoration: line-through; color:#848484; font-weight: normal; c=
+olor:#848484;"> 149,00&nbsp;=E2=82=AC </span> <span style=3D"font-size: 18p=
+x; color: #53A318; font-weight: bold;"> Desde 49,99&nbsp;=E2=82=AC </span> =
+</td> <td align=3D"right" style=3D"padding: 5px 0 0 0;"> <table cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-f=
+amily: 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; font-weigh=
+t: normal; text-align: left;"> <tr> <td style=3D"color: #ffffff; background=
+: #53A318; font-size: 12px; text-align: center; font-family: 'Helvetica',Ar=
+ial,sans-serif,'Open Sans';"><a href=3D"https://www.groupon.es/deals/almoha=
+da-espuma-memoria-sampur-2?p=3D22&utm_content=3Dalmohada-espuma-memoria-sam=
+pur-2&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13=
+d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=
+=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=
+=3D20242308&sender=3Drm&s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank=
+" style=3D"text-decoration: none; color: #ffffff; display: inline-block; bo=
+rder-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; back=
+ground-color: #53A318; border-top: 12px solid #53A318; border-bottom: 12px =
+solid #53A318; border-right: 18px solid #53A318; border-left: 18px solid #5=
+3A318; white-space:nowrap;"> Descubre </a></td> </tr> </table> </td> </tr> =
+</table> </td> </tr> </table> <table cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helveti=
+ca, Arial, sans-serif; color:#000000; font-weight: normal; text-align: left=
+; width:290px; background: #ffffff;" class=3D"container" align=3D'right'> <=
+tr> <td valign=3D"top" style=3D"padding: 10px 0 0 0; ; ;" align=3D'right' c=
+lass=3D"split-card-no-border"> <table cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"border: 0 none; border-spacing: 0; font-family: 'Open Sans', Helvet=
+ica, Arial, sans-serif; color:#000000; font-weight: normal; text-align: lef=
+t; width: 100%;"> <tr> <td valign=3D"top" colspan=3D"2"><a id=3D"deal_link"=
+ href=3D"https://www.groupon.es/deals/edredon-calido-coton-club-pana-bicolo=
+r-sampur?p=3D23&utm_content=3Dedredon-calido-coton-club-pana-bicolor-sampur=
+&utm_term=3Dw2up-deal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-495=
+8445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D094=
+5d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D202=
+42308&sender=3Drm&s=3Dbody&c=3Dimage&d=3Ddeal-page" target=3D"_blank" style=
+=3D"color:#0185C6; text-decoration:none;"><img src=3D"https://img.grouponcd=
+n.com/deal/35FHymiip5q9BNBcfargGXCbi8mY/35-1800x1080/v1/c300x182.jpg" style=
+=3D"display: block; border: none; width: 290px;" width=3D"290" alt=3D"Edred=
+=C3=B3n c=C3=A1lido Coton Club de pana y bicolor, de Sampur" title=3D"Edred=
+=C3=B3n c=C3=A1lido Coton Club de pana y bicolor, de Sampur" class=3D"100">=
+</a></td> </tr> <tr> <td align=3D"left" style=3D"font-size: 16px; color: #3=
+33333; font-weight: normal; padding: 5px 0 0 0;"colspan=3D"2">Edred=C3=B3n =
+c=C3=A1lido Coton Club de pana y bicolor, de Sampur</td> </tr> <tr> <td ali=
+gn=3D"left" style=3D"font-size: 13px; color: #999999; font-weight: normal; =
+padding: 5px 0 0 0;"colspan=3D"2"></td> </tr> <td align=3D"left" style=3D"p=
+adding: 4px 0 0 0; " class=3D""> <span><img src=3D"https://s3.grouponcdn.co=
+m/email/images/icons/review_stars/5@3x.png" style=3D"display: block; border=
+: none; display:inline; width: 69px;" width=3D"69" class=3D"" /></span><spa=
+n style=3D"font-size: 13px; color: #a5a8ab;" class=3D"display-off">&nbsp;(3=
+)</span><br /> </td> <tr> <td style=3D"padding: 3px 0 0 0;" align=3D"left">=
+ <span style=3D"font-size: 16px; text-decoration: line-through; color:#8484=
+84; font-weight: normal; color:#848484;"> 299,00&nbsp;=E2=82=AC </span> <sp=
+an style=3D"font-size: 18px; color: #53A318; font-weight: bold;"> Desde 44,=
+99&nbsp;=E2=82=AC </span> </td> <td align=3D"right" style=3D"padding: 5px 0=
+ 0 0;"> <table cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none;=
+ border-spacing: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif;=
+ color:#000000; font-weight: normal; text-align: left;"> <tr> <td style=3D"=
+color: #ffffff; background: #53A318; font-size: 12px; text-align: center; f=
+ont-family: 'Helvetica',Arial,sans-serif,'Open Sans';"><a href=3D"https://w=
+ww.groupon.es/deals/edredon-calido-coton-club-pana-bicolor-sampur?p=3D23&ut=
+m_content=3Dedredon-calido-coton-club-pana-bicolor-sampur&utm_term=3Dw2up-d=
+eal_card&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&u=
+tm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b=
+60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&=
+s=3Dbody&c=3Dbutton&d=3Ddeal-page" target=3D"_blank" style=3D"text-decorati=
+on: none; color: #ffffff; display: inline-block; border-radius: 3px; -webki=
+t-border-radius: 3px; -moz-border-radius: 3px; background-color: #53A318; b=
+order-top: 12px solid #53A318; border-bottom: 12px solid #53A318; border-ri=
+ght: 18px solid #53A318; border-left: 18px solid #53A318; white-space:nowra=
+p;"> Descubre </a></td> </tr> </table> </td> </tr> </table> </td> </tr> </t=
+able> </td> </tr> <tr> <td> </td> </tr> </table> </td> </tr> </table> <tabl=
+e cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 0 none; border-spaci=
+ng: 0; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color:#00000=
+0; font-weight: normal; text-align: left; width:600px;" class=3D"container"=
+ align=3D"center"> <tr> <td style=3D"padding:20px 0"> <table cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"width:50%;" align=3D"center"> <tr> <td heigh=
+t=3D"50px" style=3D" background-color:#82b548; text-align:center; " align=
+=3D"center" > <a href=3D"https://www.groupon.es/landing/linareve-73?nlp=3D&=
+CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchan=
+nel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_=
+0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&c=3Dlin=
+k&d=3Dcta" style=3D"width:100%; text-decoration:none;" target=3D"_blank"> <=
+table width=3D"100%" height=3D"50" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"border: 0 none; border-spacing:0; font-family: 'HelveticaNeue', 'Helve=
+tica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color:#000000; t=
+ext-align: left; vertical-align:middle;"> <tr> <td style=3D"text-align:cent=
+er" height=3D"50"> <a href=3D"https://www.groupon.es/landing/linareve-73?nl=
+p=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=
+=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e437=
+98aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dbody&=
+c=3Dlink&d=3Dcta" style=3D"padding:5px 0; text-decoration:none;" target=3D"=
+_blank"> <span style=3D"font-weight:bold; color:#ffffff;">Ver m=C3=A1s ofer=
+tas</span> </a> </td> </tr> </table> </a> </td> </tr> </table> </td> </tr> =
+</table> </td> </tr> </table> </td> </tr> </table> <table cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"border: 0 none; border-spacing: 0; font-family:=
+ 'Open Sans', Helvetica, Arial, sans-serif; color:#000000; font-weight: nor=
+mal; text-align: left; width: 100%; background: #f2f2f2;" align=3D"center">=
+ <tr> <td align=3D"center" style=3D"padding: 0;"> <table cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"width: 600px; background: #f2f2f2;" align=3D"cen=
+ter" class=3D"container"> <tr> <td align=3D"center" valign=3D"middle" style=
+=3D"border-bottom: 1px solid #d5d8db; padding: 20px 0 28px 0;"> <table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border: 0 none; borde=
+r-spacing:0; font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Ari=
+al, 'Lucida Grande', sans-serif; color:#000000; text-align: left; width:100=
+%;" align=3D"center" width=3D"100%" class=3D"container"> <tr> <td align=3D"=
+center" style=3D"padding: 0 0 8px 0; color:#53A318; font-size: 18px; font-w=
+eight: bold;"> Descarga la App Groupon Gratis </td> </tr> <tr> <td align=3D=
+"center"> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"=
+border: 0 none; border-spacing:0; font-family: 'HelveticaNeue', 'Helvetica =
+Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; color:#000000; text-a=
+lign: left; width:202px;" align=3D"center" width=3D"202"> <tr> <td valign=
+=3D"top" align=3D"left" style=3D"width:92px; height: 30px; padding: 0 4px 0=
+ 0;" width=3D"92" height=3D"30" class=3D"app-store-mobile" ><a href=3D"http=
+s://www.groupon.es/mobile?grpn_dl=3DUS_DL_BANNER_EMAIL_FOOTER_COMMERCIAL&ut=
+m_term=3Dfooter_links&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445e=
+af5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1=
+-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308=
+&sender=3Drm&s=3Dgroupon&c=3Dfooter&d=3Dlink" target=3D"_blank" style=3D"co=
+lor:#0185C6; text-decoration:none;" title=3D"Groupon App"><img src=3D"http:=
+//s3.grouponcdn.com/email/images/icons/app_store_icon_3x.png" style=3D"disp=
+lay: block; border: none; width:92px; height: 30px;" width=3D"92" height=3D=
+"30" class=3D"app-store-mobile" /></a></td> <td valign=3D"top" align=3D"rig=
+ht" style=3D"width:104px; height: 30px; padding: 0 0 0 4px;" width=3D"104" =
+height=3D"30" class=3D"google-play-mobile"><a href=3D"https://www.groupon.e=
+s/mobile?grpn_dl=3DUS_DL_BANNER_EMAIL_FOOTER_COMMERCIAL&utm_term=3Dfooter_l=
+inks&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_s=
+ource=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-4=
+1e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3D=
+groupon&c=3Dfooter&d=3Dlink" target=3D"_blank" style=3D"color:#0185C6; text=
+-decoration:none;" title=3D"Groupon App"><img src=3D"http://s3.grouponcdn.c=
+om/email/images/icons/google_play_icon_3x.png" style=3D"display: block; bor=
+der: none; width:104px; height: 30px;" width=3D"104" height=3D"30" class=3D=
+"google-play-mobile" /></a></td> </tr> </table> </td> </tr> </table> </td> =
+</tr> <tr> <td style=3D"font-size: 13px; color: #999999; line-height: 120%;=
+ padding: 10px 10px 0 10px;" align=3D"center" class=3D"mobile-font">Los pre=
+cios indicados corresponden al momento de env=C3=ADo del correo electr=C3=
+=B3nico. Dichos precios pueden variar posteriormente.</td> </tr> <tr> <td s=
+tyle=3D"font-size: 13px; color: #999999; line-height: 120%; padding: 10px 1=
+0px 10px 10px; text-align:center;" align=3D"center" class=3D"mobile-font">P=
+ara presentar tu negocio en Groupon, <a href=3D"http://www.groupon.es/merch=
+ant?nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=3D0&utm_so=
+urce=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41=
+e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=3Drm&s=3Df=
+ooter&c=3Dlink&d=3Dwelcome-unsubscribe" style=3D"color:#0185C6; text-decora=
+tion:none;">comienza</a> en Groupon Merchant.</td> </tr> <tr> <td style=3D"=
+font-size: 13px; color: #999999; line-height: 120%; padding: 20px 10px 10px=
+ 10px;" align=3D"center" class=3D"mobile-font"> =C2=BFNecesitas ayuda? =C2=
+=BFQuieres comentarnos algo? No dudes en <a href=3D"https://www.groupon.es/=
+customer_support?nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&=
+tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6=
+-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&send=
+er=3Drm&s=3Dfooter&c=3Dlink&d=3Dcontact" style=3D"color:#0185C6; text-decor=
+ation:none;" target=3D"_blank">contactar con nosotros</a>.<br /><br /> El m=
+otivo de que haya recibido este email es porque jrosarodriguez@gmail.com es=
+t=C3=A1 suscrito para la recepci=C3=B3n de correos electr=C3=B3nicos por pa=
+rte de Groupon. Si no desea seguir recibiendo correos electr=C3=B3nicos de =
+este tipo, puede darse de baja con tan solo hacer <a href=3D"https://www.gr=
+oupon.es/subscription_center/unsubscribe/consumer/27102ffd-fe85-40c7-b13d-4=
+958445eaf5b?cmplistId=3Dchannel:oferta-nacional&eh=3D25c6c8f57c3ffd1b362c72=
+26961c7b6ac853e5f9a294d886ee962ca8e3142013&nlp=3D&CID=3DES&uu=3D27102ffd-fe=
+85-40c7-b13d-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=
+=3Demail&sid=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=
+=3Dmadrid&date=3D20242308&sender=3Drm&s=3Dfooter&c=3Dlink&d=3Dunsub" style=
+=3D"color:#0185C6; text-decoration:none;">click</a>. Si desea gestionar sus=
+ otras suscripciones, por favor haga click <a href=3D"https://www.groupon.e=
+s/subscription_center/27102ffd-fe85-40c7-b13d-4958445eaf5b?cmplistId=3Dchan=
+nel:oferta-nacional&eh=3D25c6c8f57c3ffd1b362c7226961c7b6ac853e5f9a294d886ee=
+962ca8e3142013&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d-4958445eaf5b&tx=
+=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=3D0945d2f1-5cf6-4=
+44c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=3D20242308&sender=
+=3Drm&s=3Dfooter&c=3Dlink&d=3Dsubscription_center" style=3D"color:#0185C6; =
+text-decoration:none;">aqu=C3=AD</a>. <br /><br /> Enviado por Groupon Inte=
+rnational Limited, WeWork Central Plaza, 36 Dame Street, Dublin D02 EF64 Ir=
+landa, NIF:501358. Si su cuenta a=C3=BAn no ha sido transferida a Groupon I=
+nternational Limited, este email ha sido enviado por Groupon Spain S.L.U. <=
+br /><br /> </td> </tr> </table> </td> </tr> </table> </tr> </table> <img s=
+rc =3D "https://www.groupon.es/analytic/trackintl.gif?p=3D2&utm_domain=3Dgm=
+ail.com&utm_campaign=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&deal=
+s=3D01b9d0b0-f385-456a-b486-02e5c45d42ec,f8bf475d-dd36-4fc2-9f74-d7efeb3549=
+31,c80bb45a-94f7-4220-ba5a-e92acee76327,77b9912b-388e-44ba-856c-14a17d73456=
+8,2c5ce39a-ec3d-4255-b908-89f15c27ea14,8b7f1526-2a5b-4bed-9484-f77f383d7cac=
+,f3209bc3-4a5e-40a8-b76f-e0ceddddd428,7c6e44f4-1913-4355-be3d-8d99c63201a9,=
+787d9731-03aa-43c9-99ad-7400a568fb95,3bdf7479-8ebc-4bd0-afad-863b6b78a998,9=
+bb0e7ac-0489-43eb-a94a-9ced5023de96,48020e45-9fcb-4c66-ace1-027999d5b778,a7=
+013346-8916-4fc9-ae39-65c7a7a1ea0e,78fa4358-6c4b-4b4d-872d-f9ecae02989b,6dc=
+e0a5d-0099-4b4d-900a-648e67972dba,678ed395-3ae5-4489-9381-905532b29dbd,749e=
+b02c-235e-4482-9898-7d0befa1d96e,8245f39f-7202-4dce-8cbe-cb76c533d43e,a6c41=
+84f-d613-4b6d-8d01-118a9285b50c,e304c1ab-030d-4657-a926-87bd09bef495,a0479e=
+89-b3bf-4d74-86f7-7065e6f05673&nlp=3D&CID=3DES&uu=3D27102ffd-fe85-40c7-b13d=
+-4958445eaf5b&tx=3D0&utm_source=3Dchannel_goods_im&utm_medium=3Demail&sid=
+=3D0945d2f1-5cf6-444c-9b60-41e43798aeaa_0_20240823&t_division=3Dmadrid&date=
+=3D20242308&sender=3Drm&s=3Dbody&c=3Dtracking_pixel_uuid&d=3Dnone" height=
+=3D"1" width=3D"1" style=3D"display: none !important;" /> </body> </html>
