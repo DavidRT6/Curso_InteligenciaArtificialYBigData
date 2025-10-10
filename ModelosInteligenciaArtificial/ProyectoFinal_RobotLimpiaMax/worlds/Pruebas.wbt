@@ -1,0 +1,184 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "../protos/Pioneer3at.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/PlasticFruitBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/street_furniture/protos/MetallicTrash.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/obstacles/protos/Ramp30deg.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.2779484928272564 0.09235827274921844 -0.956145692240381 2.526327718250518
+  position 10.599392463052174 7.116750603057394 7.439409991281883
+}
+DEF trash4 Solid {
+  translation 1.12767 4.48 -0.109079
+  rotation 1.1745e-08 1 -6.78104e-09 -1.5707953071795862
+  children [
+    PlasticFruitBox {
+      translation 0.12 0 -4.40784e-07
+      rotation 0 1 0 1.5708
+    }
+  ]
+}
+Pioneer3at {
+  hidden rotation_1 -0.22037421569142948 0.22037517390795944 0.9501947104585586 4.661311724093519
+  hidden rotation_2 -0.05203621455197738 0.052039072581125424 0.9972884072824656 4.709663197155324
+  hidden rotation_3 -0.22006715138950284 0.22006811326357237 0.9503370320070248 4.661461300798619
+  hidden rotation_4 -0.05168677587831915 0.051689637642014535 0.9973247508007318 4.709699639892275
+  translation 3.87075 0.302264 -0.00226472
+  rotation -3.0974191659754736e-05 -2.29278793795023e-07 0.9999999995202735 -3.1315580732584434
+  name "Wally2.0"
+  controller "recolector"
+  supervisor TRUE
+}
+Floor {
+  name "Suelo"
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+Ramp30deg {
+  translation 0 0 -0.89
+}
+Ramp30deg {
+  translation 0 0 -0.9
+  rotation 0 0 1 1.5708
+  name "ramp 30 degrees(1)"
+}
+DEF trash2 CardboardBox {
+  hidden linearVelocity_0 1.554059837478729e-17 6.2114268894144675e-18 0.00011883773108975421
+  hidden angularVelocity_0 0 1.6653345369377373e-16 -1.192505068954359e-17
+  translation -1.4596014250503028e-17 -2.34 0.09994555248500671
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation -2.54 -2.34 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(1)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation 3.73 -1.77 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(2)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation -1.63 -0.89 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(3)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation 1.95 -0.09 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(4)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation 2.55 -2.09 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(11)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation -2.69 0.17 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(10)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation 3.24 0.71 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(5)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation 3.24 2.26 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(12)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation -1 2.47 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(6)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation -1 -3.68 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(7)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation 0.76 -4.2 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(8)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash2 CardboardBox {
+  translation -3.4 2.54 0.0999456
+  rotation 1.7638525831662677e-19 -0.9905532719160312 0.13712846348021723 5.917882193939922e-17
+  name "cardboard box(9)"
+  size 0.2 0.2 0.2
+  mass 0.1
+}
+DEF trash5 Solid {
+  translation 0 4.39 0.79
+  children [
+    MetallicTrash {
+      translation 0 0 -0.77
+    }
+  ]
+  name "solid(1)"
+}
+DEF Pared1 Wall {
+  translation 4.95 8.7011e-07 -0.01
+  rotation -1 0 0 -5.307179586466759e-06
+  name "Pared1"
+  size 0.1 10 0.5
+}
+DEF Pared2 Wall {
+  translation -4.97 8.7011e-07 -0.01
+  rotation -1 0 0 -5.307179586466759e-06
+  name "Pared2"
+  size 0.1 10 0.5
+}
+DEF Pared3 Wall {
+  translation -1.93822e-14 -4.95 -0.010027
+  rotation 2.653589999981315e-06 -2.653589999981315e-06 0.9999999999929585 1.5708
+  name "Pared3"
+  size 0.1 10 0.5
+}
+DEF Pared4 Wall {
+  translation -3.66581e-05 5.03 -0.00997357
+  rotation 2.653589999981315e-06 -2.653589999981315e-06 0.9999999999929585 1.5708
+  name "Pared4"
+  size 0.1 10 0.5
+}
+TexturedBackground {
+  texture "noon_building_overcast"
+}
+TexturedBackgroundLight {
+}
