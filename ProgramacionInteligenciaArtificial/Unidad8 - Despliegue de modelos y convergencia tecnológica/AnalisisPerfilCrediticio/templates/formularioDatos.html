@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para hacer predicción</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        
+        label {
+            display: block;
+            margin-top: 18px;
+            color: #555;
+
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 0.6rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        select {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px 14px;
+            font-size: 16px;
+            color: #333;
+            background-color: #f9f9f9;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D'%23666'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http://www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'/%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 24px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+        border-color: #007bff;
+        outline: none;
+        background-color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" action="/">
+            <h2>Predicción al modelo</h2>
+            <label for="prestamo">¿Préstamo anterior?</label>
+            <select id="prestamo" name="prestamo" required>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="ingresos">Porcentaje de ingresos
+                <input type="text" id="ingresos" name="ingresos" required>
+            </label>
+
+            <label for="tasa_interes">Tasa de interés
+                <input type="text" id="tasa_interes" name="tasa_interes" required>
+            </label>
+
+            <label for="posesion">Tipo de posesión</label>
+            <select id="posesion" name="posesion" required>
+                <option value="alquiler">Alquiler</option>
+                <option value="hipoteca">Hipoteca</option>
+                <option value="duenyo">Dueño/a</option>
+            </select>
+
+            <input type="submit" value="Realizar predicción">
+
+        </form>
+
+    </div>
+</body>
+
+</html>
