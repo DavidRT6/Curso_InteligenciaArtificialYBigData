@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: customers_orders
+    description: relaciona customers con orders
+    columns:
+      - name: customer_id
+      - name: customer_full_name
+      - name: first_order
+      - name: most_recent_order
+      - name: number_of_orders
+
+  - name: customers_payments
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: number_of_orders
+      - name: total_amount
